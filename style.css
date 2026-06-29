@@ -744,15 +744,26 @@ p {
   scroll-snap-align: center;
 }
 
-.horizontal-gallery figure.wide {
-  width: min(58vw, 720px);
-}
-
 .horizontal-gallery img {
   width: 100%;
   max-height: min(74vh, 760px);
   object-fit: contain;
   background: #000;
+}
+
+.wide-specimen-stack {
+  display: grid;
+  border-bottom: 1px solid var(--line);
+  background: #000;
+}
+
+.wide-specimen-stack img {
+  border-bottom: 1px solid var(--line);
+  background: #000;
+}
+
+.wide-specimen-stack img:last-child {
+  border-bottom: 0;
 }
 
 .body-copy {
@@ -827,14 +838,17 @@ p {
     padding-inline: 0;
   }
 
-  .horizontal-gallery figure,
-  .horizontal-gallery figure.wide {
+  .horizontal-gallery figure {
     width: 100%;
   }
 
   .horizontal-gallery img {
     max-height: none;
     border-bottom: 1px solid var(--line);
+  }
+
+  .horizontal-gallery [aria-hidden="true"] {
+    display: none;
   }
 }
 

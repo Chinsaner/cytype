@@ -63,6 +63,53 @@ document.querySelectorAll("[data-specimen-carousel]").forEach((carousel) => {
 });
 
 document.querySelectorAll("[data-horizontal-gallery]").forEach((gallery) => {
+  const autoGallery = gallery.hasAttribute("data-auto-gallery");
+
+  if (autoGallery && !gallery.dataset.loopReady) {
+    const items = Array.from(gallery.children);
+    items.forEach((item) => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      gallery.appendChild(clone);
+    });
+    gallery.dataset.loopReady = "true";
+  }
+
+  let paused = false;
+  let raf = 0;
+  let last = performance.now();
+
+  gallery.addEventListener("mouseenter", () => {
+    paused = !autoGallery;
+  });
+  gallery.addEventListener("mouseleave", () => {
+    paused = false;
+  });
+  gallery.addEventListener("focusin", () => {
+    paused = true;
+  });
+  gallery.addEventListener("focusout", () => {
+    paused = false;
+  });
+
+  function tick(now) {
+    const delta = now - last;
+    last = now;
+    if (autoGallery && !paused && gallery.scrollWidth > gallery.clientWidth) {
+      gallery.scrollLeft += delta * 0.075;
+      const loopPoint = gallery.scrollWidth / 2;
+      if (gallery.scrollLeft >= loopPoint) {
+        gallery.scrollLeft -= loopPoint;
+      }
+    }
+    raf = requestAnimationFrame(tick);
+  }
+
+  if (autoGallery) {
+    raf = requestAnimationFrame(tick);
+    window.addEventListener("beforeunload", () => cancelAnimationFrame(raf));
+  }
+
   gallery.addEventListener(
     "wheel",
     (event) => {
