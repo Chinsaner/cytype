@@ -705,6 +705,7 @@ p {
 .horizontal-gallery-section {
   border-bottom: 1px solid var(--line);
   background: #000;
+  overflow: hidden;
 }
 
 .gallery-intro {
@@ -731,6 +732,19 @@ p {
   scroll-snap-type: x proximity;
   scrollbar-width: none;
   padding: clamp(30px, 5vw, 68px) 24px clamp(42px, 6vw, 86px);
+}
+
+.horizontal-gallery.auto-gallery {
+  width: max-content;
+  overflow: visible;
+  animation: gallery-marquee 64s linear infinite;
+  will-change: transform;
+}
+
+@keyframes gallery-marquee {
+  to {
+    transform: translate3d(calc(-50% - clamp(14px, 2vw, 32px)), 0, 0);
+  }
 }
 
 .horizontal-gallery::-webkit-scrollbar {
@@ -836,6 +850,12 @@ p {
     grid-template-columns: 1fr;
     overflow-x: visible;
     padding-inline: 0;
+  }
+
+  .horizontal-gallery.auto-gallery {
+    width: auto;
+    animation: none;
+    transform: none;
   }
 
   .horizontal-gallery figure {

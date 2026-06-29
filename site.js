@@ -75,6 +75,8 @@ document.querySelectorAll("[data-horizontal-gallery]").forEach((gallery) => {
     gallery.dataset.loopReady = "true";
   }
 
+  if (autoGallery) return;
+
   let paused = false;
   let raf = 0;
   let last = performance.now();
@@ -86,7 +88,7 @@ document.querySelectorAll("[data-horizontal-gallery]").forEach((gallery) => {
     paused = false;
   });
   gallery.addEventListener("focusin", () => {
-    paused = true;
+    paused = !autoGallery;
   });
   gallery.addEventListener("focusout", () => {
     paused = false;
@@ -95,12 +97,14 @@ document.querySelectorAll("[data-horizontal-gallery]").forEach((gallery) => {
   function tick(now) {
     const delta = now - last;
     last = now;
-    if (autoGallery && !paused && gallery.scrollWidth > gallery.clientWidth) {
+    if (autoGallery && gallery.scrollWidth > gallery.clientWidth) {
       gallery.scrollLeft += delta * 0.075;
       const loopPoint = gallery.scrollWidth / 2;
       if (gallery.scrollLeft >= loopPoint) {
         gallery.scrollLeft -= loopPoint;
       }
+    } else if (!paused && gallery.scrollWidth > gallery.clientWidth) {
+      gallery.scrollLeft += delta * 0.075;
     }
     raf = requestAnimationFrame(tick);
   }
