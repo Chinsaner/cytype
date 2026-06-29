@@ -61,3 +61,24 @@ document.querySelectorAll("[data-specimen-carousel]").forEach((carousel) => {
     slides[index].classList.add("active");
   }, 3400);
 });
+
+document.querySelectorAll("[data-horizontal-gallery]").forEach((gallery) => {
+  gallery.addEventListener(
+    "wheel",
+    (event) => {
+      if (window.matchMedia("(max-width: 980px)").matches) return;
+      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+
+      const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+      const nextScroll = gallery.scrollLeft + event.deltaY;
+      const canScrollLeft = event.deltaY < 0 && gallery.scrollLeft > 0;
+      const canScrollRight = event.deltaY > 0 && gallery.scrollLeft < maxScroll;
+
+      if (canScrollLeft || canScrollRight) {
+        event.preventDefault();
+        gallery.scrollLeft = Math.max(0, Math.min(maxScroll, nextScroll));
+      }
+    },
+    { passive: false }
+  );
+});
