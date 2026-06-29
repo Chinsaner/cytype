@@ -876,6 +876,28 @@ p {
   .horizontal-gallery [aria-hidden="true"] {
     display: none;
   }
+
+  .horizontal-gallery.auto-gallery {
+    display: flex;
+    width: max-content;
+    overflow: visible;
+    animation: gallery-marquee 64s linear infinite;
+    transform: none;
+    padding: 34px 18px 48px;
+  }
+
+  .horizontal-gallery.auto-gallery figure {
+    width: min(68vw, 330px);
+  }
+
+  .horizontal-gallery.auto-gallery img {
+    max-height: 68vh;
+    border-bottom: 0;
+  }
+
+  .horizontal-gallery.auto-gallery [aria-hidden="true"] {
+    display: block;
+  }
 }
 
 @media (max-width: 640px) {
