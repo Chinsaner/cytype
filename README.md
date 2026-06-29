@@ -1,6 +1,6 @@
 # Yue CHEN Portfolio Website Draft
 
-This is a static portfolio website draft for CY Fonts | 虫鱼爬字. The homepage uses a black visual tone, type-project dropdown navigation, an auto-scrolling horizontal project rail, and alternating project sections. Each type project links to a dedicated detail page with metadata, specimens, and, where fonts are available, an interactive tester.
+This is a static portfolio website draft for CY Type | 虫鱼爬字. The homepage uses a black visual tone, type-project dropdown navigation, an auto-scrolling horizontal project rail, and alternating project sections. Each type project links to a dedicated detail page with metadata, specimens, and, where fonts are available, an interactive tester.
 
 ## Open locally
 
