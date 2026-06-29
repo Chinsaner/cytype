@@ -43,3 +43,21 @@ document.querySelectorAll(".project-rail").forEach((rail) => {
   raf = requestAnimationFrame(tick);
   window.addEventListener("beforeunload", () => cancelAnimationFrame(raf));
 });
+
+document.querySelectorAll("[data-specimen-carousel]").forEach((carousel) => {
+  const slides = Array.from(carousel.querySelectorAll("img"));
+  if (slides.length < 2) return;
+
+  let index = slides.findIndex((slide) => slide.classList.contains("active"));
+  if (index < 0) index = 0;
+  slides.forEach((slide, slideIndex) => slide.classList.toggle("active", slideIndex === index));
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) return;
+
+  window.setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  }, 3400);
+});
