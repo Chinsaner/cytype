@@ -708,6 +708,18 @@ p {
   opacity: 1;
 }
 
+.video-specimen {
+  border-bottom: 1px solid var(--line);
+  background: #000;
+}
+
+.video-specimen video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+}
+
 .horizontal-gallery-section {
   border-bottom: 1px solid var(--line);
   background: #000;
