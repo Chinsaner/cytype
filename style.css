@@ -382,6 +382,7 @@ p {
 }
 
 .project-hero-image {
+  position: relative;
   border-bottom: 1px solid var(--line);
   background: #000;
 }
@@ -390,6 +391,100 @@ p {
   width: 100%;
   height: auto;
   object-fit: contain;
+  background: #000;
+}
+
+.award-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: clamp(88px, 8vw, 132px);
+  height: clamp(88px, 8vw, 132px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-top: 0;
+  border-right: 0;
+  border-radius: 0 0 0 100%;
+  background: rgba(0, 0, 0, 0.92);
+  color: var(--white);
+  outline: 0;
+  transition: top 260ms ease, right 260ms ease, width 260ms ease, height 260ms ease, border-radius 260ms ease, background 260ms ease;
+}
+
+.award-corner-content {
+  position: absolute;
+  top: 44px;
+  right: 34px;
+  width: min(300px, calc(100% - 72px));
+  opacity: 0;
+  transform: translate(34%, -12%) scale(0.36);
+  transform-origin: top right;
+  transition: opacity 180ms ease, transform 260ms ease;
+}
+
+.award-corner::before {
+  content: "Awards";
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  transform: rotate(45deg) translate(20px, 8px);
+  transform-origin: center;
+  transition: opacity 160ms ease;
+}
+
+.award-corner:hover,
+.award-corner:focus {
+  width: clamp(300px, 27vw, 390px);
+  height: clamp(300px, 27vw, 390px);
+  top: 18px;
+  right: 18px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.96);
+}
+
+.award-corner:hover::before,
+.award-corner:focus::before {
+  opacity: 0;
+}
+
+.award-corner:hover .award-corner-content,
+.award-corner:focus .award-corner-content {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+.award-corner-content span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.award-corner-content ul {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.award-corner-content li {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.award-corner-content img {
+  display: block;
+  width: 100%;
+  height: auto;
   background: #000;
 }
 
@@ -859,6 +954,31 @@ p {
 
   .project-header img {
     min-height: auto;
+  }
+
+  .award-corner {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 18px;
+    border-width: 1px 0 0;
+    border-radius: 0;
+  }
+
+  .award-corner::before {
+    content: none;
+  }
+
+  .award-corner-content {
+    position: static;
+    width: 100%;
+    opacity: 1;
+    transform: none;
+  }
+
+  .award-corner-content img {
+    max-width: 420px;
   }
 
   .horizontal-gallery {
