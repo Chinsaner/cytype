@@ -465,6 +465,16 @@ p {
   object-fit: contain;
 }
 
+.award-corner-wide:hover,
+.award-corner-wide:focus {
+  width: clamp(250px, 24vw, 340px);
+  height: clamp(104px, 10vw, 142px);
+}
+
+.award-corner-wide .award-expanded-image {
+  height: 100%;
+}
+
 .meta-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
