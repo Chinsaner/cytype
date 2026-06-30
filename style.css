@@ -333,7 +333,6 @@ p {
   color: var(--muted);
   font-size: 18px;
   font-weight: 400;
-  text-transform: lowercase;
 }
 
 .contact-list dd {
@@ -453,7 +452,6 @@ p {
   gap: 7px;
   font-size: 12px;
   font-weight: 700;
-  text-transform: lowercase;
 }
 
 .tester label span {
