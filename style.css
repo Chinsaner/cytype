@@ -472,9 +472,16 @@ p {
 }
 
 .award-corner-wide .award-expanded-image,
+.award-corner-aki .award-expanded-image,
 .award-corner-jigu .award-expanded-image,
 .award-corner-shanghai .award-expanded-image {
   height: 100%;
+}
+
+.award-corner-aki:hover,
+.award-corner-aki:focus {
+  width: clamp(172px, 12vw, 198px);
+  height: clamp(266px, 18.6vw, 306px);
 }
 
 .award-corner-jigu:hover,
