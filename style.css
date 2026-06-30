@@ -429,9 +429,9 @@ p {
 
 .award-corner-content {
   position: absolute;
-  top: 62px;
-  right: 24px;
-  width: min(190px, calc(100% - 48px));
+  top: 38px;
+  right: 16px;
+  width: min(168px, calc(100% - 32px));
   opacity: 0;
   transform: translateY(-8px);
   transform-origin: top right;
@@ -440,10 +440,10 @@ p {
 
 .award-corner:hover,
 .award-corner:focus {
-  width: clamp(220px, 18vw, 280px);
-  height: clamp(390px, 34vw, 470px);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 92%, 0 100%);
-  border-radius: 0 0 10px 10px;
+  width: clamp(188px, 14vw, 220px);
+  height: clamp(318px, 26vw, 360px);
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 50% 100%, 0 96%);
+  border-radius: 0;
   background: rgba(0, 0, 0, 0.96);
 }
 
@@ -460,20 +460,25 @@ p {
 
 .award-list {
   display: grid;
-  gap: 20px;
+  gap: 12px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .award-list li {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
 }
 
 .award-list img {
   display: block;
   width: 100%;
+  max-height: 54px;
   height: auto;
+  object-fit: contain;
   background: #000;
 }
 
