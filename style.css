@@ -399,7 +399,7 @@ p {
   top: clamp(18px, 2.4vw, 42px);
   right: clamp(18px, 3vw, 58px);
   z-index: 3;
-  width: clamp(34px, 2.7vw, 44px);
+  width: clamp(38px, 2.95vw, 49px);
   height: clamp(84px, 6vw, 116px);
   overflow: hidden;
   border: 0;
