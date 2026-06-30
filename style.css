@@ -432,6 +432,7 @@ p {
   top: 14px;
   right: 14px;
   width: min(174px, calc(100% - 28px));
+  background: #000;
   opacity: 0;
   transform: translateY(-8px);
   transform-origin: top right;
@@ -444,7 +445,7 @@ p {
   height: clamp(348px, 28vw, 420px);
   clip-path: polygon(0 0, 100% 0, 100% 98%, 50% 100%, 0 98%);
   border-radius: 0;
-  background: rgba(0, 0, 0, 0.96);
+  background: #000;
 }
 
 .award-corner:hover .award-corner-icon,
