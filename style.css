@@ -399,7 +399,7 @@ p {
   top: clamp(18px, 2.4vw, 42px);
   right: clamp(18px, 3vw, 58px);
   z-index: 3;
-  width: clamp(54px, 4.2vw, 72px);
+  width: clamp(42px, 3.2vw, 54px);
   height: clamp(84px, 6vw, 116px);
   overflow: hidden;
   border: 0;
@@ -429,9 +429,9 @@ p {
 
 .award-corner-content {
   position: absolute;
-  top: 38px;
-  right: 16px;
-  width: min(168px, calc(100% - 32px));
+  top: 14px;
+  right: 14px;
+  width: min(174px, calc(100% - 28px));
   opacity: 0;
   transform: translateY(-8px);
   transform-origin: top right;
@@ -440,9 +440,9 @@ p {
 
 .award-corner:hover,
 .award-corner:focus {
-  width: clamp(188px, 14vw, 220px);
-  height: clamp(318px, 26vw, 360px);
-  clip-path: polygon(0 0, 100% 0, 100% 96%, 50% 100%, 0 96%);
+  width: clamp(188px, 14vw, 224px);
+  height: clamp(348px, 28vw, 420px);
+  clip-path: polygon(0 0, 100% 0, 100% 98%, 50% 100%, 0 98%);
   border-radius: 0;
   background: rgba(0, 0, 0, 0.96);
 }
@@ -458,28 +458,11 @@ p {
   transform: translateY(0);
 }
 
-.award-list {
-  display: grid;
-  gap: 12px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.award-list li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 54px;
-}
-
-.award-list img {
+.award-expanded-image {
   display: block;
   width: 100%;
-  max-height: 54px;
   height: auto;
   object-fit: contain;
-  background: #000;
 }
 
 .meta-grid {
@@ -974,11 +957,7 @@ p {
     transform: none;
   }
 
-  .award-list {
-    max-width: 460px;
-  }
-
-  .award-list li {
+  .award-expanded-image {
     max-width: 220px;
   }
 
