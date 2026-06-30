@@ -479,7 +479,7 @@ p {
 .award-corner-shanghai:hover,
 .award-corner-shanghai:focus {
   width: clamp(172px, 12vw, 198px);
-  height: clamp(146px, 10.2vw, 168px);
+  height: clamp(200px, 13.9vw, 230px);
 }
 
 .meta-grid {
