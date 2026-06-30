@@ -467,12 +467,19 @@ p {
 
 .award-corner-wide:hover,
 .award-corner-wide:focus {
-  width: clamp(250px, 24vw, 340px);
-  height: clamp(104px, 10vw, 142px);
+  width: clamp(172px, 12vw, 198px);
+  height: clamp(72px, 5vw, 83px);
 }
 
-.award-corner-wide .award-expanded-image {
+.award-corner-wide .award-expanded-image,
+.award-corner-shanghai .award-expanded-image {
   height: 100%;
+}
+
+.award-corner-shanghai:hover,
+.award-corner-shanghai:focus {
+  width: clamp(172px, 12vw, 198px);
+  height: clamp(146px, 10.2vw, 168px);
 }
 
 .meta-grid {
