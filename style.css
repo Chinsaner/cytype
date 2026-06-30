@@ -442,7 +442,7 @@ p {
 .award-corner:hover,
 .award-corner:focus {
   width: clamp(188px, 14vw, 224px);
-  height: clamp(310px, 25vw, 370px);
+  height: clamp(314px, 23.3vw, 374px);
   clip-path: polygon(0 0, 100% 0, 100% 98%, 50% 100%, 0 98%);
   border-radius: 0;
   background: #000;
