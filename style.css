@@ -163,7 +163,7 @@ p {
   font-size: clamp(82px, 8.8vw, 154px);
   font-weight: 800;
   letter-spacing: 0;
-  line-height: 0.56;
+  line-height: 0.7;
 }
 
 .project-rail {
