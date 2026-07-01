@@ -160,7 +160,7 @@ p {
   max-width: 1120px;
   margin: 0;
   font-family: "Youran Lihei", "Noto Sans CJK SC", sans-serif;
-  font-size: clamp(68px, 8.8vw, 146px);
+  font-size: clamp(108px, 10.5vw, 186px);
   font-weight: 800;
   letter-spacing: 0;
   line-height: 0.88;
@@ -1042,7 +1042,7 @@ p {
   }
 
   .home-title h1 {
-    font-size: 66px;
+    font-size: 106px;
   }
 
   .project-header h1 {
