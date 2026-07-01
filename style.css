@@ -214,16 +214,13 @@ p {
   grid-template-columns: 30fr 70fr;
   min-height: 520px;
   border-bottom: 1px solid var(--line);
+  opacity: 0.34;
+  filter: grayscale(0.28);
   transition: opacity 0.22s ease, filter 0.22s ease;
 }
 
-.home-projects:hover .feature-row {
-  opacity: 0.34;
-  filter: grayscale(0.28);
-}
-
-.home-projects:hover .feature-row:hover,
-.home-projects:hover .feature-row:focus-within {
+.feature-row:hover,
+.feature-row:focus-within {
   opacity: 1;
   filter: none;
 }
