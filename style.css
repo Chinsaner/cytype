@@ -293,8 +293,6 @@ p {
   transition: color 0.18s ease;
 }
 
-.feature-row:hover .feature-copy h2,
-.feature-row:focus-within .feature-copy h2,
 .feature-row:hover .text-link,
 .feature-row:focus-within .text-link {
   color: var(--mint);
