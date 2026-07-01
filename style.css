@@ -16,6 +16,12 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Youran Lihei";
+  src: url("assets/fonts/YouranLihei-SemiBold.woff") format("woff");
+  font-display: swap;
+}
+
 :root {
   --bg: #050505;
   --ink: #f7f7f2;
@@ -153,7 +159,7 @@ p {
 .home-title h1 {
   max-width: 1120px;
   margin: 0;
-  font-family: "Noto Sans CJK SC", sans-serif;
+  font-family: "Youran Lihei", "Noto Sans CJK SC", sans-serif;
   font-size: clamp(48px, 8vw, 126px);
   font-weight: 800;
   letter-spacing: 0;
