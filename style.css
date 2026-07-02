@@ -319,6 +319,14 @@ p {
   border-bottom: 1px solid var(--line);
 }
 
+#brands {
+  display: none;
+}
+
+#brands:target {
+  display: grid;
+}
+
 .simple-section h2 {
   font-size: clamp(28px, 4vw, 56px);
 }
