@@ -339,17 +339,21 @@ p {
 .talks-hero {
   min-height: 54vh;
   display: grid;
-  grid-template-columns: 0.35fr 0.65fr;
+  grid-template-columns: 0.68fr 0.32fr;
   gap: 40px;
-  align-items: end;
-  padding: clamp(96px, 12vw, 180px) 24px 72px;
+  align-items: center;
+  padding: clamp(70px, 11vw, 150px) 24px clamp(56px, 8vw, 110px);
   border-bottom: 1px solid var(--line);
 }
 
 .talks-hero h1 {
-  max-width: 980px;
-  font-size: clamp(38px, 5.6vw, 86px);
-  line-height: 0.96;
+  max-width: 1120px;
+  margin: 0;
+  font-family: "Youran Lihei", "Noto Sans CJK SC", sans-serif;
+  font-size: clamp(74px, 8vw, 140px);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 0.66;
 }
 
 .talk-list {
@@ -361,6 +365,15 @@ p {
   grid-template-columns: 0.42fr 0.58fr;
   min-height: 34vh;
   border-bottom: 1px solid var(--line);
+  opacity: 0.34;
+  filter: grayscale(0.28);
+  transition: opacity 0.22s ease, filter 0.22s ease;
+}
+
+.talk-card:hover,
+.talk-card:focus-within {
+  opacity: 1;
+  filter: none;
 }
 
 .talk-image {
