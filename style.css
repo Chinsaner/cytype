@@ -363,7 +363,7 @@ p {
 .talk-card {
   display: grid;
   grid-template-columns: 0.33fr 0.67fr;
-  min-height: 34vh;
+  min-height: 25.5vh;
   border-bottom: 1px solid var(--line);
   opacity: 0.34;
   filter: grayscale(0.28);
