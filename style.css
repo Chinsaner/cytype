@@ -365,15 +365,6 @@ p {
   grid-template-columns: 0.33fr 0.67fr;
   min-height: 18vh;
   border-bottom: 1px solid var(--line);
-  opacity: 0.34;
-  filter: grayscale(0.28);
-  transition: opacity 0.22s ease, filter 0.22s ease;
-}
-
-.talk-card:hover,
-.talk-card:focus-within {
-  opacity: 1;
-  filter: none;
 }
 
 .talk-image {
