@@ -380,14 +380,15 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(22px, 4.2vw, 58px);
+  padding: clamp(18px, 3.4vw, 46px);
   border-right: 1px solid var(--line);
 }
 
 .talk-image img {
-  width: 100%;
-  max-height: 20vh;
-  object-fit: contain;
+  width: min(100%, 480px);
+  aspect-ratio: 16 / 10;
+  max-height: 22vh;
+  object-fit: cover;
 }
 
 .talk-copy {
