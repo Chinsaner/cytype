@@ -386,9 +386,8 @@ p {
 
 .talk-image img {
   width: min(100%, 480px);
-  aspect-ratio: 16 / 10;
-  max-height: 22vh;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .talk-copy {
