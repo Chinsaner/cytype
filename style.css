@@ -409,6 +409,11 @@ p {
   text-decoration: none;
 }
 
+.talk-detail-link {
+  align-self: flex-start;
+  margin-top: 14px;
+}
+
 .talk-subtitle {
   max-width: 720px;
   color: #cfcfc9;
@@ -496,6 +501,46 @@ p {
   max-width: none;
   object-fit: contain;
   background: #000;
+}
+
+.auto-scroll-gallery {
+  display: block;
+  overflow-x: hidden;
+}
+
+.talk-gallery-track {
+  display: flex;
+  gap: clamp(18px, 2.4vw, 34px);
+  width: max-content;
+}
+
+.auto-scroll-gallery .talk-gallery-track {
+  animation: talkGalleryScroll 54s linear infinite;
+}
+
+.auto-scroll-gallery:hover .talk-gallery-track,
+.auto-scroll-gallery:focus-within .talk-gallery-track {
+  animation-play-state: paused;
+}
+
+@keyframes talkGalleryScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auto-scroll-gallery {
+    overflow-x: auto;
+  }
+
+  .auto-scroll-gallery .talk-gallery-track {
+    animation: none;
+  }
 }
 
 .contact-list {
