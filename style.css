@@ -404,6 +404,11 @@ p {
   line-height: 0.98;
 }
 
+.talk-copy h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .talk-subtitle {
   max-width: 720px;
   color: #cfcfc9;
@@ -429,6 +434,68 @@ p {
   margin: 0;
   color: var(--muted);
   font-size: 15px;
+}
+
+.talk-detail-hero {
+  min-height: 58vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(58px, 8vw, 120px) 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.talk-detail-hero h1 {
+  max-width: 1040px;
+  margin-bottom: 26px;
+  font-size: clamp(54px, 8vw, 132px);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+}
+
+.talk-detail-hero p:not(.eyebrow) {
+  max-width: 920px;
+  color: #cfcfc9;
+  font-size: clamp(22px, 2.8vw, 42px);
+  line-height: 1.12;
+}
+
+.talk-detail-hero .talk-meta {
+  margin-top: clamp(28px, 5vw, 72px);
+}
+
+.talk-gallery-strip {
+  display: flex;
+  gap: clamp(18px, 2.4vw, 34px);
+  align-items: center;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  padding: clamp(28px, 4vw, 62px) 24px clamp(44px, 6vw, 86px);
+  border-bottom: 1px solid var(--line);
+  background: #000;
+}
+
+.talk-gallery-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.talk-gallery-strip figure {
+  flex: 0 0 auto;
+  height: clamp(260px, 42vw, 620px);
+  margin: 0;
+  scroll-snap-align: center;
+  background: #000;
+}
+
+.talk-gallery-strip img {
+  width: auto;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  background: #000;
 }
 
 .contact-list {
