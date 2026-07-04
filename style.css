@@ -400,6 +400,13 @@ p {
   text-decoration: none;
 }
 
+.talk-list a,
+.talk-list a:hover,
+.talk-list a:focus {
+  color: inherit;
+  transition: none;
+}
+
 .talk-detail-link {
   align-self: flex-start;
   margin-top: 8px;
