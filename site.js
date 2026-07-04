@@ -27,6 +27,35 @@ document.querySelectorAll(".project-rail").forEach((rail) => {
     paused = false;
   });
 
+  function updateRailActiveItem() {
+    if (!window.matchMedia("(max-width: 980px)").matches) {
+      rail.querySelectorAll(".is-active").forEach((item) => item.classList.remove("is-active"));
+      return;
+    }
+
+    const railBox = rail.getBoundingClientRect();
+    const center = railBox.left + railBox.width / 2;
+    let closest = null;
+    let closestDistance = Infinity;
+
+    Array.from(rail.children).forEach((item) => {
+      const box = item.getBoundingClientRect();
+      const itemCenter = box.left + box.width / 2;
+      const distance = Math.abs(itemCenter - center);
+      if (distance < closestDistance) {
+        closest = item;
+        closestDistance = distance;
+      }
+    });
+
+    rail.querySelectorAll(".is-active").forEach((item) => item.classList.remove("is-active"));
+    if (closest) closest.classList.add("is-active");
+  }
+
+  rail.addEventListener("scroll", updateRailActiveItem, { passive: true });
+  window.addEventListener("resize", updateRailActiveItem);
+  updateRailActiveItem();
+
   function tick(now) {
     const delta = now - last;
     last = now;
@@ -36,6 +65,7 @@ document.querySelectorAll(".project-rail").forEach((rail) => {
       if (rail.scrollLeft >= loopPoint) {
         rail.scrollLeft -= loopPoint;
       }
+      updateRailActiveItem();
     }
     raf = requestAnimationFrame(tick);
   }
@@ -43,6 +73,40 @@ document.querySelectorAll(".project-rail").forEach((rail) => {
   raf = requestAnimationFrame(tick);
   window.addEventListener("beforeunload", () => cancelAnimationFrame(raf));
 });
+document.querySelectorAll(".home-projects").forEach((projectList) => {
+  const rows = Array.from(projectList.querySelectorAll(".feature-row"));
+  if (!rows.length) return;
+
+  function updateActiveProjectRow() {
+    if (!window.matchMedia("(max-width: 980px)").matches) {
+      rows.forEach((row) => row.classList.remove("is-active"));
+      return;
+    }
+
+    const viewportCenter = window.innerHeight / 2;
+    let closest = null;
+    let closestDistance = Infinity;
+
+    rows.forEach((row) => {
+      const box = row.getBoundingClientRect();
+      if (box.bottom < 0 || box.top > window.innerHeight) return;
+
+      const rowCenter = box.top + box.height / 2;
+      const distance = Math.abs(rowCenter - viewportCenter);
+      if (distance < closestDistance) {
+        closest = row;
+        closestDistance = distance;
+      }
+    });
+
+    rows.forEach((row) => row.classList.toggle("is-active", row === closest));
+  }
+
+  window.addEventListener("scroll", updateActiveProjectRow, { passive: true });
+  window.addEventListener("resize", updateActiveProjectRow);
+  updateActiveProjectRow();
+});
+
 
 document.querySelectorAll("[data-specimen-carousel]").forEach((carousel) => {
   const slides = Array.from(carousel.querySelectorAll("img"));

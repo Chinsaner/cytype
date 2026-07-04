@@ -205,7 +205,8 @@ p {
   transition: color 0.18s ease;
 }
 
-.project-rail a:hover span {
+.project-rail a:hover span,
+.project-rail a.is-active span {
   color: var(--mint);
 }
 
@@ -220,7 +221,8 @@ p {
 }
 
 .feature-row:hover,
-.feature-row:focus-within {
+.feature-row:focus-within,
+.feature-row.is-active {
   opacity: 1;
   filter: none;
 }
