@@ -385,7 +385,7 @@ p {
 }
 
 .talk-image img {
-  width: min(100%, 480px);
+  width: min(100%, 360px);
   height: auto;
   object-fit: contain;
 }
