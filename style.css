@@ -362,7 +362,7 @@ p {
 
 .talk-card {
   display: grid;
-  grid-template-columns: 0.42fr 0.58fr;
+  grid-template-columns: 0.33fr 0.67fr;
   min-height: 34vh;
   border-bottom: 1px solid var(--line);
   opacity: 0.34;
@@ -380,7 +380,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(24px, 3.2vw, 48px);
+  padding: clamp(34px, 7vw, 96px);
   border-right: 1px solid var(--line);
 }
 
@@ -395,7 +395,7 @@ p {
   flex-direction: column;
   justify-content: center;
   gap: 14px;
-  padding: clamp(24px, 3.2vw, 48px);
+  padding: clamp(34px, 7vw, 96px);
 }
 
 .talk-copy h2 {
@@ -489,7 +489,7 @@ p {
 
 .talk-gallery-strip figure {
   flex: 0 0 auto;
-  height: clamp(260px, 42vw, 620px);
+  height: clamp(195px, 31.5vw, 465px);
   margin: 0;
   scroll-snap-align: center;
   background: #000;
@@ -516,6 +516,7 @@ p {
 
 .auto-scroll-gallery .talk-gallery-track {
   animation: talkGalleryScroll 54s linear infinite;
+  will-change: transform;
 }
 
 .auto-scroll-gallery:hover .talk-gallery-track,
