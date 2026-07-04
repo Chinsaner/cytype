@@ -503,7 +503,7 @@ p {
 
 .auto-scroll-gallery {
   display: block;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 .talk-gallery-track {
