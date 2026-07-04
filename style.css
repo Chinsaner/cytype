@@ -336,6 +336,107 @@ p {
   line-height: 1.1;
 }
 
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  max-width: 820px;
+  margin: 28px 0 34px;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.about-highlights li {
+  display: grid;
+  gap: 10px;
+  min-height: 150px;
+  padding: clamp(18px, 2.6vw, 30px);
+  background: var(--black);
+}
+
+.about-highlights span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.about-highlights strong {
+  color: var(--white);
+  font-size: clamp(16px, 1.55vw, 21px);
+  font-weight: 650;
+  line-height: 1.22;
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.44fr) minmax(160px, 0.22fr) minmax(220px, 0.34fr);
+  gap: clamp(24px, 4vw, 56px);
+  padding: clamp(34px, 5vw, 72px) 24px;
+  border-top: 1px solid var(--line);
+  background: var(--black);
+}
+
+.footer-mark {
+  color: var(--white);
+  font-size: clamp(22px, 2.6vw, 34px);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer-intro p {
+  max-width: 480px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.45;
+}
+
+.footer-nav {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.footer-nav a,
+.footer-contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-nav a:hover,
+.footer-contact a:hover {
+  color: var(--mint);
+}
+
+.footer-contact {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  margin: 0;
+}
+
+.footer-contact div {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 14px;
+}
+
+.footer-contact dt,
+.footer-contact dd {
+  margin: 0;
+}
+
+.footer-contact dt {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.footer-contact dd {
+  overflow-wrap: anywhere;
+}
+
 .talks-hero {
   min-height: 54vh;
   display: grid;
@@ -1265,6 +1366,7 @@ p {
   .main-nav,
   .topbar nav {
     justify-content: flex-start;
+    row-gap: 8px;
   }
 
   .project-menu {
@@ -1272,9 +1374,43 @@ p {
     right: auto;
   }
 
-  .home-title h1 {
-    font-size: 78px;
-    line-height: 0.6;
+  .home-title {
+    padding-top: 54px;
+    padding-bottom: 52px;
+  }
+
+  .home-title h1,
+  .talks-hero h1 {
+    font-size: clamp(48px, 15vw, 64px);
+    line-height: 0.72;
+  }
+
+  .feature-copy h2,
+  .simple-section h2 {
+    font-size: clamp(34px, 12vw, 52px);
+    line-height: 0.95;
+  }
+
+  .talk-copy h2 {
+    font-size: clamp(25px, 9vw, 38px);
+  }
+
+  .about-highlights,
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .about-highlights li {
+    min-height: auto;
+  }
+
+  .site-footer {
+    padding-block: 34px;
+  }
+
+  .footer-contact div {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   .project-header h1 {
