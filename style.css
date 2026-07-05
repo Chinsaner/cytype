@@ -379,6 +379,7 @@ p {
 
 .activity-tabs {
   display: flex;
+  justify-content: flex-end;
   gap: 0;
   border-bottom: 1px solid var(--line);
 }
@@ -386,7 +387,7 @@ p {
 .activity-tabs a {
   min-width: 190px;
   padding: 18px 24px;
-  border-right: 1px solid var(--line);
+  border-left: 1px solid var(--line);
   color: var(--muted);
   font-weight: 800;
   text-decoration: none;
