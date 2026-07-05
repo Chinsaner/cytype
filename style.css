@@ -427,6 +427,18 @@ p {
   line-height: 1;
 }
 
+.teaching-title h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.teaching-list a,
+.teaching-list a:hover,
+.teaching-list a:focus {
+  color: inherit;
+  transition: none;
+}
+
 .teaching-title p:not(.eyebrow) {
   max-width: 720px;
   color: #cfcfc9;
