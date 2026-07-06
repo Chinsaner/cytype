@@ -145,11 +145,12 @@ document.querySelectorAll("[data-paired-specimen]").forEach((gallery) => {
       slides[index].classList.add("active");
     };
 
-    const initialDelay = columnIndex === 0 ? 3600 : 1800;
+    const interval = 2800;
+    const initialDelay = columnIndex === 0 ? interval : interval / 2;
 
     window.setTimeout(() => {
       advance();
-      window.setInterval(advance, 3600);
+      window.setInterval(advance, interval);
     }, initialDelay);
   });
 });
