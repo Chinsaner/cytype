@@ -576,6 +576,10 @@ p {
   line-height: 0.98;
 }
 
+.teaching-detail-hero h1 {
+  font-size: clamp(36px, 5.333vw, 88px);
+}
+
 .talk-detail-hero p:not(.eyebrow) {
   max-width: 920px;
   color: #cfcfc9;
