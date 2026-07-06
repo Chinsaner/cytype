@@ -127,6 +127,24 @@ document.querySelectorAll("[data-specimen-carousel]").forEach((carousel) => {
   }, 3400);
 });
 
+document.querySelectorAll("[data-paired-specimen]").forEach((gallery) => {
+  const slides = Array.from(gallery.querySelectorAll("figure"));
+  if (slides.length < 2) return;
+
+  let index = slides.findIndex((slide) => slide.classList.contains("active"));
+  if (index < 0) index = 0;
+  slides.forEach((slide, slideIndex) => slide.classList.toggle("active", slideIndex === index));
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) return;
+
+  window.setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  }, 3200);
+});
+
 document.querySelectorAll("[data-horizontal-gallery]").forEach((gallery) => {
   const autoGallery = gallery.hasAttribute("data-auto-gallery");
 
