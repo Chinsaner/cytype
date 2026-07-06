@@ -74,60 +74,6 @@ document.querySelectorAll(".project-rail").forEach((rail) => {
   window.addEventListener("beforeunload", () => cancelAnimationFrame(raf));
 });
 
-document.querySelectorAll("[data-glyph-field]").forEach((field) => {
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const glyphs = [
-    "虫", "鱼", "爬", "字", "隶", "黑", "悠", "然", "书", "写", "系", "统",
-    "文", "字", "笔", "画", "撇", "捺", "横", "竖", "点", "钩", "碑", "刻",
-    "A", "B", "C", "G", "R", "S", "T", "Y", "a", "e", "g", "n", "r", "t",
-    "ꀀ", "ꁱ", "ꂷ", "ꃅ", "ꄿ", "ꇁ", "ꈌ", "ꉙ", "ꊿ", "ꌠ", "ꎭ", "ꑭ"
-  ];
-
-  function randomGlyph() {
-    return glyphs[Math.floor(Math.random() * glyphs.length)];
-  }
-
-  function buildField() {
-    const isNarrow = window.matchMedia("(max-width: 640px)").matches;
-    const columns = isNarrow ? 7 : 14;
-    const rows = isNarrow ? 8 : 6;
-    const count = columns * rows;
-
-    field.style.setProperty("--glyph-columns", columns);
-    field.replaceChildren();
-
-    for (let index = 0; index < count; index += 1) {
-      const glyph = document.createElement("span");
-      glyph.textContent = randomGlyph();
-      glyph.style.setProperty("--glyph-opacity", (0.14 + Math.random() * 0.24).toFixed(2));
-      glyph.style.setProperty("--glyph-shift", `${(Math.random() * 0.28 - 0.14).toFixed(2)}em`);
-      field.appendChild(glyph);
-    }
-  }
-
-  buildField();
-  window.addEventListener("resize", buildField);
-
-  if (reduceMotion) return;
-
-  window.setInterval(() => {
-    const cells = Array.from(field.children);
-    const changes = Math.max(4, Math.floor(cells.length * 0.13));
-
-    for (let index = 0; index < changes; index += 1) {
-      const cell = cells[Math.floor(Math.random() * cells.length)];
-      if (!cell) continue;
-
-      cell.classList.add("is-changing");
-      window.setTimeout(() => {
-        cell.textContent = randomGlyph();
-        cell.style.setProperty("--glyph-opacity", (0.14 + Math.random() * 0.3).toFixed(2));
-        cell.style.setProperty("--glyph-shift", `${(Math.random() * 0.28 - 0.14).toFixed(2)}em`);
-        cell.classList.remove("is-changing");
-      }, 140);
-    }
-  }, 420);
-});
 document.querySelectorAll(".home-projects").forEach((projectList) => {
   const rows = Array.from(projectList.querySelectorAll(".feature-row"));
   if (!rows.length) return;

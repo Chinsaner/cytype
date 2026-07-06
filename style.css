@@ -153,52 +153,10 @@ p {
 }
 
 .home-title {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  min-height: clamp(520px, 72vh, 820px);
-  display: flex;
-  align-items: center;
   padding: clamp(70px, 11vw, 150px) 24px clamp(56px, 8vw, 110px);
 }
 
-.home-glyph-field {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  display: grid;
-  grid-template-columns: repeat(var(--glyph-columns, 14), minmax(0, 1fr));
-  align-content: stretch;
-  gap: clamp(8px, 1.5vw, 22px);
-  padding: clamp(62px, 7vw, 112px) 24px clamp(46px, 6vw, 88px);
-  color: rgba(247, 247, 242, 0.2);
-  font-family: "Youran Lihei", "Noto Sans CJK SC", sans-serif;
-  pointer-events: none;
-  user-select: none;
-}
-
-.home-glyph-field span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 0;
-  aspect-ratio: 1;
-  font-size: clamp(34px, 5.4vw, 104px);
-  font-weight: 800;
-  line-height: 0.9;
-  opacity: var(--glyph-opacity, 0.26);
-  transform: translateY(var(--glyph-shift, 0));
-  transition: opacity 0.28s ease, transform 0.28s ease;
-}
-
-.home-glyph-field span.is-changing {
-  opacity: 0.72;
-  transform: translateY(-0.08em);
-}
-
 .home-title h1 {
-  position: relative;
-  z-index: 1;
   max-width: 1120px;
   margin: 0;
   font-family: "Youran Lihei", "Noto Sans CJK SC", sans-serif;
@@ -1440,19 +1398,8 @@ p {
   }
 
   .home-title {
-    min-height: clamp(430px, 70vh, 620px);
     padding-top: 54px;
     padding-bottom: 52px;
-  }
-
-  .home-glyph-field {
-    grid-template-columns: repeat(var(--glyph-columns, 7), minmax(0, 1fr));
-    gap: 8px;
-    padding: 58px 18px 48px;
-  }
-
-  .home-glyph-field span {
-    font-size: clamp(30px, 12vw, 72px);
   }
 
   .home-title h1,
