@@ -1167,7 +1167,8 @@ p {
 }
 
 .paired-specimen {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   aspect-ratio: 16 / 9;
   border-bottom: 1px solid var(--line);
   background: #000;
@@ -1175,25 +1176,23 @@ p {
 }
 
 .paired-specimen figure {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  position: relative;
   margin: 0;
-  opacity: 0;
-  transition: opacity 0.8s ease;
-}
-
-.paired-specimen figure.active {
-  z-index: 1;
-  opacity: 1;
 }
 
 .paired-specimen img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
   background: #000;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.paired-specimen img.active {
+  opacity: 1;
 }
 
 .video-specimen {
@@ -1473,18 +1472,6 @@ p {
 
   .talk-copy h2 {
     font-size: clamp(25px, 9vw, 38px);
-  }
-
-  .paired-specimen {
-    aspect-ratio: 4 / 5;
-  }
-
-  .paired-specimen figure {
-    grid-template-columns: 1fr;
-  }
-
-  .paired-specimen img:nth-child(2) {
-    display: none;
   }
 
   .project-header h1 {

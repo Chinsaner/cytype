@@ -128,21 +128,30 @@ document.querySelectorAll("[data-specimen-carousel]").forEach((carousel) => {
 });
 
 document.querySelectorAll("[data-paired-specimen]").forEach((gallery) => {
-  const slides = Array.from(gallery.querySelectorAll("figure"));
-  if (slides.length < 2) return;
-
-  let index = slides.findIndex((slide) => slide.classList.contains("active"));
-  if (index < 0) index = 0;
-  slides.forEach((slide, slideIndex) => slide.classList.toggle("active", slideIndex === index));
-
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reduceMotion) return;
 
-  window.setInterval(() => {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
-  }, 3200);
+  Array.from(gallery.querySelectorAll(".paired-specimen-column")).forEach((column, columnIndex) => {
+    const slides = Array.from(column.querySelectorAll("img"));
+    if (slides.length < 2) return;
+
+    let index = slides.findIndex((slide) => slide.classList.contains("active"));
+    if (index < 0) index = 0;
+    slides.forEach((slide, slideIndex) => slide.classList.toggle("active", slideIndex === index));
+
+    const advance = () => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    };
+
+    const initialDelay = columnIndex === 0 ? 3600 : 1800;
+
+    window.setTimeout(() => {
+      advance();
+      window.setInterval(advance, 3600);
+    }, initialDelay);
+  });
 });
 
 document.querySelectorAll("[data-horizontal-gallery]").forEach((gallery) => {
