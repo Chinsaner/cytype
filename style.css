@@ -1166,6 +1166,10 @@ p {
   opacity: 1;
 }
 
+.jigu-hanli-carousel {
+  aspect-ratio: 841.89 / 508.125;
+}
+
 .paired-specimen {
   display: grid;
   grid-template-columns: 1fr 1fr;
