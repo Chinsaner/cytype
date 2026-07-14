@@ -120,11 +120,13 @@ document.querySelectorAll("[data-specimen-carousel]").forEach((carousel) => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reduceMotion) return;
 
+  const interval = Number(carousel.dataset.carouselInterval) || 3400;
+
   window.setInterval(() => {
     slides[index].classList.remove("active");
     index = (index + 1) % slides.length;
     slides[index].classList.add("active");
-  }, 3400);
+  }, interval);
 });
 
 document.querySelectorAll("[data-paired-specimen]").forEach((gallery) => {

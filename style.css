@@ -1170,6 +1170,10 @@ p {
   aspect-ratio: 841.89 / 508.125;
 }
 
+.aki-specimen-carousel {
+  aspect-ratio: 1190.55 / 595.276;
+}
+
 .paired-specimen {
   display: grid;
   grid-template-columns: 1fr 1fr;
