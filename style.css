@@ -152,6 +152,12 @@ p {
   margin-top: 0;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Easy Lihei", "Noto Sans CJK SC", sans-serif;
+}
+
 .home-title {
   padding: clamp(70px, 11vw, 150px) 24px clamp(56px, 8vw, 110px);
 }
@@ -159,7 +165,7 @@ p {
 .home-title h1 {
   max-width: 1120px;
   margin: 0;
-  font-family: "Youran Lihei", "Noto Sans CJK SC", sans-serif;
+  font-family: "Easy Lihei", "Noto Sans CJK SC", sans-serif;
   font-size: clamp(74px, 8vw, 140px);
   font-weight: 800;
   letter-spacing: 0;
@@ -351,7 +357,7 @@ p {
 .talks-hero h1 {
   max-width: 1120px;
   margin: 0;
-  font-family: "Youran Lihei", "Noto Sans CJK SC", sans-serif;
+  font-family: "Easy Lihei", "Noto Sans CJK SC", sans-serif;
   font-size: clamp(74px, 8vw, 140px);
   font-weight: 800;
   letter-spacing: 0;
@@ -370,7 +376,7 @@ p {
 .activities-hero h1 {
   max-width: 1180px;
   margin: 0;
-  font-family: "Youran Lihei", "Noto Sans CJK SC", sans-serif;
+  font-family: "Easy Lihei", "Noto Sans CJK SC", sans-serif;
   font-size: clamp(58px, 7vw, 118px);
   font-weight: 800;
   letter-spacing: 0;
