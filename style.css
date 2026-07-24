@@ -707,19 +707,21 @@ h1 {
 }
 
 .site-qr {
-  width: min(180px, 45vw);
-  margin: 34px 0 0;
+  width: 72px;
+  margin: 18px 0 0;
 }
 
 .site-qr img {
-  padding: 12px;
-  background: var(--white);
+  padding: 0;
+  background: transparent;
+  filter: invert(1);
 }
 
 .site-qr figcaption {
-  margin-top: 10px;
+  margin-top: 8px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 11px;
+  line-height: 1.15;
 }
 
 .project-header {
