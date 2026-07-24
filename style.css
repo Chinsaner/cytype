@@ -706,6 +706,22 @@ h1 {
   overflow-wrap: anywhere;
 }
 
+.site-qr {
+  width: min(180px, 45vw);
+  margin: 34px 0 0;
+}
+
+.site-qr img {
+  padding: 12px;
+  background: var(--white);
+}
+
+.site-qr figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .project-header {
   display: grid;
   grid-template-columns: 0.38fr 0.62fr;
