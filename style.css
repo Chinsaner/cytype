@@ -717,13 +717,6 @@ h1 {
   filter: invert(1);
 }
 
-.site-qr figcaption {
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.15;
-}
-
 .project-header {
   display: grid;
   grid-template-columns: 0.38fr 0.62fr;
