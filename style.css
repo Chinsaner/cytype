@@ -1282,18 +1282,6 @@ h1 {
   margin-top: 18px;
 }
 
-.zidao-video-hero {
-  border-bottom: 1px solid var(--line);
-  background: #000;
-}
-
-.zidao-video-hero video {
-  display: block;
-  width: 100%;
-  height: auto;
-  background: #000;
-}
-
 .research-marquee {
   height: calc((100vh - 58px) * 0.67);
   min-height: 360px;
