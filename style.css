@@ -1203,8 +1203,8 @@ h1 {
 }
 
 .research-marquee {
-  height: calc(100vh - 58px);
-  min-height: 540px;
+  height: calc((100vh - 58px) * 0.67);
+  min-height: 360px;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
   background: #000;
@@ -1491,8 +1491,8 @@ h1 {
   }
 
   .research-marquee {
-    height: 72vh;
-    min-height: 420px;
+    height: 48vh;
+    min-height: 280px;
   }
 
   .research-marquee-track {
