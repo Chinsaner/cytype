@@ -1297,6 +1297,10 @@ h1 {
   background: #000;
 }
 
+.overseas-gallery {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .research-gallery figure {
   min-height: 520px;
   padding: clamp(18px, 3vw, 46px);
@@ -1305,6 +1309,14 @@ h1 {
 }
 
 .research-gallery figure:nth-child(2n) {
+  border-right: 0;
+}
+
+.overseas-gallery figure:nth-child(2n) {
+  border-right: 1px solid var(--line);
+}
+
+.overseas-gallery figure:nth-child(3n) {
   border-right: 0;
 }
 
