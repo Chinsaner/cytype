@@ -1261,6 +1261,11 @@ h1 {
   line-height: 1;
 }
 
+.research-list .feature-copy h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .research-list .feature-copy p:not(.eyebrow) {
   max-width: 720px;
   font-size: clamp(14px, 1.22vw, 19px);
