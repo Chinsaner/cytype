@@ -1255,8 +1255,13 @@ h1 {
 }
 
 .research-list .feature-row {
+  min-height: 347px;
   opacity: 1;
   filter: none;
+}
+
+.research-list .feature-image img {
+  max-height: 347px;
 }
 
 .research-list .feature-copy h2 {
