@@ -1255,12 +1255,15 @@ h1 {
 }
 
 .research-list .feature-row {
+  grid-template-columns: 0.33fr 0.67fr;
   min-height: 347px;
   opacity: 1;
   filter: none;
 }
 
 .research-list .feature-image img {
+  width: min(100%, 360px);
+  height: auto;
   max-height: 347px;
 }
 
