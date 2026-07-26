@@ -662,6 +662,28 @@ h1 {
   background: #000;
 }
 
+.gongche-gallery {
+  overflow-y: visible;
+}
+
+.gongche-gallery figure {
+  overflow: visible;
+}
+
+.gongche-gallery img {
+  position: relative;
+  z-index: 1;
+  transform-origin: center;
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.gongche-gallery figure:hover img,
+.gongche-gallery figure:focus-within img {
+  z-index: 5;
+  transform: scale(1.22);
+  box-shadow: 0 0 0 1px var(--ink), 0 18px 52px rgba(0, 0, 0, 0.65);
+}
+
 .auto-scroll-gallery {
   display: block;
   overflow-x: auto;
