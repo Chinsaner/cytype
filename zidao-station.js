@@ -236,16 +236,7 @@ const stations = {
     label: 'Overseas Station 02',
     title: 'South Africa',
     images: [
-      'assets/research/zidao/photos/south-africa/south-africa-006.jpg',
-      'assets/research/zidao/photos/south-africa/south-africa-007.jpg',
-      'assets/research/zidao/photos/south-africa/south-africa-008.jpg',
-      'assets/research/zidao/photos/south-africa/south-africa-010.jpg',
-      'assets/research/zidao/photos/south-africa/south-africa-011.jpg',
-      'assets/research/zidao/photos/south-africa/south-africa-019.jpg',
-      'assets/research/zidao/photos/south-africa/south-africa-020.jpg',
-      'assets/research/zidao/photos/south-africa/south-africa-026.jpg',
-      'assets/research/zidao/photos/south-africa/south-africa-027.jpg',
-      'assets/research/zidao/photos/south-africa/south-africa-028.jpg'
+      'assets/research/zidao/photos/south-africa/south-africa-selected.png'
     ]
   },
   'korea': {

@@ -1405,6 +1405,7 @@ h1 {
 .station-preview-card {
   display: grid;
   grid-template-columns: minmax(260px, 0.3fr) minmax(0, 0.7fr);
+  grid-template-rows: 1fr 1.35fr;
   height: clamp(220px, 24vw, 370px);
   color: var(--ink);
   text-decoration: none;
@@ -1416,14 +1417,18 @@ h1 {
 .station-preview-card > h2 {
   grid-column: 1;
   margin-left: clamp(24px, 4vw, 70px);
+  position: relative;
+  z-index: 2;
 }
 
 .station-preview-card > .eyebrow {
+  grid-row: 1;
   align-self: end;
   margin-bottom: 18px;
 }
 
 .station-preview-card > h2 {
+  grid-row: 2;
   align-self: start;
   max-width: 420px;
   margin-top: 0;
@@ -1445,8 +1450,17 @@ h1 {
   height: 100%;
 }
 
+.station-preview-images:has(img:only-child) {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
 .station-preview-images img:first-child {
   grid-row: span 2;
+}
+
+.station-preview-images:has(img:only-child) img:first-child {
+  grid-row: auto;
 }
 
 .station-preview-images img {
