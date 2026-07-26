@@ -1197,6 +1197,63 @@ h1 {
   aspect-ratio: 1190.55 / 595.276;
 }
 
+.research-list .feature-row {
+  opacity: 1;
+  filter: none;
+}
+
+.research-gallery-section {
+  border-bottom: 1px solid var(--line);
+}
+
+.research-gallery-heading {
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  gap: 40px;
+  padding: 54px 24px 34px;
+  border-bottom: 1px solid var(--line);
+}
+
+.research-gallery-heading h2 {
+  max-width: 780px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(34px, 5vw, 78px);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+}
+
+.research-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  background: #000;
+}
+
+.research-gallery figure {
+  min-height: 520px;
+  padding: clamp(18px, 3vw, 46px);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.research-gallery figure:nth-child(2n) {
+  border-right: 0;
+}
+
+.research-gallery img {
+  width: 100%;
+  height: min(72vh, 720px);
+  object-fit: contain;
+  background: #000;
+}
+
+.research-gallery figcaption {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .paired-specimen {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1360,6 +1417,11 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .research-gallery,
+  .research-gallery-heading {
+    grid-template-columns: 1fr;
+  }
+
   .feature-row.reverse .feature-image,
   .feature-row.reverse .feature-copy {
     order: initial;
@@ -1380,6 +1442,20 @@ h1 {
   .tester-panel,
   .meta-grid div {
     border-bottom: 1px solid var(--line);
+  }
+
+  .research-gallery figure,
+  .research-gallery figure:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .research-gallery figure {
+    min-height: auto;
+  }
+
+  .research-gallery img {
+    height: auto;
+    max-height: 74vh;
   }
 
   .project-header img {
