@@ -625,11 +625,11 @@ h1 {
   line-height: 1.12;
 }
 
-.gongche-hero h1 {
+.research-detail-hero h1 {
   font-size: clamp(27px, 4.64vw, 69px);
 }
 
-.gongche-hero p:not(.eyebrow) {
+.research-detail-hero p:not(.eyebrow) {
   font-size: clamp(16px, 1.6vw, 25px);
 }
 
@@ -670,23 +670,23 @@ h1 {
   background: #000;
 }
 
-.gongche-gallery {
+.gallery-hover-zoom {
   overflow-y: visible;
 }
 
-.gongche-gallery figure {
+.gallery-hover-zoom figure {
   overflow: visible;
 }
 
-.gongche-gallery img {
+.gallery-hover-zoom img {
   position: relative;
   z-index: 1;
   transform-origin: center;
   transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 
-.gongche-gallery figure:hover img,
-.gongche-gallery figure:focus-within img {
+.gallery-hover-zoom figure:hover img,
+.gallery-hover-zoom figure:focus-within img {
   z-index: 5;
   transform: scale(1.22);
   box-shadow: 0 0 0 1px var(--ink), 0 18px 52px rgba(0, 0, 0, 0.65);
