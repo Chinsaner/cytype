@@ -1760,10 +1760,17 @@ h1 {
 }
 
 .forum-preview-list .station-preview-card {
-  height: clamp(513.3px, 56vw, 863.3px);
+  height: auto;
+  grid-template-rows: auto auto;
+}
+
+.forum-preview-list .station-preview-images {
+  height: auto;
 }
 
 .forum-preview-list .station-preview-images img {
+  height: auto;
+  aspect-ratio: 2376 / 1680;
   object-fit: contain;
   object-position: right center;
 }
