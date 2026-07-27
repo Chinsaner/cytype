@@ -1299,7 +1299,6 @@ h1 {
 .research-list .feature-image img {
   width: min(100%, 360px);
   height: auto;
-  max-height: 347px;
 }
 
 .research-list .feature-copy h2 {
