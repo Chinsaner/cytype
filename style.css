@@ -1414,7 +1414,7 @@ h1 {
 
 .research-list .feature-row {
   grid-template-columns: 0.33fr 0.67fr;
-  min-height: 347px;
+  min-height: 300px;
   opacity: 1;
   filter: none;
 }
