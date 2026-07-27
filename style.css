@@ -1098,7 +1098,7 @@ h1 {
 }
 
 .zidao-meta-grid-secondary {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
 }
 
 .zidao-meta-grid-secondary div:nth-child(2n) {
