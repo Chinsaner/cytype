@@ -1199,7 +1199,6 @@ h1 {
 }
 
 .zidao-overview {
-  max-width: 980px;
   padding: clamp(34px, 6vw, 88px) 24px clamp(42px, 7vw, 96px);
   border-bottom: 1px solid var(--line);
 }
@@ -1758,6 +1757,21 @@ h1 {
 
 .station-preview-images img:last-child {
   border-bottom: 0;
+}
+
+.forum-preview-list .station-preview-images img {
+  object-fit: contain;
+}
+
+.forum-preview-list .station-preview-card:hover h2,
+.forum-preview-list .station-preview-card:focus h2 {
+  color: var(--ink);
+}
+
+.forum-preview-list .station-preview-card:hover .station-preview-images img,
+.forum-preview-list .station-preview-card:focus .station-preview-images img {
+  filter: saturate(0.92);
+  transform: none;
 }
 
 .station-preview-card:hover h2,
