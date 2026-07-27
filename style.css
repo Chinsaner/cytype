@@ -1810,8 +1810,9 @@ h1 {
 }
 
 .station-switcher {
+  margin-top: clamp(28px, 5vw, 56px);
+  padding: 20px 0 0;
   border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
 }
 
 .station-switcher a:last-child {
