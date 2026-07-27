@@ -393,12 +393,14 @@ h1 {
   line-height: 1.28;
 }
 
-.feature-copy h2 .i18n-zh {
+.feature-copy h2 .i18n-zh,
+.feature-copy h2 .i18n-en {
   font-size: clamp(28.8px, 4.8vw, 73.6px);
   letter-spacing: 0;
 }
 
-.feature-copy p.i18n-zh {
+.feature-copy p.i18n-zh,
+.feature-copy p.i18n-en {
   font-size: clamp(14.4px, 1.6vw, 20.8px);
   letter-spacing: 0;
 }
