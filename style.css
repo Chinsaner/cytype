@@ -625,6 +625,14 @@ h1 {
   line-height: 1.12;
 }
 
+.gongche-hero h1 {
+  font-size: clamp(27px, 4.64vw, 69px);
+}
+
+.gongche-hero p:not(.eyebrow) {
+  font-size: clamp(16px, 1.6vw, 25px);
+}
+
 .talk-detail-hero .talk-meta {
   margin-top: clamp(28px, 5vw, 72px);
 }
