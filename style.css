@@ -1760,11 +1760,12 @@ h1 {
 }
 
 .forum-preview-list .station-preview-card {
-  height: clamp(385px, 42vw, 647.5px);
+  height: clamp(513.3px, 56vw, 863.3px);
 }
 
 .forum-preview-list .station-preview-images img {
   object-fit: contain;
+  object-position: right center;
 }
 
 .forum-preview-list .station-preview-card:hover h2,
