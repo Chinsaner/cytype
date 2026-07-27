@@ -1408,6 +1408,10 @@ h1 {
   aspect-ratio: 1190.55 / 595.276;
 }
 
+.ideographic-yi-carousel {
+  aspect-ratio: 4800 / 2438;
+}
+
 .research-list .feature-row {
   grid-template-columns: 0.33fr 0.67fr;
   min-height: 347px;
