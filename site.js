@@ -1,3 +1,26 @@
+(function () {
+  const STORAGE_KEY = "cytypeLang";
+  const buttons = document.querySelectorAll("[data-lang-btn]");
+  if (!buttons.length) return;
+
+  function applyLang(lang) {
+    document.documentElement.classList.toggle("lang-zh", lang === "zh");
+    buttons.forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.langBtn === lang);
+    });
+  }
+
+  applyLang(localStorage.getItem(STORAGE_KEY) === "zh" ? "zh" : "en");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const lang = btn.dataset.langBtn;
+      localStorage.setItem(STORAGE_KEY, lang);
+      applyLang(lang);
+    });
+  });
+})();
+
 document.querySelectorAll(".project-rail").forEach((rail) => {
   if (!rail.dataset.loopReady) {
     const items = Array.from(rail.children);
