@@ -1081,16 +1081,24 @@ h1 {
 }
 
 .zidao-meta-grid {
-  grid-template-columns:
-    minmax(0, 1.45fr)
-    minmax(0, 1.1fr)
-    minmax(0, 0.72fr)
-    minmax(0, 0.8fr)
-    minmax(0, 1.25fr);
+  display: block;
 }
 
 .zidao-meta-grid div {
-  min-height: 126px;
+  display: grid;
+  grid-template-columns: minmax(160px, 240px) minmax(0, 1fr);
+  gap: 20px;
+  min-height: 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.zidao-meta-grid div:last-child {
+  border-bottom: 0;
+}
+
+.zidao-meta-grid span {
+  margin-bottom: 0;
 }
 
 .zidao-overview {
@@ -1990,8 +1998,9 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .zidao-meta-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .zidao-meta-grid div {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
   .research-gallery,
