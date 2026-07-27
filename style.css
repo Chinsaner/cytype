@@ -1809,6 +1809,27 @@ h1 {
   color: var(--mint);
 }
 
+.station-switcher {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.station-switcher a:last-child {
+  text-align: right;
+}
+
+.station-switcher a::before {
+  content: "← ";
+}
+
+.station-switcher a:last-child::before {
+  content: "";
+}
+
+.station-switcher a:last-child::after {
+  content: " →";
+}
+
 .teaching-pager {
   align-items: center;
 }

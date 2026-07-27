@@ -284,3 +284,15 @@ station.images.forEach((src, index) => {
   figure.append(image);
   wall.append(figure);
 });
+
+const stationKeys = Object.keys(stations);
+const currentIndex = stationKeys.indexOf(stationKey);
+const prevKey = stationKeys[(currentIndex - 1 + stationKeys.length) % stationKeys.length];
+const nextKey = stationKeys[(currentIndex + 1) % stationKeys.length];
+
+const prevLink = document.querySelector("[data-station-prev]");
+const nextLink = document.querySelector("[data-station-next]");
+prevLink.href = `zidao-station.html?station=${prevKey}`;
+prevLink.textContent = stations[prevKey].title;
+nextLink.href = `zidao-station.html?station=${nextKey}`;
+nextLink.textContent = stations[nextKey].title;
