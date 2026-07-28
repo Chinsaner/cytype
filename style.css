@@ -1531,7 +1531,7 @@ h1 {
 .research-list .feature-copy h2 {
   max-width: 760px;
   margin-bottom: 12px;
-  font-size: clamp(24px, 2.75vw, 42px);
+  font-size: clamp(28.8px, 4.8vw, 73.6px);
   letter-spacing: 0;
   line-height: 1;
 }
@@ -1543,7 +1543,8 @@ h1 {
 
 .research-list .feature-copy p:not(.eyebrow) {
   max-width: 720px;
-  font-size: clamp(14px, 1.22vw, 19px);
+  font-size: clamp(14.4px, 1.6vw, 20.8px);
+  letter-spacing: 0;
   line-height: 1.2;
 }
 
