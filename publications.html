@@ -5,59 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Publications | Research | CY Type</title>
   <meta name="description" content="Book translations and publications on type, scripts, and writing systems by CY Type.">
-  <link rel="stylesheet" href="style.css?v=research-h2-45-2">
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css?v=publications-lang-1">
 </head>
 <body>
   <header class="site-header">
     <a class="studio-mark" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav class="main-nav" aria-label="Primary navigation">
-      <div class="nav-group">
-        <a href="index.html#type-projects">Type Projects</a>
-        <div class="project-menu" aria-label="Type projects">
-          <a href="lihei.html">Youran Lihei</a>
-          <a href="jigu-hanli.html">Jigu Hanli</a>
-          <a href="jingzhe-an.html">Jingzhe An</a>
-          <a href="yourong.html">Yourong Type</a>
-          <a href="aki.html">Aki Family</a>
-          <a href="shanghai-sky.html">Shanghai Sky</a>
-          <a href="guqin.html">Guqin Notation</a>
+    <div class="header-right">
+      <nav class="main-nav" aria-label="Primary navigation">
+        <div class="nav-group">
+          <a href="index.html#type-projects"><span class="i18n-en">Type Projects</span><span class="i18n-zh">字体项目</span></a>
+          <div class="project-menu" aria-label="Type projects">
+            <a href="lihei.html"><span class="i18n-en">Youran Lihei</span><span class="i18n-zh">悠然隶黑</span></a>
+            <a href="jigu-hanli.html"><span class="i18n-en">Jigu Hanli</span><span class="i18n-zh">集古汉隶</span></a>
+            <a href="jingzhe-an.html"><span class="i18n-en">Jingzhe An</span><span class="i18n-zh">静者安</span></a>
+            <a href="yourong.html"><span class="i18n-en">Yourong Type</span><span class="i18n-zh">有容体</span></a>
+            <a href="aki.html"><span class="i18n-en">Aki Family</span><span class="i18n-zh">阿町家族</span></a>
+            <a href="shanghai-sky.html"><span class="i18n-en">Shanghai Sky</span><span class="i18n-zh">上海天空体</span></a>
+            <a href="guqin.html"><span class="i18n-en">Guqin Notation</span><span class="i18n-zh">古琴减字谱</span></a>
+          </div>
         </div>
+        <a href="brands.html"><span class="i18n-en">Research</span><span class="i18n-zh">研究</span></a>
+        <a href="activities.html"><span class="i18n-en">Activities</span><span class="i18n-zh">活动</span></a>
+        <a href="index.html#about"><span class="i18n-en">About</span><span class="i18n-zh">关于</span></a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
       </div>
-      <a href="brands.html">Research</a>
-      <a href="activities.html">Activities</a>
-      <a href="index.html#about">About</a>
-    </nav>
+    </div>
   </header>
 
   <main>
     <section class="activities-hero research-hero">
-      <p class="eyebrow">Research</p>
-      <h1>Exhibition, publication, and visual research work.</h1>
+      <p class="eyebrow"><span class="i18n-en">Research</span><span class="i18n-zh">研究</span></p>
+      <h1 class="i18n-en">Exhibition, publication, and visual research work.</h1>
+      <h1 class="i18n-zh">展览、出版<br>与视觉研究工作。</h1>
     </section>
 
     <nav class="activity-tabs" aria-label="Research categories">
-      <a href="brands.html">Projects</a>
-      <a class="active" href="publications.html" aria-current="page">Publications</a>
+      <a href="brands.html"><span class="i18n-en">Projects</span><span class="i18n-zh">项目</span></a>
+      <a class="active" href="publications.html" aria-current="page"><span class="i18n-en">Publications</span><span class="i18n-zh">出版物</span></a>
     </nav>
 
     <section class="home-projects research-list" aria-label="Publications">
       <article class="feature-row is-active">
         <a class="feature-image" href="typography-handbook.html"><img src="assets/research/typography-handbook/typography-handbook-cover.png" alt="Design, Typography, etc.: A Handbook, Chinese translation cover" decoding="async" loading="lazy"></a>
         <div class="feature-copy dark">
-          <p class="eyebrow">Book Translation</p>
-          <h2><a href="typography-handbook.html">Design, Typography, etc.: A Handbook</a></h2>
-          <p class="talk-subtitle">文字设计的可能：从基础到创新实践</p>
-          <p>A comprehensive handbook on print typography, with practical notes, illustrative application examples, and an extensive bibliography.</p>
+          <p class="eyebrow"><span class="i18n-en">Book Translation</span><span class="i18n-zh">图书翻译</span></p>
+          <h2><a href="typography-handbook.html"><span class="i18n-en">Design, Typography, etc.: A Handbook</span><span class="i18n-zh">文字设计的可能：从基础到创新实践</span></a></h2>
+          <p class="i18n-en">A comprehensive handbook on print typography, with practical notes, illustrative application examples, and an extensive bibliography.</p>
+          <p class="i18n-zh">一部关于印刷字体设计的综合性手册，包含实用笔记、图文并茂的应用案例与详尽的参考书目。</p>
           <dl class="talk-meta">
-            <div><dt>Author</dt><dd>Damien Gautier, Claire Gautier (France)</dd></div>
-            <div><dt>Publisher</dt><dd>Shanghai People's Art Publishing House</dd></div>
-            <div><dt>Translators</dt><dd>Chen Yue, Liu Zhao</dd></div>
-            <div><dt>Published</dt><dd>2024</dd></div>
+            <div><dt><span class="i18n-en">Author</span><span class="i18n-zh">作者</span></dt><dd><span class="i18n-en">Damien Gautier, Claire Gautier (France)</span><span class="i18n-zh">达米安·戈蒂耶、克莱尔·戈蒂耶（法国）</span></dd></div>
+            <div><dt><span class="i18n-en">Publisher</span><span class="i18n-zh">出版社</span></dt><dd><span class="i18n-en">Shanghai People's Art Publishing House</span><span class="i18n-zh">上海人民美术出版社</span></dd></div>
+            <div><dt><span class="i18n-en">Translators</span><span class="i18n-zh">译者</span></dt><dd><span class="i18n-en">Chen Yue, Liu Zhao</span><span class="i18n-zh">陈玥、刘钊</span></dd></div>
+            <div><dt><span class="i18n-en">Published</span><span class="i18n-zh">出版年份</span></dt><dd>2024</dd></div>
           </dl>
-          <a class="text-link" href="typography-handbook.html">View details</a>
+          <a class="text-link" href="typography-handbook.html"><span class="i18n-en">View details</span><span class="i18n-zh">查看详情</span></a>
         </div>
       </article>
     </section>
   </main>
+  <script src="site.js?v=publications-lang-1"></script>
 </body>
 </html>
