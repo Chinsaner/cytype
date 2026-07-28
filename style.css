@@ -2374,13 +2374,13 @@ h1 {
   .topbar nav {
     justify-content: flex-start;
     flex-wrap: nowrap;
-    gap: 14px;
+    gap: 12px;
     row-gap: 8px;
   }
 
   .main-nav a,
   .topbar nav a {
-    font-size: 12.5px;
+    font-size: 15px;
     white-space: nowrap;
   }
 
