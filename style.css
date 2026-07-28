@@ -1531,9 +1531,15 @@ h1 {
 .research-list .feature-copy h2 {
   max-width: 760px;
   margin-bottom: 12px;
-  font-size: clamp(28.8px, 4.8vw, 64px);
+  font-size: clamp(23.04px, 3.84vw, 51.2px);
   letter-spacing: 0;
   line-height: 1;
+}
+
+.research-list .feature-copy h2 .i18n-en,
+.research-list .feature-copy h2 .i18n-zh {
+  font-size: clamp(23.04px, 3.84vw, 51.2px);
+  letter-spacing: 0;
 }
 
 .research-list .feature-copy h2 a {
