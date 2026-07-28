@@ -1,7 +1,9 @@
 const stations = {
   'anyang': {
     label: 'China Station 01',
+    labelZh: '中国站 01',
     title: 'Anyang',
+    titleZh: '安阳',
     images: [
       'assets/research/zidao/photos/anyang/anyang-020.jpg',
       'assets/research/zidao/photos/anyang/anyang-021.jpg',
@@ -19,7 +21,9 @@ const stations = {
   },
   'nanjing': {
     label: 'China Station 02',
+    labelZh: '中国站 02',
     title: 'Nanjing',
+    titleZh: '南京',
     images: [
       'assets/research/zidao/photos/nanjing/nanjing-001.jpg',
       'assets/research/zidao/photos/nanjing/nanjing-002.jpg',
@@ -38,7 +42,9 @@ const stations = {
   },
   'beijing': {
     label: 'China Station 03',
+    labelZh: '中国站 03',
     title: 'Beijing',
+    titleZh: '北京',
     images: [
       'assets/research/zidao/photos/beijing/beijing-001.jpg',
       'assets/research/zidao/photos/beijing/beijing-002.jpg',
@@ -107,7 +113,9 @@ const stations = {
   },
   'ningbo': {
     label: 'China Station 04',
+    labelZh: '中国站 04',
     title: 'Ningbo',
+    titleZh: '宁波',
     images: [
       'assets/research/zidao/photos/ningbo/ningbo-001.jpg',
       'assets/research/zidao/photos/ningbo/ningbo-002.jpg',
@@ -123,7 +131,9 @@ const stations = {
   },
   'huzhou': {
     label: 'China Station 05',
+    labelZh: '中国站 05',
     title: 'Huzhou',
+    titleZh: '湖州',
     images: [
       'assets/research/zidao/photos/huzhou/huzhou-001.jpg',
       'assets/research/zidao/photos/huzhou/huzhou-002.jpg',
@@ -146,7 +156,9 @@ const stations = {
   },
   'qingdao': {
     label: 'China Station 06',
+    labelZh: '中国站 06',
     title: 'Qingdao',
+    titleZh: '青岛',
     images: [
       'assets/research/zidao/photos/qingdao/qingdao-015.jpg',
       'assets/research/zidao/photos/qingdao/qingdao-020.jpg',
@@ -169,7 +181,9 @@ const stations = {
   },
   'zhangzhou': {
     label: 'China Station 07',
+    labelZh: '中国站 07',
     title: 'Zhangzhou / Xiamen University',
+    titleZh: '漳州／厦门大学',
     images: [
       'assets/research/zidao/photos/zhangzhou/zhangzhou-025.jpg',
       'assets/research/zidao/photos/zhangzhou/zhangzhou-026.jpg',
@@ -207,7 +221,9 @@ const stations = {
   },
   'reading': {
     label: 'Overseas Station 01',
+    labelZh: '海外站 01',
     title: 'University of Reading',
+    titleZh: '雷丁大学',
     images: [
       'assets/research/zidao/photos/reading/reading-001.jpg',
       'assets/research/zidao/photos/reading/reading-002.jpg',
@@ -234,7 +250,9 @@ const stations = {
   },
   'south-africa': {
     label: 'Overseas Station 02',
+    labelZh: '海外站 02',
     title: 'South Africa',
+    titleZh: '南非',
     images: [
       'assets/research/zidao/photos/south-africa/south-africa-006.jpg',
       'assets/research/zidao/photos/south-africa/south-africa-007.jpg',
@@ -250,7 +268,9 @@ const stations = {
   },
   'korea': {
     label: 'Overseas Station 03',
+    labelZh: '海外站 03',
     title: 'Republic of Korea',
+    titleZh: '韩国',
     images: [
       'assets/research/zidao/photos/korea/korea-002.jpg',
       'assets/research/zidao/photos/korea/korea-003.jpg',
@@ -269,9 +289,12 @@ const stationKey = params.get("station") || "anyang";
 const station = stations[stationKey] || stations.anyang;
 
 document.title = `${station.title} | Way of Type | CY Type`;
-document.querySelector("[data-station-kind]").textContent = station.label;
-document.querySelector("[data-station-title]").textContent = station.title;
-document.querySelector("[data-station-summary]").textContent = `${station.images.length} exhibition images.`;
+document.querySelector("[data-station-kind]").innerHTML =
+  `<span class="i18n-en">${station.label}</span><span class="i18n-zh">${station.labelZh}</span>`;
+document.querySelector("[data-station-title]").innerHTML =
+  `<span class="i18n-en">${station.title}</span><span class="i18n-zh">${station.titleZh}</span>`;
+document.querySelector("[data-station-summary]").innerHTML =
+  `<span class="i18n-en">${station.images.length} exhibition images.</span><span class="i18n-zh">${station.images.length} 张展览现场图片。</span>`;
 
 const wall = document.querySelector("[data-station-wall]");
 station.images.forEach((src, index) => {
@@ -293,6 +316,8 @@ const nextKey = stationKeys[(currentIndex + 1) % stationKeys.length];
 const prevLink = document.querySelector("[data-station-prev]");
 const nextLink = document.querySelector("[data-station-next]");
 prevLink.href = `zidao-station.html?station=${prevKey}`;
-prevLink.textContent = stations[prevKey].title;
+prevLink.innerHTML =
+  `<span class="i18n-en">${stations[prevKey].title}</span><span class="i18n-zh">${stations[prevKey].titleZh}</span>`;
 nextLink.href = `zidao-station.html?station=${nextKey}`;
-nextLink.textContent = stations[nextKey].title;
+nextLink.innerHTML =
+  `<span class="i18n-en">${stations[nextKey].title}</span><span class="i18n-zh">${stations[nextKey].titleZh}</span>`;

@@ -5,12 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Way of Type Station | CY Type</title>
   <meta name="description" content="Station photo wall for Way of Type: Modernisation of Chinese Typography.">
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="zidao.html">Way of Type</a></nav>
+    <div class="header-right">
+      <nav><a href="zidao.html"><span class="i18n-en">Way of Type</span><span class="i18n-zh">字道</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
   <main>
     <section class="station-detail-hero">
@@ -24,10 +37,11 @@
     </section>
     <section class="station-wall" data-station-wall aria-label="Station photo wall"></section>
     <section class="pager">
-      <a href="zidao.html">Back to project</a>
-      <a href="brands.html">Back to Research</a>
+      <a href="zidao.html"><span class="i18n-en">Back to project</span><span class="i18n-zh">返回项目</span></a>
+      <a href="brands.html"><span class="i18n-en">Back to Research</span><span class="i18n-zh">返回研究</span></a>
     </section>
   </main>
-  <script src="zidao-station.js?v=research-zidao-11"></script>
+  <script src="zidao-station.js?v=research-zidao-12"></script>
+  <script src="site.js?v=zidao-station-1"></script>
 </body>
 </html>
