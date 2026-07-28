@@ -2366,20 +2366,34 @@ h1 {
     flex-direction: column;
   }
 
-  .site-header {
-    padding-right: 96px;
+  .header-right {
+    margin-top: 18px;
   }
 
   .main-nav,
   .topbar nav {
     justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 14px;
     row-gap: 8px;
+  }
+
+  .main-nav a,
+  .topbar nav a {
+    font-size: 12.5px;
+    white-space: nowrap;
   }
 
   .lang-switch {
     position: absolute;
     top: 16px;
     right: 24px;
+    padding: 2px;
+  }
+
+  .lang-switch .lang-btn {
+    padding: 2px 8px;
+    font-size: 11px;
   }
 
   .research-list .feature-copy > p,
