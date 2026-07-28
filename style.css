@@ -2126,17 +2126,20 @@ h1 {
   color: var(--muted);
   font-weight: 600;
   font-size: 13px;
+  margin-left: 6px;
 }
 
 .credits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 32px 20px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .credit-card {
+  width: 150px;
   text-align: center;
 }
 
