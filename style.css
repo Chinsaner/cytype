@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "Easy Lihei Titles";
-  src: url("assets/fonts/Easy-goingLihei-Titles-20260714.woff") format("woff");
+  src: url("assets/fonts/Easy-goingLihei-Titles-20260714.woff?v=subset-1") format("woff");
   font-display: swap;
 }
 
