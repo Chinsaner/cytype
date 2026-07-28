@@ -240,7 +240,7 @@ h1 {
 }
 
 .home-title {
-  padding: clamp(70px, 11vw, 150px) 24px clamp(56px, 8vw, 110px);
+  padding: clamp(90px, 13vw, 170px) 24px clamp(36px, 6vw, 90px);
 }
 
 .home-title h1 {
@@ -301,7 +301,7 @@ h1 {
 .feature-row {
   display: grid;
   grid-template-columns: 30fr 70fr;
-  min-height: 520px;
+  min-height: 416px;
   border-bottom: 1px solid var(--line);
   opacity: 0.34;
   filter: grayscale(0.28);
@@ -342,7 +342,7 @@ h1 {
 }
 
 .feature-image img {
-  max-height: 520px;
+  max-height: 416px;
   object-fit: contain;
   background: #000;
 }
@@ -739,6 +739,7 @@ h1 {
 
 .talk-subtitle {
   max-width: 720px;
+  margin-top: 2px;
   color: #cfcfc9;
   font-size: clamp(14px, 1.22vw, 19px);
   line-height: 1.2;
