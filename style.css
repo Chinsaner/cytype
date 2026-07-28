@@ -1761,11 +1761,36 @@ h1 {
 
 .forum-preview-list .station-preview-card {
   height: auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: none;
 }
 
 .forum-preview-list .station-preview-images {
   height: auto;
+  grid-row: 1;
+}
+
+.forum-preview-list .station-preview-label {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+  margin: 24px clamp(24px, 3vw, 48px) 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.forum-preview-list .station-preview-label .eyebrow {
+  margin-bottom: 0;
+}
+
+.forum-preview-list .station-preview-label h2 {
+  max-width: 420px;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, "Noto Sans SC", sans-serif;
+  font-size: clamp(30px, 4vw, 70px);
+  font-weight: 800;
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+  transition: color 0.2s ease;
 }
 
 .forum-preview-list .station-preview-images img {
