@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "Youran Lihei";
-  src: url("assets/fonts/YouranLihei-SemiBold.woff?v=subset-1") format("woff");
+  src: url("assets/fonts/YouranLihei-SemiBold.woff?v=subset-2") format("woff");
   font-display: swap;
 }
 
@@ -240,7 +240,7 @@ p {
 }
 
 h1 {
-  font-family: "Easy Lihei Titles", "Noto Sans SC", sans-serif;
+  font-family: "Easy Lihei Titles", "Youran Lihei", "Noto Sans SC", sans-serif;
 }
 
 .home-title {
@@ -561,7 +561,7 @@ h1 {
 .talks-hero h1 {
   max-width: 1120px;
   margin: 0;
-  font-family: "Easy Lihei Titles", "Noto Sans SC", sans-serif;
+  font-family: "Easy Lihei Titles", "Youran Lihei", "Noto Sans SC", sans-serif;
   font-size: clamp(74px, 8vw, 140px);
   font-weight: 800;
   letter-spacing: 0;
@@ -580,7 +580,7 @@ h1 {
 .activities-hero h1 {
   max-width: 1180px;
   margin: 0;
-  font-family: "Easy Lihei Titles", "Noto Sans SC", sans-serif;
+  font-family: "Easy Lihei Titles", "Youran Lihei", "Noto Sans SC", sans-serif;
   font-size: clamp(58px, 7vw, 118px);
   font-weight: 800;
   letter-spacing: 0;
