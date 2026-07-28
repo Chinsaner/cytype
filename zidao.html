@@ -5,12 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Way of Type: Modernisation of Chinese Typography | CY Type</title>
   <meta name="description" content="Research secretary work for Way of Type: Modernisation of Chinese Typography.">
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=zidao-credits-1">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="brands.html">Research</a></nav>
+    <div class="header-right">
+      <nav><a href="brands.html"><span class="i18n-en">Research</span><span class="i18n-zh">研究</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
   <main>
     <section class="research-marquee" aria-label="Domestic and international station posters">
@@ -41,39 +54,41 @@
     <div class="zidao-meta-outer">
       <div class="zidao-meta-stack">
         <section class="meta-grid zidao-meta-grid">
-          <div><span>Role / Contribution</span><strong>Research secretary<br>Data integration, exhibition site coordination, forum video production, and related work.</strong></div>
-          <div><span>Project</span><strong>Way of Type: Modernisation of Chinese Typography</strong></div>
-          <div><span>Academic Chair</span><strong>Fan Di'an</strong></div>
-          <div><span>Curators</span><strong>Yue Jieqiong<br>Liu Zhao</strong></div>
+          <div><span><span class="i18n-en">Role / Contribution</span><span class="i18n-zh">角色 / 贡献</span></span><strong><span class="i18n-en">Research secretary<br>Data integration, exhibition site coordination, forum video production, and related work.</span><span class="i18n-zh">研究秘书<br>负责数据整理、展览现场协调、论坛视频制作等相关工作。</span></strong></div>
+          <div><span><span class="i18n-en">Project</span><span class="i18n-zh">项目</span></span><strong><span class="i18n-en">Way of Type: Modernisation of Chinese Typography</span><span class="i18n-zh">字道——汉字设计的现代之路</span></strong></div>
+          <div><span><span class="i18n-en">Academic Chair</span><span class="i18n-zh">学术主持</span></span><strong><span class="i18n-en">Fan Di'an</span><span class="i18n-zh">范迪安</span></strong></div>
+          <div><span><span class="i18n-en">Curators</span><span class="i18n-zh">策展人</span></span><strong><span class="i18n-en">Yue Jieqiong<br>Liu Zhao</span><span class="i18n-zh">岳洁琼<br>刘钊</span></strong></div>
         </section>
         <section class="meta-grid zidao-meta-grid zidao-meta-grid-secondary">
-          <div><span>Curatorial Team</span><strong>Zhou Zhiyu, Cao Fang, Jiang Jie, Thomas S. Mullaney, Xing Li, Sun Mingyuan, Cheng Xunchang, Zhang Hao</strong></div>
-          <div><span>Organizers</span><strong>National Arts Fund<br>Central Academy of Fine Arts<br>Chinese Character Glyph Information Technical Committee, Chinese Information Processing Society of China</strong></div>
+          <div><span><span class="i18n-en">Curatorial Team</span><span class="i18n-zh">策展团队</span></span><strong><span class="i18n-en">Zhou Zhiyu, Cao Fang, Jiang Jie, Thomas S. Mullaney, Xing Li, Sun Mingyuan, Cheng Xunchang, Zhang Hao</span><span class="i18n-zh">周至禹、曹方、蒋杰、墨磊宁、邢立、孙明远、程训昌、张昊</span></strong></div>
+          <div><span><span class="i18n-en">Organizers</span><span class="i18n-zh">主办单位</span></span><strong><span class="i18n-en">National Arts Fund<br>Central Academy of Fine Arts<br>Chinese Character Glyph Information Technical Committee, Chinese Information Processing Society of China</span><span class="i18n-zh">国家艺术基金<br>中央美术学院<br>中国中文信息学会汉字字形信息专业委员会</span></strong></div>
         </section>
       </div>
-      <a class="credits-col" href="zidao-credits.html">Credits</a>
+      <a class="credits-col" href="zidao-credits.html"><span class="i18n-en">Credits</span><span class="i18n-zh">鸣谢名单</span></a>
     </div>
 
     <section class="zidao-overview" data-way-panel="exhibition">
-      <p class="eyebrow">Overview</p>
-      <h2>Way of Type: Modernisation of Chinese Typography</h2>
-      <p>With the theme of modernisation of Chinese typography, the exhibition traces the development of modern Chinese character design through changes in printing, type design, visual presentation, and the cultural community of characters.</p>
+      <p class="eyebrow"><span class="i18n-en">Overview</span><span class="i18n-zh">概览</span></p>
+      <h2><span class="i18n-en">Way of Type: Modernisation of Chinese Typography</span><span class="i18n-zh">字道——汉字设计的现代之路</span></h2>
+      <p class="i18n-en">With the theme of modernisation of Chinese typography, the exhibition traces the development of modern Chinese character design through changes in printing, type design, visual presentation, and the cultural community of characters.</p>
+      <p class="i18n-zh">展览以汉字设计的现代化为主题，通过印刷方式、字体设计、视觉呈现及汉字文化群体的变迁，梳理中国现代汉字设计的发展历程。</p>
     </section>
     <section class="zidao-overview is-hidden" data-way-panel="forum">
-      <p class="eyebrow">Forum</p>
-      <h2>Way of Type: Modernisation of Chinese Typography</h2>
-      <p>Public forums held alongside the touring exhibition, bringing together type designers, researchers, and historians at each domestic station to discuss Chinese character design past and present.</p>
+      <p class="eyebrow"><span class="i18n-en">Forum</span><span class="i18n-zh">论坛</span></p>
+      <h2><span class="i18n-en">Way of Type: Modernisation of Chinese Typography</span><span class="i18n-zh">字道——汉字设计的现代之路</span></h2>
+      <p class="i18n-en">Public forums held alongside the touring exhibition, bringing together type designers, researchers, and historians at each domestic station to discuss Chinese character design past and present.</p>
+      <p class="i18n-zh">展览巡展期间同步举办的公开论坛，汇聚字体设计师、研究者与历史学者，在国内各站点探讨汉字设计的历史与当下。</p>
     </section>
 
     <nav class="activity-tabs" aria-label="Way of Type sections">
-      <a class="active" href="#exhibition" data-way-tab="exhibition" aria-current="page">Exhibition</a>
-      <a href="#forum" data-way-tab="forum">Forum</a>
+      <a class="active" href="#exhibition" data-way-tab="exhibition" aria-current="page"><span class="i18n-en">Exhibition</span><span class="i18n-zh">展览</span></a>
+      <a href="#forum" data-way-tab="forum"><span class="i18n-en">Forum</span><span class="i18n-zh">论坛</span></a>
     </nav>
 
     <section class="station-preview-list" aria-label="Exhibition station previews" data-way-panel="exhibition">
       <a class="station-preview-card" href="zidao-station.html?station=anyang">
-        <span class="eyebrow">China Station 01</span>
-        <h2>Anyang</h2>
+        <span class="eyebrow"><span class="i18n-en">China Station 01</span><span class="i18n-zh">中国站 01</span></span>
+        <h2><span class="i18n-en">Anyang</span><span class="i18n-zh">安阳</span></h2>
         <div class="station-preview-images">
           <img src="assets/research/zidao/photos/anyang/anyang-020.jpg" alt="Way of Type exhibition view in Anyang" decoding="async" loading="lazy">
           <img src="assets/research/zidao/photos/anyang/anyang-021.jpg" alt="Way of Type exhibition view in Anyang" decoding="async" loading="lazy">
@@ -81,8 +96,8 @@
         </div>
       </a>
       <a class="station-preview-card" href="zidao-station.html?station=nanjing">
-        <span class="eyebrow">China Station 02</span>
-        <h2>Nanjing</h2>
+        <span class="eyebrow"><span class="i18n-en">China Station 02</span><span class="i18n-zh">中国站 02</span></span>
+        <h2><span class="i18n-en">Nanjing</span><span class="i18n-zh">南京</span></h2>
         <div class="station-preview-images">
           <img src="assets/research/zidao/photos/nanjing/nanjing-001.jpg" alt="Way of Type exhibition view in Nanjing" decoding="async" loading="lazy">
           <img src="assets/research/zidao/photos/nanjing/nanjing-002.jpg" alt="Way of Type exhibition view in Nanjing" decoding="async" loading="lazy">
@@ -90,8 +105,8 @@
         </div>
       </a>
       <a class="station-preview-card" href="zidao-station.html?station=beijing">
-        <span class="eyebrow">China Station 03</span>
-        <h2>Beijing</h2>
+        <span class="eyebrow"><span class="i18n-en">China Station 03</span><span class="i18n-zh">中国站 03</span></span>
+        <h2><span class="i18n-en">Beijing</span><span class="i18n-zh">北京</span></h2>
         <div class="station-preview-images">
           <img src="assets/research/zidao/photos/beijing/beijing-001.jpg" alt="Way of Type exhibition view in Beijing" decoding="async" loading="lazy">
           <img src="assets/research/zidao/photos/beijing/beijing-002.jpg" alt="Way of Type exhibition view in Beijing" decoding="async" loading="lazy">
@@ -99,8 +114,8 @@
         </div>
       </a>
       <a class="station-preview-card" href="zidao-station.html?station=ningbo">
-        <span class="eyebrow">China Station 04</span>
-        <h2>Ningbo</h2>
+        <span class="eyebrow"><span class="i18n-en">China Station 04</span><span class="i18n-zh">中国站 04</span></span>
+        <h2><span class="i18n-en">Ningbo</span><span class="i18n-zh">宁波</span></h2>
         <div class="station-preview-images">
           <img src="assets/research/zidao/photos/ningbo/ningbo-001.jpg" alt="Way of Type exhibition view in Ningbo" decoding="async" loading="lazy">
           <img src="assets/research/zidao/photos/ningbo/ningbo-002.jpg" alt="Way of Type exhibition view in Ningbo" decoding="async" loading="lazy">
@@ -108,8 +123,8 @@
         </div>
       </a>
       <a class="station-preview-card" href="zidao-station.html?station=huzhou">
-        <span class="eyebrow">China Station 05</span>
-        <h2>Huzhou</h2>
+        <span class="eyebrow"><span class="i18n-en">China Station 05</span><span class="i18n-zh">中国站 05</span></span>
+        <h2><span class="i18n-en">Huzhou</span><span class="i18n-zh">湖州</span></h2>
         <div class="station-preview-images">
           <img src="assets/research/zidao/photos/huzhou/huzhou-001.jpg" alt="Way of Type exhibition view in Huzhou" decoding="async" loading="lazy">
           <img src="assets/research/zidao/photos/huzhou/huzhou-002.jpg" alt="Way of Type exhibition view in Huzhou" decoding="async" loading="lazy">
@@ -117,8 +132,8 @@
         </div>
       </a>
       <a class="station-preview-card" href="zidao-station.html?station=qingdao">
-        <span class="eyebrow">China Station 06</span>
-        <h2>Qingdao</h2>
+        <span class="eyebrow"><span class="i18n-en">China Station 06</span><span class="i18n-zh">中国站 06</span></span>
+        <h2><span class="i18n-en">Qingdao</span><span class="i18n-zh">青岛</span></h2>
         <div class="station-preview-images">
           <img src="assets/research/zidao/photos/qingdao/qingdao-015.jpg" alt="Way of Type exhibition view in Qingdao" decoding="async" loading="lazy">
           <img src="assets/research/zidao/photos/qingdao/qingdao-020.jpg" alt="Way of Type exhibition view in Qingdao" decoding="async" loading="lazy">
@@ -126,8 +141,8 @@
         </div>
       </a>
       <a class="station-preview-card" href="zidao-station.html?station=zhangzhou">
-        <span class="eyebrow">China Station 07</span>
-        <h2>Zhangzhou / Xiamen University</h2>
+        <span class="eyebrow"><span class="i18n-en">China Station 07</span><span class="i18n-zh">中国站 07</span></span>
+        <h2><span class="i18n-en">Zhangzhou / Xiamen University</span><span class="i18n-zh">漳州／厦门大学</span></h2>
         <div class="station-preview-images">
           <img src="assets/research/zidao/photos/zhangzhou/zhangzhou-026.jpg" alt="Way of Type exhibition view at Zhangzhou and Xiamen University station" decoding="async" loading="lazy">
           <img src="assets/research/zidao/photos/zhangzhou/zhangzhou-027.jpg" alt="Way of Type exhibition view at Zhangzhou and Xiamen University station" decoding="async" loading="lazy">
@@ -135,8 +150,8 @@
         </div>
       </a>
       <a class="station-preview-card" href="zidao-station.html?station=reading">
-        <span class="eyebrow">Overseas Station 01</span>
-        <h2>University of Reading</h2>
+        <span class="eyebrow"><span class="i18n-en">Overseas Station 01</span><span class="i18n-zh">海外站 01</span></span>
+        <h2><span class="i18n-en">University of Reading</span><span class="i18n-zh">雷丁大学</span></h2>
         <div class="station-preview-images">
           <img src="assets/research/zidao/photos/reading/reading-001.jpg" alt="Way of Type exhibition view at University of Reading" decoding="async" loading="lazy">
           <img src="assets/research/zidao/photos/reading/reading-002.jpg" alt="Way of Type exhibition view at University of Reading" decoding="async" loading="lazy">
@@ -144,15 +159,15 @@
         </div>
       </a>
       <a class="station-preview-card" href="zidao-station.html?station=south-africa">
-        <span class="eyebrow">Overseas Station 02</span>
-        <h2>South Africa</h2>
+        <span class="eyebrow"><span class="i18n-en">Overseas Station 02</span><span class="i18n-zh">海外站 02</span></span>
+        <h2><span class="i18n-en">South Africa</span><span class="i18n-zh">南非</span></h2>
         <div class="station-preview-images">
           <img src="assets/research/zidao/photos/south-africa/south-africa-selected.png" alt="Way of Type exhibition view in South Africa" decoding="async" loading="lazy">
         </div>
       </a>
       <a class="station-preview-card" href="zidao-station.html?station=korea">
-        <span class="eyebrow">Overseas Station 03</span>
-        <h2>Republic of Korea</h2>
+        <span class="eyebrow"><span class="i18n-en">Overseas Station 03</span><span class="i18n-zh">海外站 03</span></span>
+        <h2><span class="i18n-en">Republic of Korea</span><span class="i18n-zh">韩国</span></h2>
         <div class="station-preview-images">
           <img src="assets/research/zidao/photos/korea/korea-004.jpg" alt="Way of Type exhibition view in Korea" decoding="async" loading="lazy">
           <img src="assets/research/zidao/photos/korea/korea-002.jpg" alt="Way of Type exhibition view in Korea" decoding="async" loading="lazy">
@@ -164,8 +179,8 @@
     <section class="station-preview-list forum-preview-list is-hidden" aria-label="Forum station lineups" data-way-panel="forum">
       <div class="station-preview-card">
         <div class="station-preview-label">
-          <span class="eyebrow">China Station 02</span>
-          <h2>Nanjing</h2>
+          <span class="eyebrow"><span class="i18n-en">China Station 02</span><span class="i18n-zh">中国站 02</span></span>
+          <h2><span class="i18n-en">Nanjing</span><span class="i18n-zh">南京</span></h2>
         </div>
         <div class="station-preview-images">
           <img src="assets/research/zidao/forum/forum-nanjing.png" alt="Way of Type Nanjing station forum guest lineup" decoding="async" loading="lazy">
@@ -173,8 +188,8 @@
       </div>
       <div class="station-preview-card">
         <div class="station-preview-label">
-          <span class="eyebrow">China Station 04</span>
-          <h2>Ningbo</h2>
+          <span class="eyebrow"><span class="i18n-en">China Station 04</span><span class="i18n-zh">中国站 04</span></span>
+          <h2><span class="i18n-en">Ningbo</span><span class="i18n-zh">宁波</span></h2>
         </div>
         <div class="station-preview-images">
           <img src="assets/research/zidao/forum/forum-ningbo.png" alt="Way of Type Ningbo station forum guest lineup" decoding="async" loading="lazy">
@@ -182,8 +197,8 @@
       </div>
       <div class="station-preview-card">
         <div class="station-preview-label">
-          <span class="eyebrow">China Station 03</span>
-          <h2>Beijing</h2>
+          <span class="eyebrow"><span class="i18n-en">China Station 03</span><span class="i18n-zh">中国站 03</span></span>
+          <h2><span class="i18n-en">Beijing</span><span class="i18n-zh">北京</span></h2>
         </div>
         <div class="station-preview-images">
           <img src="assets/research/zidao/forum/forum-beijing.png" alt="Way of Type Beijing station forum guest lineup" decoding="async" loading="lazy">
@@ -191,8 +206,8 @@
       </div>
       <div class="station-preview-card">
         <div class="station-preview-label">
-          <span class="eyebrow">China Station 06</span>
-          <h2>Qingdao</h2>
+          <span class="eyebrow"><span class="i18n-en">China Station 06</span><span class="i18n-zh">中国站 06</span></span>
+          <h2><span class="i18n-en">Qingdao</span><span class="i18n-zh">青岛</span></h2>
         </div>
         <div class="station-preview-images">
           <img src="assets/research/zidao/forum/forum-qingdao.png" alt="Way of Type Qingdao station forum guest lineup" decoding="async" loading="lazy">
@@ -201,7 +216,7 @@
     </section>
 
     <section class="pager">
-      <a href="brands.html">Back to Research</a>
+      <a href="brands.html"><span class="i18n-en">Back to Research</span><span class="i18n-zh">返回研究</span></a>
     </section>
   </main>
   <script src="site.js?v=zidao-tabs-1"></script>

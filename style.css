@@ -1162,7 +1162,7 @@ h1 {
   border-right: 0;
 }
 
-.meta-grid span {
+.meta-grid div > span {
   display: block;
   margin-bottom: 16px;
   color: var(--muted);
@@ -1229,7 +1229,7 @@ h1 {
   border-right: 0;
 }
 
-.zidao-meta-grid span {
+.zidao-meta-grid div > span {
   margin-bottom: 0;
 }
 
