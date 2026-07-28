@@ -2150,6 +2150,21 @@ h1 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .research-list .feature-row {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .research-list .feature-image {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .research-list .feature-image img {
+    width: 100%;
+    max-width: none;
+  }
+
   .zidao-meta-grid div:nth-child(4n) {
     border-right: 1px solid var(--line);
   }
@@ -2394,11 +2409,6 @@ h1 {
   .lang-switch .lang-btn {
     padding: 2px 8px;
     font-size: 11px;
-  }
-
-  .research-list .feature-copy > p,
-  .research-list .feature-copy > dl {
-    display: none;
   }
 
   .project-menu {
