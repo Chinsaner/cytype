@@ -1225,6 +1225,10 @@ h1 {
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
 }
 
+.zidao-meta-grid-secondary div {
+  min-height: 0;
+}
+
 .zidao-meta-grid-secondary div:nth-child(2n) {
   border-right: 0;
 }
@@ -1242,10 +1246,10 @@ h1 {
   max-width: 820px;
   margin-bottom: 22px;
   font-family: Arial, Helvetica, "Noto Sans SC", sans-serif;
-  font-size: clamp(27px, 4.64vw, 69px);
+  font-size: clamp(23.04px, 3.84vw, 51.2px);
   font-weight: 800;
-  letter-spacing: -0.055em;
-  line-height: 0.9;
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .zidao-overview p:not(.eyebrow) {
