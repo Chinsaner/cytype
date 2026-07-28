@@ -2382,6 +2382,11 @@ h1 {
     right: 24px;
   }
 
+  .research-list .feature-copy > p,
+  .research-list .feature-copy > dl {
+    display: none;
+  }
+
   .project-menu {
     left: 0;
     right: auto;
