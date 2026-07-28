@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Way of Type: Modernisation of Chinese Typography | CY Type</title>
   <meta name="description" content="Research secretary work for Way of Type: Modernisation of Chinese Typography.">
-  <link rel="stylesheet" href="style.css?v=zidao-forum-6">
+  <link rel="stylesheet" href="style.css?v=zidao-tabs-1">
 </head>
 <body>
   <header class="topbar">
@@ -49,18 +49,23 @@
       <div><span>Organizers</span><strong>National Arts Fund<br>Central Academy of Fine Arts<br>Chinese Character Glyph Information Technical Committee, Chinese Information Processing Society of China</strong></div>
     </section>
 
-    <section class="zidao-overview">
+    <section class="zidao-overview" data-way-panel="exhibition">
       <p class="eyebrow">Overview</p>
       <h2>Way of Type: Modernisation of Chinese Typography</h2>
       <p>With the theme of modernisation of Chinese typography, the exhibition traces the development of modern Chinese character design through changes in printing, type design, visual presentation, and the cultural community of characters.</p>
     </section>
+    <section class="zidao-overview is-hidden" data-way-panel="forum">
+      <p class="eyebrow">Forum</p>
+      <h2>Way of Type: Modernisation of Chinese Typography</h2>
+      <p>Public forums held alongside the touring exhibition, bringing together type designers, researchers, and historians at each domestic station to discuss Chinese character design past and present.</p>
+    </section>
 
     <nav class="activity-tabs" aria-label="Way of Type sections">
-      <a class="active" href="zidao.html" aria-current="page">Exhibition</a>
-      <a href="zidao-forum.html">Forum</a>
+      <a class="active" href="#exhibition" data-way-tab="exhibition" aria-current="page">Exhibition</a>
+      <a href="#forum" data-way-tab="forum">Forum</a>
     </nav>
 
-    <section class="station-preview-list" aria-label="Exhibition station previews">
+    <section class="station-preview-list" aria-label="Exhibition station previews" data-way-panel="exhibition">
       <a class="station-preview-card" href="zidao-station.html?station=anyang">
         <span class="eyebrow">China Station 01</span>
         <h2>Anyang</h2>
@@ -151,9 +156,49 @@
       </a>
     </section>
 
+    <section class="station-preview-list forum-preview-list is-hidden" aria-label="Forum station lineups" data-way-panel="forum">
+      <div class="station-preview-card">
+        <div class="station-preview-label">
+          <span class="eyebrow">China Station 02</span>
+          <h2>Nanjing</h2>
+        </div>
+        <div class="station-preview-images">
+          <img src="assets/research/zidao/forum/forum-nanjing.png" alt="Way of Type Nanjing station forum guest lineup" decoding="async" loading="lazy">
+        </div>
+      </div>
+      <div class="station-preview-card">
+        <div class="station-preview-label">
+          <span class="eyebrow">China Station 04</span>
+          <h2>Ningbo</h2>
+        </div>
+        <div class="station-preview-images">
+          <img src="assets/research/zidao/forum/forum-ningbo.png" alt="Way of Type Ningbo station forum guest lineup" decoding="async" loading="lazy">
+        </div>
+      </div>
+      <div class="station-preview-card">
+        <div class="station-preview-label">
+          <span class="eyebrow">China Station 03</span>
+          <h2>Beijing</h2>
+        </div>
+        <div class="station-preview-images">
+          <img src="assets/research/zidao/forum/forum-beijing.png" alt="Way of Type Beijing station forum guest lineup" decoding="async" loading="lazy">
+        </div>
+      </div>
+      <div class="station-preview-card">
+        <div class="station-preview-label">
+          <span class="eyebrow">China Station 06</span>
+          <h2>Qingdao</h2>
+        </div>
+        <div class="station-preview-images">
+          <img src="assets/research/zidao/forum/forum-qingdao.png" alt="Way of Type Qingdao station forum guest lineup" decoding="async" loading="lazy">
+        </div>
+      </div>
+    </section>
+
     <section class="pager">
       <a href="brands.html">Back to Research</a>
     </section>
   </main>
+  <script src="site.js?v=zidao-tabs-1"></script>
 </body>
 </html>

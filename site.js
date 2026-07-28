@@ -1,4 +1,25 @@
 (function () {
+  const tabs = document.querySelectorAll("[data-way-tab]");
+  const panels = document.querySelectorAll("[data-way-panel]");
+  if (!tabs.length) return;
+
+  function activate(tab) {
+    tabs.forEach((t) => t.classList.toggle("active", t.dataset.wayTab === tab));
+    panels.forEach((p) => p.classList.toggle("is-hidden", p.dataset.wayPanel !== tab));
+  }
+
+  tabs.forEach((t) => {
+    t.addEventListener("click", (e) => {
+      e.preventDefault();
+      activate(t.dataset.wayTab);
+      history.replaceState(null, "", "#" + t.dataset.wayTab);
+    });
+  });
+
+  activate(location.hash === "#forum" ? "forum" : "exhibition");
+})();
+
+(function () {
   const STORAGE_KEY = "cytypeLang";
   const buttons = document.querySelectorAll("[data-lang-btn]");
   if (!buttons.length) return;
