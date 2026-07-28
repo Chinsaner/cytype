@@ -5,39 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Activities | CY Type</title>
   <meta name="description" content="Teaching, talks, and public programs around type, scripts, and writing systems by CY Type.">
-  <link rel="stylesheet" href="style.css?v=noto-sans-sc-1">
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css?v=activities-lang-1">
 </head>
 <body>
   <header class="site-header">
     <a class="studio-mark" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav class="main-nav" aria-label="Primary navigation">
-      <div class="nav-group">
-        <a href="index.html#type-projects">Type Projects</a>
-        <div class="project-menu" aria-label="Type projects">
-          <a href="lihei.html">Youran Lihei</a>
-          <a href="jigu-hanli.html">Jigu Hanli</a>
-          <a href="jingzhe-an.html">Jingzhe An</a>
-          <a href="yourong.html">Yourong Type</a>
-          <a href="aki.html">Aki Family</a>
-          <a href="shanghai-sky.html">Shanghai Sky</a>
-          <a href="guqin.html">Guqin Notation</a>
+    <div class="header-right">
+      <nav class="main-nav" aria-label="Primary navigation">
+        <div class="nav-group">
+          <a href="index.html#type-projects"><span class="i18n-en">Type Projects</span><span class="i18n-zh">字体项目</span></a>
+          <div class="project-menu" aria-label="Type projects">
+            <a href="lihei.html"><span class="i18n-en">Youran Lihei</span><span class="i18n-zh">悠然隶黑</span></a>
+            <a href="jigu-hanli.html"><span class="i18n-en">Jigu Hanli</span><span class="i18n-zh">集古汉隶</span></a>
+            <a href="jingzhe-an.html"><span class="i18n-en">Jingzhe An</span><span class="i18n-zh">静者安</span></a>
+            <a href="yourong.html"><span class="i18n-en">Yourong Type</span><span class="i18n-zh">有容体</span></a>
+            <a href="aki.html"><span class="i18n-en">Aki Family</span><span class="i18n-zh">阿町家族</span></a>
+            <a href="shanghai-sky.html"><span class="i18n-en">Shanghai Sky</span><span class="i18n-zh">上海天空体</span></a>
+            <a href="guqin.html"><span class="i18n-en">Guqin Notation</span><span class="i18n-zh">古琴减字谱</span></a>
+          </div>
         </div>
+        <a href="brands.html"><span class="i18n-en">Research</span><span class="i18n-zh">研究</span></a>
+        <a href="activities.html"><span class="i18n-en">Activities</span><span class="i18n-zh">活动</span></a>
+        <a href="index.html#about"><span class="i18n-en">About</span><span class="i18n-zh">关于</span></a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
       </div>
-      <a href="brands.html">Research</a>
-      <a href="activities.html">Activities</a>
-      <a href="index.html#about">About</a>
-    </nav>
+    </div>
   </header>
 
   <main>
     <section class="activities-hero">
-      <p class="eyebrow">Activities</p>
-      <h1>Teaching, talks, and public programs around type, scripts, and writing systems.</h1>
+      <p class="eyebrow"><span class="i18n-en">Activities</span><span class="i18n-zh">活动</span></p>
+      <h1 class="i18n-en">Teaching, talks, and public programs around type, scripts, and writing systems.</h1>
+      <h1 class="i18n-zh">围绕字体、文字系统与书写工具的教学、讲座与公共项目。</h1>
     </section>
 
     <nav class="activity-tabs" aria-label="Activity categories">
-      <a class="active" href="activities.html" aria-current="page">Teaching</a>
-      <a href="talks.html">Talks</a>
+      <a class="active" href="activities.html" aria-current="page"><span class="i18n-en">Teaching</span><span class="i18n-zh">教学</span></a>
+      <a href="talks.html"><span class="i18n-en">Talks</span><span class="i18n-zh">讲座</span></a>
     </nav>
 
     <section class="teaching-list" aria-label="Teaching list">
@@ -46,17 +60,18 @@
         <div class="talk-copy">
           <time datetime="2026-04">2026.04-2026.05</time>
         <div class="teaching-title">
-          <p class="eyebrow">Course</p>
-          <h2><a href="teaching-cross-script-2026.html">Chinese-Latin Cross-script Design and Application</a></h2>
-          <p>Course on multilingual typography, cross-script composition, and applied type design.</p>
+          <p class="eyebrow"><span class="i18n-en">Course</span><span class="i18n-zh">课程</span></p>
+          <h2><a href="teaching-cross-script-2026.html"><span class="i18n-en">Chinese-Latin Cross-script Design and Application</span><span class="i18n-zh">中西文交叉设计与运用</span></a></h2>
+          <p class="i18n-en">Course on multilingual typography, cross-script composition, and applied type design.</p>
+          <p class="i18n-zh">多语言排版、跨文字组合与应用型字体设计课程。</p>
         </div>
         <dl class="teaching-meta">
-          <div><dt>School</dt><dd>Sichuan Fine Arts Institute</dd></div>
-          <div><dt>Place</dt><dd>Chongqing</dd></div>
-          <div><dt>Students</dt><dd>Studio 2, Class of 2023</dd></div>
-          <div><dt>Role</dt><dd>Instructor</dd></div>
+          <div><dt><span class="i18n-en">School</span><span class="i18n-zh">院校</span></dt><dd><span class="i18n-en">Sichuan Fine Arts Institute</span><span class="i18n-zh">四川美术学院</span></dd></div>
+          <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Chongqing</span><span class="i18n-zh">重庆</span></dd></div>
+          <div><dt><span class="i18n-en">Students</span><span class="i18n-zh">学生</span></dt><dd><span class="i18n-en">Studio 2, Class of 2023</span><span class="i18n-zh">2023级第二工作室</span></dd></div>
+          <div><dt><span class="i18n-en">Role</span><span class="i18n-zh">角色</span></dt><dd><span class="i18n-en">Instructor</span><span class="i18n-zh">授课教师</span></dd></div>
         </dl>
-        <a class="text-link talk-detail-link" href="teaching-cross-script-2026.html">View details</a>
+        <a class="text-link talk-detail-link" href="teaching-cross-script-2026.html"><span class="i18n-en">View details</span><span class="i18n-zh">查看详情</span></a>
         </div>
       </article>
 
@@ -65,17 +80,18 @@
         <div class="talk-copy">
           <time datetime="2026-03">2026.03-2026.04</time>
         <div class="teaching-title">
-          <p class="eyebrow">Course</p>
-          <h2><a href="teaching-foundations-latin-type-2026.html">Foundations of Latin Type Design</a></h2>
-          <p>Foundational Latin type design course covering letterform structure, spacing, and type development.</p>
+          <p class="eyebrow"><span class="i18n-en">Course</span><span class="i18n-zh">课程</span></p>
+          <h2><a href="teaching-foundations-latin-type-2026.html"><span class="i18n-en">Foundations of Latin Type Design</span><span class="i18n-zh">拉丁字体设计基础</span></a></h2>
+          <p class="i18n-en">Foundational Latin type design course covering letterform structure, spacing, and type development.</p>
+          <p class="i18n-zh">拉丁字体设计基础课程，涵盖字形结构、间距与字体开发。</p>
         </div>
         <dl class="teaching-meta">
-          <div><dt>School</dt><dd>Central Academy of Fine Arts</dd></div>
-          <div><dt>Place</dt><dd>Beijing</dd></div>
-          <div><dt>Students</dt><dd>Class of 2025 students</dd></div>
-          <div><dt>Role</dt><dd>Instructor; co-taught with Liu Zhao</dd></div>
+          <div><dt><span class="i18n-en">School</span><span class="i18n-zh">院校</span></dt><dd><span class="i18n-en">Central Academy of Fine Arts</span><span class="i18n-zh">中央美术学院</span></dd></div>
+          <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Beijing</span><span class="i18n-zh">北京</span></dd></div>
+          <div><dt><span class="i18n-en">Students</span><span class="i18n-zh">学生</span></dt><dd><span class="i18n-en">Class of 2025 students</span><span class="i18n-zh">2025级学生</span></dd></div>
+          <div><dt><span class="i18n-en">Role</span><span class="i18n-zh">角色</span></dt><dd><span class="i18n-en">Instructor; co-taught with Liu Zhao</span><span class="i18n-zh">授课教师；与刘钊共同授课</span></dd></div>
         </dl>
-        <a class="text-link talk-detail-link" href="teaching-foundations-latin-type-2026.html">View details</a>
+        <a class="text-link talk-detail-link" href="teaching-foundations-latin-type-2026.html"><span class="i18n-en">View details</span><span class="i18n-zh">查看详情</span></a>
         </div>
       </article>
 
@@ -84,17 +100,18 @@
         <div class="talk-copy">
           <time datetime="2025-11">2025.11-2025.12</time>
         <div class="teaching-title">
-          <p class="eyebrow">Course</p>
-          <h2><a href="teaching-symbols-experimental-type-2025.html">Symbols and Contemporary Experimental Typeface Design</a></h2>
-          <p>Experimental type design course exploring symbols, visual systems, and contemporary display typography.</p>
+          <p class="eyebrow"><span class="i18n-en">Course</span><span class="i18n-zh">课程</span></p>
+          <h2><a href="teaching-symbols-experimental-type-2025.html"><span class="i18n-en">Symbols and Contemporary Experimental Typeface Design</span><span class="i18n-zh">符号与当代实验字体设计</span></a></h2>
+          <p class="i18n-en">Experimental type design course exploring symbols, visual systems, and contemporary display typography.</p>
+          <p class="i18n-zh">探索符号、视觉系统与当代展示字体的实验性字体设计课程。</p>
         </div>
         <dl class="teaching-meta">
-          <div><dt>School</dt><dd>Sichuan Fine Arts Institute</dd></div>
-          <div><dt>Place</dt><dd>Chongqing</dd></div>
-          <div><dt>Students</dt><dd>Studio 2, Class of 2023</dd></div>
-          <div><dt>Role</dt><dd>Instructor</dd></div>
+          <div><dt><span class="i18n-en">School</span><span class="i18n-zh">院校</span></dt><dd><span class="i18n-en">Sichuan Fine Arts Institute</span><span class="i18n-zh">四川美术学院</span></dd></div>
+          <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Chongqing</span><span class="i18n-zh">重庆</span></dd></div>
+          <div><dt><span class="i18n-en">Students</span><span class="i18n-zh">学生</span></dt><dd><span class="i18n-en">Studio 2, Class of 2023</span><span class="i18n-zh">2023级第二工作室</span></dd></div>
+          <div><dt><span class="i18n-en">Role</span><span class="i18n-zh">角色</span></dt><dd><span class="i18n-en">Instructor</span><span class="i18n-zh">授课教师</span></dd></div>
         </dl>
-        <a class="text-link talk-detail-link" href="teaching-symbols-experimental-type-2025.html">View details</a>
+        <a class="text-link talk-detail-link" href="teaching-symbols-experimental-type-2025.html"><span class="i18n-en">View details</span><span class="i18n-zh">查看详情</span></a>
         </div>
       </article>
 
@@ -103,17 +120,18 @@
         <div class="talk-copy">
           <time datetime="2025-04">2025.04-2025.05</time>
         <div class="teaching-title">
-          <p class="eyebrow">Course</p>
-          <h2><a href="teaching-cross-script-2025.html">Chinese-Latin Cross-script Design and Application</a></h2>
-          <p>Course on multilingual typography, cross-script composition, and applied type design.</p>
+          <p class="eyebrow"><span class="i18n-en">Course</span><span class="i18n-zh">课程</span></p>
+          <h2><a href="teaching-cross-script-2025.html"><span class="i18n-en">Chinese-Latin Cross-script Design and Application</span><span class="i18n-zh">中西文交叉设计与运用</span></a></h2>
+          <p class="i18n-en">Course on multilingual typography, cross-script composition, and applied type design.</p>
+          <p class="i18n-zh">多语言排版、跨文字组合与应用型字体设计课程。</p>
         </div>
         <dl class="teaching-meta">
-          <div><dt>School</dt><dd>Sichuan Fine Arts Institute</dd></div>
-          <div><dt>Place</dt><dd>Chongqing</dd></div>
-          <div><dt>Students</dt><dd>Studio 2, Class of 2022</dd></div>
-          <div><dt>Role</dt><dd>Instructor</dd></div>
+          <div><dt><span class="i18n-en">School</span><span class="i18n-zh">院校</span></dt><dd><span class="i18n-en">Sichuan Fine Arts Institute</span><span class="i18n-zh">四川美术学院</span></dd></div>
+          <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Chongqing</span><span class="i18n-zh">重庆</span></dd></div>
+          <div><dt><span class="i18n-en">Students</span><span class="i18n-zh">学生</span></dt><dd><span class="i18n-en">Studio 2, Class of 2022</span><span class="i18n-zh">2022级第二工作室</span></dd></div>
+          <div><dt><span class="i18n-en">Role</span><span class="i18n-zh">角色</span></dt><dd><span class="i18n-en">Instructor</span><span class="i18n-zh">授课教师</span></dd></div>
         </dl>
-        <a class="text-link talk-detail-link" href="teaching-cross-script-2025.html">View details</a>
+        <a class="text-link talk-detail-link" href="teaching-cross-script-2025.html"><span class="i18n-en">View details</span><span class="i18n-zh">查看详情</span></a>
         </div>
       </article>
 
@@ -122,17 +140,18 @@
         <div class="talk-copy">
           <time datetime="2023-04">2023.04</time>
         <div class="teaching-title">
-          <p class="eyebrow">Teaching Assistant</p>
-          <h2><a href="teaching-food-type-field-practice-2023.html">Food Type Design: Field Practice Course</a></h2>
-          <p>Elective course exploring food culture, lettering, and expressive type design.</p>
+          <p class="eyebrow"><span class="i18n-en">Teaching Assistant</span><span class="i18n-zh">助教</span></p>
+          <h2><a href="teaching-food-type-field-practice-2023.html"><span class="i18n-en">Food Type Design: Field Practice Course</span><span class="i18n-zh">美食字体（外出实践考察）</span></a></h2>
+          <p class="i18n-en">Elective course exploring food culture, lettering, and expressive type design.</p>
+          <p class="i18n-zh">探索饮食文化、字体书写与表现性字体设计的选修课程。</p>
         </div>
         <dl class="teaching-meta">
-          <div><dt>School</dt><dd>Central Academy of Fine Arts</dd></div>
-          <div><dt>Place</dt><dd>Beijing</dd></div>
-          <div><dt>Students</dt><dd>Elective course students, Central Academy of Fine Arts</dd></div>
-          <div><dt>Role</dt><dd>Teaching Assistant</dd></div>
+          <div><dt><span class="i18n-en">School</span><span class="i18n-zh">院校</span></dt><dd><span class="i18n-en">Central Academy of Fine Arts</span><span class="i18n-zh">中央美术学院</span></dd></div>
+          <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Beijing</span><span class="i18n-zh">北京</span></dd></div>
+          <div><dt><span class="i18n-en">Students</span><span class="i18n-zh">学生</span></dt><dd><span class="i18n-en">Elective course students, Central Academy of Fine Arts</span><span class="i18n-zh">中央美术学院选修课学生</span></dd></div>
+          <div><dt><span class="i18n-en">Role</span><span class="i18n-zh">角色</span></dt><dd><span class="i18n-en">Teaching Assistant</span><span class="i18n-zh">助教</span></dd></div>
         </dl>
-        <a class="text-link talk-detail-link" href="teaching-food-type-field-practice-2023.html">View details</a>
+        <a class="text-link talk-detail-link" href="teaching-food-type-field-practice-2023.html"><span class="i18n-en">View details</span><span class="i18n-zh">查看详情</span></a>
         </div>
       </article>
 
@@ -141,20 +160,22 @@
         <div class="talk-copy">
           <time datetime="2022-06">2022.06-2022.07</time>
         <div class="teaching-title">
-          <p class="eyebrow">Teaching Assistant</p>
-          <h2><a href="teaching-poster-design-artists-2022.html">Poster Design for Artists</a></h2>
-          <p>Poster design course focused on visual identity, exhibition communication, and artist-facing design.</p>
+          <p class="eyebrow"><span class="i18n-en">Teaching Assistant</span><span class="i18n-zh">助教</span></p>
+          <h2><a href="teaching-poster-design-artists-2022.html"><span class="i18n-en">Poster Design for Artists</span><span class="i18n-zh">为艺术家做海报</span></a></h2>
+          <p class="i18n-en">Poster design course focused on visual identity, exhibition communication, and artist-facing design.</p>
+          <p class="i18n-zh">聚焦视觉识别、展览传达与面向艺术家的海报设计课程。</p>
         </div>
         <dl class="teaching-meta">
-          <div><dt>School</dt><dd>Central Academy of Fine Arts</dd></div>
-          <div><dt>Place</dt><dd>Beijing</dd></div>
-          <div><dt>Students</dt><dd>Course students, Central Academy of Fine Arts</dd></div>
-          <div><dt>Role</dt><dd>Teaching Assistant</dd></div>
+          <div><dt><span class="i18n-en">School</span><span class="i18n-zh">院校</span></dt><dd><span class="i18n-en">Central Academy of Fine Arts</span><span class="i18n-zh">中央美术学院</span></dd></div>
+          <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Beijing</span><span class="i18n-zh">北京</span></dd></div>
+          <div><dt><span class="i18n-en">Students</span><span class="i18n-zh">学生</span></dt><dd><span class="i18n-en">Course students, Central Academy of Fine Arts</span><span class="i18n-zh">中央美术学院课程学生</span></dd></div>
+          <div><dt><span class="i18n-en">Role</span><span class="i18n-zh">角色</span></dt><dd><span class="i18n-en">Teaching Assistant</span><span class="i18n-zh">助教</span></dd></div>
         </dl>
-        <a class="text-link talk-detail-link" href="teaching-poster-design-artists-2022.html">View details</a>
+        <a class="text-link talk-detail-link" href="teaching-poster-design-artists-2022.html"><span class="i18n-en">View details</span><span class="i18n-zh">查看详情</span></a>
         </div>
       </article>
     </section>
   </main>
+  <script src="site.js?v=activities-lang-1"></script>
 </body>
 </html>
