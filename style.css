@@ -1578,6 +1578,7 @@ h1 {
   height: 100%;
   gap: 0;
   animation: research-marquee 46s linear infinite;
+  will-change: transform;
 }
 
 .research-marquee img {
