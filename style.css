@@ -1531,7 +1531,7 @@ h1 {
 .research-list .feature-copy h2 {
   max-width: 760px;
   margin-bottom: 12px;
-  font-size: clamp(28.8px, 4.8vw, 73.6px);
+  font-size: clamp(28.8px, 4.8vw, 64px);
   letter-spacing: 0;
   line-height: 1;
 }
