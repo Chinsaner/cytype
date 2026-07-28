@@ -5,101 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Talks | Activities | CY Type</title>
   <meta name="description" content="Teaching, talks, and public programs around type, scripts, and writing systems by CY Type.">
-  <link rel="stylesheet" href="style.css?v=noto-sans-sc-1">
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css?v=talks-lang-1">
 </head>
 <body>
   <header class="site-header">
     <a class="studio-mark" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav class="main-nav" aria-label="Primary navigation">
-      <div class="nav-group">
-        <a href="index.html#type-projects">Type Projects</a>
-        <div class="project-menu" aria-label="Type projects">
-          <a href="lihei.html">Youran Lihei</a>
-          <a href="jigu-hanli.html">Jigu Hanli</a>
-          <a href="jingzhe-an.html">Jingzhe An</a>
-          <a href="yourong.html">Yourong Type</a>
-          <a href="aki.html">Aki Family</a>
-          <a href="shanghai-sky.html">Shanghai Sky</a>
-          <a href="guqin.html">Guqin Notation</a>
+    <div class="header-right">
+      <nav class="main-nav" aria-label="Primary navigation">
+        <div class="nav-group">
+          <a href="index.html#type-projects"><span class="i18n-en">Type Projects</span><span class="i18n-zh">字体项目</span></a>
+          <div class="project-menu" aria-label="Type projects">
+            <a href="lihei.html"><span class="i18n-en">Youran Lihei</span><span class="i18n-zh">悠然隶黑</span></a>
+            <a href="jigu-hanli.html"><span class="i18n-en">Jigu Hanli</span><span class="i18n-zh">集古汉隶</span></a>
+            <a href="jingzhe-an.html"><span class="i18n-en">Jingzhe An</span><span class="i18n-zh">静者安</span></a>
+            <a href="yourong.html"><span class="i18n-en">Yourong Type</span><span class="i18n-zh">有容体</span></a>
+            <a href="aki.html"><span class="i18n-en">Aki Family</span><span class="i18n-zh">阿町家族</span></a>
+            <a href="shanghai-sky.html"><span class="i18n-en">Shanghai Sky</span><span class="i18n-zh">上海天空体</span></a>
+            <a href="guqin.html"><span class="i18n-en">Guqin Notation</span><span class="i18n-zh">古琴减字谱</span></a>
+          </div>
         </div>
+        <a href="brands.html"><span class="i18n-en">Research</span><span class="i18n-zh">研究</span></a>
+        <a href="activities.html"><span class="i18n-en">Activities</span><span class="i18n-zh">活动</span></a>
+        <a href="index.html#about"><span class="i18n-en">About</span><span class="i18n-zh">关于</span></a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
       </div>
-      <a href="brands.html">Research</a>
-      <a href="activities.html">Activities</a>
-      <a href="index.html#about">About</a>
-    </nav>
+    </div>
   </header>
 
   <main>
     <section class="activities-hero">
-      <p class="eyebrow">Activities</p>
-      <h1>Teaching, talks, and public programs around type, scripts, and writing systems.</h1>
+      <p class="eyebrow"><span class="i18n-en">Activities</span><span class="i18n-zh">活动</span></p>
+      <h1 class="i18n-en">Teaching, talks, and public programs around type, scripts, and writing systems.</h1>
+      <h1 class="i18n-zh">围绕字体、文字系统与书写工具的教学、讲座<br>与公共项目。</h1>
     </section>
 
     <nav class="activity-tabs" aria-label="Activity categories">
-      <a href="activities.html">Teaching</a>
-      <a class="active" href="talks.html" aria-current="page">Talks</a>
+      <a href="activities.html"><span class="i18n-en">Teaching</span><span class="i18n-zh">教学</span></a>
+      <a class="active" href="talks.html" aria-current="page"><span class="i18n-en">Talks</span><span class="i18n-zh">讲座</span></a>
     </nav>
 
     <section class="talk-list" aria-label="Talk list">
       <article class="talk-card">
         <a class="talk-image" href="grapholinguistics-2026.html"><img src="assets/talks/grapholinguistics-2026-cover.jpg" alt="Grapholinguistics in the 21st century conference presentation" decoding="async"></a>
         <div class="talk-copy">
-          <p class="eyebrow">Conference Presentation</p>
+          <p class="eyebrow"><span class="i18n-en">Conference Presentation</span><span class="i18n-zh">会议报告</span></p>
           <h2><a href="grapholinguistics-2026.html">/gʁafematik/ 2026</a></h2>
-          <p class="talk-subtitle">Establishing comparable writing units in a non-unified writing system: a grapholinguistic approach based on ideographic Yi</p>
+          <p class="talk-subtitle i18n-en">Establishing comparable writing units in a non-unified writing system: a grapholinguistic approach based on ideographic Yi</p>
+          <p class="talk-subtitle i18n-zh">在非统一文字系统中建立可比较书写单位：基于表意彝文的字符学方法</p>
           <dl class="talk-meta">
-            <div><dt>Event</dt><dd>Grapholinguistics in the 21st century—Entangled Scripts, Cultures, Disciplines</dd></div>
-            <div><dt>Date</dt><dd>June 25, 2026</dd></div>
-            <div><dt>Place</dt><dd>University of Reading, UK</dd></div>
-            <div><dt>Host</dt><dd>/gʁafematik/ 2026 Organizing Committee</dd></div>
+            <div><dt><span class="i18n-en">Event</span><span class="i18n-zh">活动</span></dt><dd><span class="i18n-en">Grapholinguistics in the 21st century—Entangled Scripts, Cultures, Disciplines</span><span class="i18n-zh">21世纪的文字学——交织的文字、文化与学科</span></dd></div>
+            <div><dt><span class="i18n-en">Date</span><span class="i18n-zh">日期</span></dt><dd><span class="i18n-en">June 25, 2026</span><span class="i18n-zh">2026年6月25日</span></dd></div>
+            <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">University of Reading, UK</span><span class="i18n-zh">英国雷丁大学</span></dd></div>
+            <div><dt><span class="i18n-en">Host</span><span class="i18n-zh">主办方</span></dt><dd><span class="i18n-en">/gʁafematik/ 2026 Organizing Committee</span><span class="i18n-zh">/gʁafematik/ 2026 组委会</span></dd></div>
           </dl>
-          <a class="text-link talk-detail-link" href="grapholinguistics-2026.html">View details</a>
+          <a class="text-link talk-detail-link" href="grapholinguistics-2026.html"><span class="i18n-en">View details</span><span class="i18n-zh">查看详情</span></a>
         </div>
       </article>
 
       <article class="talk-card">
         <a class="talk-image" href="atypi-2026.html"><img src="assets/talks/atypi-2026-cover.jpg" alt="ATypI 2026 Stanford presentation" decoding="async" loading="lazy"></a>
         <div class="talk-copy">
-          <p class="eyebrow">Conference Presentation</p>
-          <h2><a href="atypi-2026.html">ATypI 2026 Stanford</a></h2>
-          <p class="talk-subtitle">From Fragmentation to Belonging: The Development and Standardization of the Yi Script in Southwest China</p>
+          <p class="eyebrow"><span class="i18n-en">Conference Presentation</span><span class="i18n-zh">会议报告</span></p>
+          <h2><a href="atypi-2026.html"><span class="i18n-en">ATypI 2026 Stanford</span><span class="i18n-zh">ATypI 2026 斯坦福</span></a></h2>
+          <p class="talk-subtitle i18n-en">From Fragmentation to Belonging: The Development and Standardization of the Yi Script in Southwest China</p>
+          <p class="talk-subtitle i18n-zh">从分裂走向归属：中国西南彝文的发展与规范化</p>
           <dl class="talk-meta">
-            <div><dt>Event</dt><dd>Homescreen: Design for Belonging</dd></div>
-            <div><dt>Date</dt><dd>May 30, 2026</dd></div>
-            <div><dt>Place</dt><dd>Stanford University, USA</dd></div>
-            <div><dt>Host</dt><dd>Association Typographique Internationale</dd></div>
+            <div><dt><span class="i18n-en">Event</span><span class="i18n-zh">活动</span></dt><dd><span class="i18n-en">Homescreen: Design for Belonging</span><span class="i18n-zh">Homescreen：为归属感而设计</span></dd></div>
+            <div><dt><span class="i18n-en">Date</span><span class="i18n-zh">日期</span></dt><dd><span class="i18n-en">May 30, 2026</span><span class="i18n-zh">2026年5月30日</span></dd></div>
+            <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Stanford University, USA</span><span class="i18n-zh">美国斯坦福大学</span></dd></div>
+            <div><dt><span class="i18n-en">Host</span><span class="i18n-zh">主办方</span></dt><dd><span class="i18n-en">Association Typographique Internationale</span><span class="i18n-zh">国际字体协会（ATypI）</span></dd></div>
           </dl>
-          <a class="text-link talk-detail-link" href="atypi-2026.html">View details</a>
+          <a class="text-link talk-detail-link" href="atypi-2026.html"><span class="i18n-en">View details</span><span class="i18n-zh">查看详情</span></a>
         </div>
       </article>
 
       <article class="talk-card">
         <a class="talk-image" href="wave-2.html"><img src="assets/talks/wave-2-cover.jpg" alt="Writing As Visual Engagement / WAVE 2 presentation" decoding="async" loading="lazy"></a>
         <div class="talk-copy">
-          <p class="eyebrow">Conference Presentation</p>
+          <p class="eyebrow"><span class="i18n-en">Conference Presentation</span><span class="i18n-zh">会议报告</span></p>
           <h2><a href="wave-2.html">Writing As Visual Engagement / WAVE 2</a></h2>
-          <p class="talk-subtitle">Participatory Visuality in Yi Script: Minority Writing and Cultural Engagement in China</p>
+          <p class="talk-subtitle i18n-en">Participatory Visuality in Yi Script: Minority Writing and Cultural Engagement in China</p>
+          <p class="talk-subtitle i18n-zh">彝文的参与式视觉性：中国少数民族文字与文化参与</p>
           <dl class="talk-meta">
-            <div><dt>Event</dt><dd>Writing As Visual Engagement / WAVE 2</dd></div>
-            <div><dt>Date</dt><dd>March 28, 2026</dd></div>
-            <div><dt>Place</dt><dd>University of Cambridge, UK / Hybrid</dd></div>
-            <div><dt>Host</dt><dd>The VIEWS Project, Faculty of Classics, University of Cambridge</dd></div>
+            <div><dt><span class="i18n-en">Event</span><span class="i18n-zh">活动</span></dt><dd>Writing As Visual Engagement / WAVE 2</dd></div>
+            <div><dt><span class="i18n-en">Date</span><span class="i18n-zh">日期</span></dt><dd><span class="i18n-en">March 28, 2026</span><span class="i18n-zh">2026年3月28日</span></dd></div>
+            <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">University of Cambridge, UK / Hybrid</span><span class="i18n-zh">英国剑桥大学 / 线上线下</span></dd></div>
+            <div><dt><span class="i18n-en">Host</span><span class="i18n-zh">主办方</span></dt><dd><span class="i18n-en">The VIEWS Project, Faculty of Classics, University of Cambridge</span><span class="i18n-zh">剑桥大学古典学系 VIEWS 项目</span></dd></div>
           </dl>
-          <a class="text-link talk-detail-link" href="wave-2.html">View details</a>
+          <a class="text-link talk-detail-link" href="wave-2.html"><span class="i18n-en">View details</span><span class="i18n-zh">查看详情</span></a>
         </div>
       </article>
 
       <article class="talk-card">
         <div class="talk-image"><img src="assets/talks/western-typeface-design-01.jpg" alt="Western typeface design lecture visual" decoding="async" loading="lazy"></div>
         <div class="talk-copy">
-          <p class="eyebrow">Course Lecture</p>
-          <h2>Western Typeface Design</h2>
-          <p class="talk-subtitle">Western Typeface Design</p>
+          <p class="eyebrow"><span class="i18n-en">Course Lecture</span><span class="i18n-zh">课程讲座</span></p>
+          <h2><span class="i18n-en">Western Typeface Design</span><span class="i18n-zh">西文字体设计</span></h2>
+          <p class="talk-subtitle i18n-en">Western Typeface Design</p>
+          <p class="talk-subtitle i18n-zh">西文字体设计</p>
           <dl class="talk-meta">
-            <div><dt>Event</dt><dd>Typeface Design Course</dd></div>
-            <div><dt>Date</dt><dd>November 13, 2025, 8:30-12:00</dd></div>
-            <div><dt>Place</dt><dd>Tencent Meeting</dd></div>
-            <div><dt>Host</dt><dd>Qingdao Industry-Education Integration Base, School of Visual Communication Design, Shandong University of Art &amp; Design; organized by Yanzifang Studio</dd></div>
+            <div><dt><span class="i18n-en">Event</span><span class="i18n-zh">活动</span></dt><dd><span class="i18n-en">Typeface Design Course</span><span class="i18n-zh">字体设计课程</span></dd></div>
+            <div><dt><span class="i18n-en">Date</span><span class="i18n-zh">日期</span></dt><dd><span class="i18n-en">November 13, 2025, 8:30-12:00</span><span class="i18n-zh">2025年11月13日 8:30–12:00</span></dd></div>
+            <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Tencent Meeting</span><span class="i18n-zh">腾讯会议</span></dd></div>
+            <div><dt><span class="i18n-en">Host</span><span class="i18n-zh">主办方</span></dt><dd><span class="i18n-en">Qingdao Industry-Education Integration Base, School of Visual Communication Design, Shandong University of Art &amp; Design; organized by Yanzifang Studio</span><span class="i18n-zh">山东工艺美术学院视觉传达设计学院青岛产教融合基地；燕子坊工作室承办</span></dd></div>
           </dl>
         </div>
       </article>
@@ -107,44 +125,47 @@
       <article class="talk-card">
         <a class="talk-image" href="graduate-doctoral-research.html"><img src="assets/talks/graduate-doctoral-research-cover.jpg" alt="Graduate and doctoral research forum presentation visual" decoding="async" loading="lazy"></a>
         <div class="talk-copy">
-          <p class="eyebrow">Academic Forum</p>
-          <h2><a href="graduate-doctoral-research.html">Graduate &amp; Doctoral Research Forum</a></h2>
-          <p class="talk-subtitle">The Development of Hanyu Pinyin and Its Application Challenges in Type Design</p>
+          <p class="eyebrow"><span class="i18n-en">Academic Forum</span><span class="i18n-zh">学术论坛</span></p>
+          <h2><a href="graduate-doctoral-research.html"><span class="i18n-en">Graduate &amp; Doctoral Research Forum</span><span class="i18n-zh">研究生与博士生研究论坛</span></a></h2>
+          <p class="talk-subtitle i18n-en">The Development of Hanyu Pinyin and Its Application Challenges in Type Design</p>
+          <p class="talk-subtitle i18n-zh">汉语拼音的发展及其在字体设计中的应用挑战</p>
           <dl class="talk-meta">
-            <div><dt>Date</dt><dd>May 14-15, 2025</dd></div>
-            <div><dt>Place</dt><dd>Academy of Arts &amp; Design, Tsinghua University / Online and onsite</dd></div>
-            <div><dt>Host</dt><dd>Department of Visual Communication Design, Academy of Arts &amp; Design, Tsinghua University; Department of Typography &amp; Graphic Communication, University of Reading</dd></div>
+            <div><dt><span class="i18n-en">Date</span><span class="i18n-zh">日期</span></dt><dd><span class="i18n-en">May 14-15, 2025</span><span class="i18n-zh">2025年5月14日至15日</span></dd></div>
+            <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Academy of Arts &amp; Design, Tsinghua University / Online and onsite</span><span class="i18n-zh">清华大学美术学院 / 线上线下</span></dd></div>
+            <div><dt><span class="i18n-en">Host</span><span class="i18n-zh">主办方</span></dt><dd><span class="i18n-en">Department of Visual Communication Design, Academy of Arts &amp; Design, Tsinghua University; Department of Typography &amp; Graphic Communication, University of Reading</span><span class="i18n-zh">清华大学美术学院视觉传达设计系；雷丁大学字体与平面传达系</span></dd></div>
           </dl>
-          <a class="text-link talk-detail-link" href="graduate-doctoral-research.html">View details</a>
+          <a class="text-link talk-detail-link" href="graduate-doctoral-research.html"><span class="i18n-en">View details</span><span class="i18n-zh">查看详情</span></a>
         </div>
       </article>
 
       <article class="talk-card">
         <a class="talk-image" href="anyang-2025.html"><img src="assets/talks/anyang-2025-01.jpg" alt="2025 China Anyang International Chinese Characters Conference visual" decoding="async" loading="lazy"></a>
         <div class="talk-copy">
-          <p class="eyebrow">Conference Presentation</p>
-          <h2><a href="anyang-2025.html">Anyang Chinese Characters Conference 2025</a></h2>
-          <p class="talk-subtitle">The Story of Pinyin</p>
+          <p class="eyebrow"><span class="i18n-en">Conference Presentation</span><span class="i18n-zh">会议报告</span></p>
+          <h2><a href="anyang-2025.html"><span class="i18n-en">Anyang Chinese Characters Conference 2025</span><span class="i18n-zh">安阳汉字大会 2025</span></a></h2>
+          <p class="talk-subtitle i18n-en">The Story of Pinyin</p>
+          <p class="talk-subtitle i18n-zh">拼音的故事</p>
           <dl class="talk-meta">
-            <div><dt>Event</dt><dd>Zidao: The Aesthetic Narrative of Writing Forum</dd></div>
-            <div><dt>Date</dt><dd>April 20, 2025</dd></div>
-            <div><dt>Place</dt><dd>Anyang, Henan, China</dd></div>
-            <div><dt>Host</dt><dd>China Anyang International Chinese Characters Conference</dd></div>
+            <div><dt><span class="i18n-en">Event</span><span class="i18n-zh">活动</span></dt><dd><span class="i18n-en">Zidao: The Aesthetic Narrative of Writing Forum</span><span class="i18n-zh">字道：书写的审美叙事论坛</span></dd></div>
+            <div><dt><span class="i18n-en">Date</span><span class="i18n-zh">日期</span></dt><dd><span class="i18n-en">April 20, 2025</span><span class="i18n-zh">2025年4月20日</span></dd></div>
+            <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Anyang, Henan, China</span><span class="i18n-zh">中国河南安阳</span></dd></div>
+            <div><dt><span class="i18n-en">Host</span><span class="i18n-zh">主办方</span></dt><dd><span class="i18n-en">China Anyang International Chinese Characters Conference</span><span class="i18n-zh">中国（安阳）国际汉字大会</span></dd></div>
           </dl>
-          <a class="text-link talk-detail-link" href="anyang-2025.html">View details</a>
+          <a class="text-link talk-detail-link" href="anyang-2025.html"><span class="i18n-en">View details</span><span class="i18n-zh">查看详情</span></a>
         </div>
       </article>
 
       <article class="talk-card">
         <a class="talk-image" href="#"><img src="assets/talks/modern-chinese-character-design-cover.jpg" alt="Lecture on Modernisation of Chinese Typography poster" decoding="async" loading="lazy"></a>
         <div class="talk-copy">
-          <p class="eyebrow">Lecture</p>
-          <h2>Lecture on Modernisation of Chinese Typography</h2>
-          <p class="talk-subtitle">汉字设计的现代之路讲座</p>
+          <p class="eyebrow"><span class="i18n-en">Lecture</span><span class="i18n-zh">讲座</span></p>
+          <h2><span class="i18n-en">Lecture on Modernisation of Chinese Typography</span><span class="i18n-zh">汉字设计的现代之路讲座</span></h2>
+          <p class="talk-subtitle i18n-en">The Modern Path of Chinese Character Design</p>
+          <p class="talk-subtitle i18n-zh">汉字设计的现代之路</p>
           <dl class="talk-meta">
-            <div><dt>Date</dt><dd>December 5, 2024</dd></div>
-            <div><dt>Place</dt><dd>Smart Classroom SD201, Building D, 2F</dd></div>
-            <div><dt>Host</dt><dd>Sichuan Fine Arts Institute course / lecture program</dd></div>
+            <div><dt><span class="i18n-en">Date</span><span class="i18n-zh">日期</span></dt><dd><span class="i18n-en">December 5, 2024</span><span class="i18n-zh">2024年12月5日</span></dd></div>
+            <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Smart Classroom SD201, Building D, 2F</span><span class="i18n-zh">D栋2层智慧教室SD201</span></dd></div>
+            <div><dt><span class="i18n-en">Host</span><span class="i18n-zh">主办方</span></dt><dd><span class="i18n-en">Sichuan Fine Arts Institute course / lecture program</span><span class="i18n-zh">四川美术学院课程／讲座项目</span></dd></div>
           </dl>
         </div>
       </article>
@@ -152,32 +173,35 @@
       <article class="talk-card">
         <a class="talk-image" href="writing-evolution.html"><img src="assets/talks/writing-evolution-01.jpg" alt="Writing Evolution Exhibition Event visual" decoding="async" loading="lazy"></a>
         <div class="talk-copy">
-          <p class="eyebrow">Cultural Event Talk</p>
-          <h2><a href="writing-evolution.html">Writing Evolution Exhibition Event</a></h2>
-          <p class="talk-subtitle">The Story of Yi Script</p>
+          <p class="eyebrow"><span class="i18n-en">Cultural Event Talk</span><span class="i18n-zh">文化活动讲座</span></p>
+          <h2><a href="writing-evolution.html"><span class="i18n-en">Writing Evolution Exhibition Event</span><span class="i18n-zh">文字演变展览活动</span></a></h2>
+          <p class="talk-subtitle i18n-en">The Story of Yi Script</p>
+          <p class="talk-subtitle i18n-zh">彝文的故事</p>
           <dl class="talk-meta">
-            <div><dt>Date</dt><dd>April 27, 2024</dd></div>
-            <div><dt>Place</dt><dd>Embassy of China in the UK, London</dd></div>
-            <div><dt>Host</dt><dd>Cultural event at the Embassy of China in the UK</dd></div>
+            <div><dt><span class="i18n-en">Date</span><span class="i18n-zh">日期</span></dt><dd><span class="i18n-en">April 27, 2024</span><span class="i18n-zh">2024年4月27日</span></dd></div>
+            <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Embassy of China in the UK, London</span><span class="i18n-zh">中国驻英国大使馆，伦敦</span></dd></div>
+            <div><dt><span class="i18n-en">Host</span><span class="i18n-zh">主办方</span></dt><dd><span class="i18n-en">Cultural event at the Embassy of China in the UK</span><span class="i18n-zh">中国驻英国大使馆文化活动</span></dd></div>
           </dl>
-          <a class="text-link talk-detail-link" href="writing-evolution.html">View details</a>
+          <a class="text-link talk-detail-link" href="writing-evolution.html"><span class="i18n-en">View details</span><span class="i18n-zh">查看详情</span></a>
         </div>
       </article>
 
       <article class="talk-card">
         <a class="talk-image" href="#"><img src="assets/talks/chinese-character-glyph-symposium-2023-cover.png" alt="Typography Design in Oracle-Bone Picture Books presentation visual" decoding="async" loading="lazy"></a>
         <div class="talk-copy">
-          <p class="eyebrow">Academic Symposium</p>
-          <h2>Chinese Character Glyph Symposium 2023</h2>
-          <p class="talk-subtitle">Typography Design in Oracle-Bone Picture Books</p>
+          <p class="eyebrow"><span class="i18n-en">Academic Symposium</span><span class="i18n-zh">学术研讨会</span></p>
+          <h2><span class="i18n-en">Chinese Character Glyph Symposium 2023</span><span class="i18n-zh">中国中文信息学会汉字字形信息专业委员会学术研讨会</span></h2>
+          <p class="talk-subtitle i18n-en">Typography Design in Oracle-Bone Picture Books</p>
+          <p class="talk-subtitle i18n-zh">甲骨文绘本中的字体设计</p>
           <dl class="talk-meta">
-            <div><dt>Date</dt><dd>November 25, 2023</dd></div>
-            <div><dt>Place</dt><dd>China Intellectual Property Training Center</dd></div>
-            <div><dt>Host</dt><dd>Chinese Character Glyph Information Committee, Chinese Information Processing Society of China</dd></div>
+            <div><dt><span class="i18n-en">Date</span><span class="i18n-zh">日期</span></dt><dd><span class="i18n-en">November 25, 2023</span><span class="i18n-zh">2023年11月25日</span></dd></div>
+            <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">China Intellectual Property Training Center</span><span class="i18n-zh">中国知识产权培训中心</span></dd></div>
+            <div><dt><span class="i18n-en">Host</span><span class="i18n-zh">主办方</span></dt><dd><span class="i18n-en">Chinese Character Glyph Information Committee, Chinese Information Processing Society of China</span><span class="i18n-zh">中国中文信息学会汉字字形信息专业委员会</span></dd></div>
           </dl>
         </div>
       </article>
     </section>
   </main>
+  <script src="site.js?v=talks-lang-1"></script>
 </body>
 </html>
