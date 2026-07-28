@@ -2366,10 +2366,20 @@ h1 {
     flex-direction: column;
   }
 
+  .site-header {
+    padding-right: 96px;
+  }
+
   .main-nav,
   .topbar nav {
     justify-content: flex-start;
     row-gap: 8px;
+  }
+
+  .lang-switch {
+    position: absolute;
+    top: 16px;
+    right: 24px;
   }
 
   .project-menu {
