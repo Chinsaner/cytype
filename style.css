@@ -716,6 +716,7 @@ h1 {
 
 .talk-copy h2 {
   max-width: 760px;
+  margin-bottom: 0;
   font-size: clamp(24px, 2.75vw, 42px);
   line-height: 1;
 }
