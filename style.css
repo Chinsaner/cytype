@@ -1255,7 +1255,7 @@ h1 {
 .zidao-overview p:not(.eyebrow) {
   max-width: 900px;
   color: var(--muted);
-  font-size: clamp(16px, 1.6vw, 25px);
+  font-size: clamp(12px, 1.2vw, 18.75px);
   line-height: 1.24;
 }
 
