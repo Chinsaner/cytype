@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "Youran Lihei";
-  src: url("assets/fonts/YouranLihei-SemiBold.woff") format("woff");
+  src: url("assets/fonts/YouranLihei-SemiBold.woff?v=subset-1") format("woff");
   font-display: swap;
 }
 
@@ -250,7 +250,7 @@ h1 {
 .home-title h1 {
   max-width: 1120px;
   margin: 0;
-  font-family: "Easy Lihei Titles", "Noto Sans SC", sans-serif;
+  font-family: "Easy Lihei Titles", "Youran Lihei", "Noto Sans SC", sans-serif;
   font-size: clamp(74px, 8vw, 140px);
   font-weight: 800;
   letter-spacing: 0;
