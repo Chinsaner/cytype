@@ -5,25 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Writing As Visual Engagement / WAVE 2 | CY Type</title>
   <meta name="description" content="Writing As Visual Engagement / WAVE 2 presentation by Yue Chen.">
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="activities.html">Activities</a><a href="atypi-2026.html">Previous</a><a href="graduate-doctoral-research.html">Next</a></nav>
+    <div class="header-right">
+      <nav><a href="activities.html"><span class="i18n-en">Activities</span><span class="i18n-zh">活动</span></a><a href="atypi-2026.html"><span class="i18n-en">Previous</span><span class="i18n-zh">上一篇</span></a><a href="graduate-doctoral-research.html"><span class="i18n-en">Next</span><span class="i18n-zh">下一篇</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
 
   <main>
     <section class="talk-detail-hero">
-      <p class="eyebrow">Conference Presentation</p>
+      <p class="eyebrow"><span class="i18n-en">Conference Presentation</span><span class="i18n-zh">会议报告</span></p>
       <h1>Writing As Visual Engagement / WAVE 2</h1>
-      <p>Participatory Visuality in Yi Script: Minority Writing and Cultural Engagement in China</p>
+      <p><span class="i18n-en">Participatory Visuality in Yi Script: Minority Writing and Cultural Engagement in China</span><span class="i18n-zh">彝文的参与式视觉性：中国少数民族文字与文化参与</span></p>
       <dl class="talk-meta">
-        <div><dt>Event</dt><dd>Writing As Visual Engagement / WAVE 2</dd></div>
-        <div><dt>Date</dt><dd>March 28, 2026</dd></div>
-        <div><dt>Place</dt><dd>University of Cambridge, UK / Hybrid</dd></div>
-        <div><dt>Host</dt><dd>The VIEWS Project, Faculty of Classics, University of Cambridge</dd></div>
-        <div><dt>Links</dt><dd><a href="https://viewsproject.wordpress.com/writing-as-visual-engagement/" target="_blank" rel="noopener">Schedule</a> / <a href="https://viewsproject.wordpress.com/category/views-events/" target="_blank" rel="noopener">News release</a></dd></div>
+        <div><dt><span class="i18n-en">Event</span><span class="i18n-zh">活动</span></dt><dd>Writing As Visual Engagement / WAVE 2</dd></div>
+        <div><dt><span class="i18n-en">Date</span><span class="i18n-zh">日期</span></dt><dd><span class="i18n-en">March 28, 2026</span><span class="i18n-zh">2026年3月28日</span></dd></div>
+        <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">University of Cambridge, UK / Hybrid</span><span class="i18n-zh">英国剑桥大学 / 线上线下</span></dd></div>
+        <div><dt><span class="i18n-en">Host</span><span class="i18n-zh">主办方</span></dt><dd><span class="i18n-en">The VIEWS Project, Faculty of Classics, University of Cambridge</span><span class="i18n-zh">剑桥大学古典学系 VIEWS 项目</span></dd></div>
+        <div><dt><span class="i18n-en">Links</span><span class="i18n-zh">链接</span></dt><dd><a href="https://viewsproject.wordpress.com/writing-as-visual-engagement/" target="_blank" rel="noopener"><span class="i18n-en">Schedule</span><span class="i18n-zh">日程</span></a> / <a href="https://viewsproject.wordpress.com/category/views-events/" target="_blank" rel="noopener"><span class="i18n-en">News release</span><span class="i18n-zh">新闻稿</span></a></dd></div>
       </dl>
     </section>
 
@@ -55,9 +68,10 @@
     </section>
 
     <section class="pager">
-      <a href="atypi-2026.html">Previous: ATypI 2026 Stanford</a>
-      <a href="graduate-doctoral-research.html">Next: Graduate & Doctoral Research Forum</a>
+      <a href="atypi-2026.html"><span class="i18n-en">Previous: ATypI 2026 Stanford</span><span class="i18n-zh">上一篇：ATypI 2026 斯坦福</span></a>
+      <a href="graduate-doctoral-research.html"><span class="i18n-en">Next: Graduate & Doctoral Research Forum</span><span class="i18n-zh">下一篇：研究生与博士生研究论坛</span></a>
     </section>
   </main>
+  <script src="site.js?v=talk-detail-lang-1"></script>
 </body>
 </html>

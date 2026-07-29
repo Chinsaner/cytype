@@ -5,23 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Writing Evolution Exhibition Event | CY Type</title>
   <meta name="description" content="Writing Evolution Exhibition Event talk by Yue Chen.">
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="activities.html">Activities</a><a href="anyang-2025.html">Previous</a><a href="grapholinguistics-2026.html">Next</a></nav>
+    <div class="header-right">
+      <nav><a href="activities.html"><span class="i18n-en">Activities</span><span class="i18n-zh">活动</span></a><a href="anyang-2025.html"><span class="i18n-en">Previous</span><span class="i18n-zh">上一篇</span></a><a href="grapholinguistics-2026.html"><span class="i18n-en">Next</span><span class="i18n-zh">下一篇</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
 
   <main>
     <section class="talk-detail-hero">
-      <p class="eyebrow">Cultural Event Talk</p>
-      <h1>Writing Evolution Exhibition Event</h1>
-      <p>The Story of Yi Script</p>
+      <p class="eyebrow"><span class="i18n-en">Cultural Event Talk</span><span class="i18n-zh">文化活动讲座</span></p>
+      <h1><span class="i18n-en">Writing Evolution Exhibition Event</span><span class="i18n-zh">文字演变展览活动</span></h1>
+      <p><span class="i18n-en">The Story of Yi Script</span><span class="i18n-zh">彝文的故事</span></p>
       <dl class="talk-meta">
-        <div><dt>Date</dt><dd>April 27, 2024</dd></div>
-        <div><dt>Place</dt><dd>Embassy of China in the UK, London</dd></div>
-        <div><dt>Host</dt><dd>Cultural event at the Embassy of China in the UK</dd></div>
+        <div><dt><span class="i18n-en">Date</span><span class="i18n-zh">日期</span></dt><dd><span class="i18n-en">April 27, 2024</span><span class="i18n-zh">2024年4月27日</span></dd></div>
+        <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Embassy of China in the UK, London</span><span class="i18n-zh">中国驻英国大使馆，伦敦</span></dd></div>
+        <div><dt><span class="i18n-en">Host</span><span class="i18n-zh">主办方</span></dt><dd><span class="i18n-en">Cultural event at the Embassy of China in the UK</span><span class="i18n-zh">中国驻英国大使馆文化活动</span></dd></div>
       </dl>
     </section>
 
@@ -37,9 +50,10 @@
     </section>
 
     <section class="pager">
-      <a href="anyang-2025.html">Previous: Anyang Chinese Characters Conference 2025</a>
+      <a href="anyang-2025.html"><span class="i18n-en">Previous: Anyang Chinese Characters Conference 2025</span><span class="i18n-zh">上一篇：安阳汉字大会 2025</span></a>
       <a href="grapholinguistics-2026.html">Next: /gʁafematik/ 2026</a>
     </section>
   </main>
+  <script src="site.js?v=talk-detail-lang-1"></script>
 </body>
 </html>

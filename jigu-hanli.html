@@ -4,12 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jigu Hanli | Yue CHEN</title>
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="lihei.html">Previous</a><a href="jingzhe-an.html">Next</a></nav>
+    <div class="header-right">
+      <nav><a href="lihei.html"><span class="i18n-en">Previous</span><span class="i18n-zh">上一篇</span></a><a href="jingzhe-an.html"><span class="i18n-en">Next</span><span class="i18n-zh">下一篇</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
   <main>
     <section class="project-hero-image project-hero-awarded">
@@ -29,11 +42,11 @@
       </aside>
     </section>
     <section class="meta-grid">
-      <div><span>Scripts</span><strong>Hanzi, Latin</strong></div>
-      <div><span>Award</span><strong>The 6th Hanyi Font Star Design Competition Chinese Type Student Category First Prize</strong></div>
-      <div><span>Foundry</span><strong>Hanyi Fonts (unreleased)</strong></div>
-      <div><span>Designers</span><strong>Yue CHEN, Congyu ZHANG</strong></div>
-      <div><span>Period</span><strong>September 2025 to present</strong></div>
+      <div><span><span class="i18n-en">Scripts</span><span class="i18n-zh">文字系统</span></span><strong><span class="i18n-en">Hanzi, Latin</span><span class="i18n-zh">汉字、拉丁字母</span></strong></div>
+      <div><span><span class="i18n-en">Award</span><span class="i18n-zh">获奖</span></span><strong>The 6th Hanyi Font Star Design Competition Chinese Type Student Category First Prize</strong></div>
+      <div><span><span class="i18n-en">Foundry</span><span class="i18n-zh">发行方</span></span><strong><span class="i18n-en">Hanyi Fonts (unreleased)</span><span class="i18n-zh">汉仪字库（未发布）</span></strong></div>
+      <div><span><span class="i18n-en">Designers</span><span class="i18n-zh">设计师</span></span><strong>Yue CHEN, Congyu ZHANG</strong></div>
+      <div><span><span class="i18n-en">Period</span><span class="i18n-zh">项目周期</span></span><strong><span class="i18n-en">September 2025 to present</span><span class="i18n-zh">2025年9月至今</span></strong></div>
     </section>
     <section class="specimen-carousel jigu-hanli-carousel" data-specimen-carousel data-carousel-interval="2200" aria-label="Jigu Hanli detail specimens">
       <img class="active" src="assets/details/jigu-hanli/jigu-hanli-detail-01.png" alt="Jigu Hanli detail specimen 1" decoding="async" loading="lazy">
@@ -41,8 +54,8 @@
       <img src="assets/details/jigu-hanli/jigu-hanli-detail-03.png" alt="Jigu Hanli detail specimen 3" decoding="async" loading="lazy">
     </section>
     <section class="pager">
-      <a href="lihei.html">Previous: Youran Lihei</a>
-      <a href="jingzhe-an.html">Next: Jingzhe An</a>
+      <a href="lihei.html"><span class="i18n-en">Previous: Youran Lihei</span><span class="i18n-zh">上一篇：悠然隶黑</span></a>
+      <a href="jingzhe-an.html"><span class="i18n-en">Next: Jingzhe An</span><span class="i18n-zh">下一篇：静者安</span></a>
     </section>
   </main>
   <script src="site.js?v=jigu-hanli-carousel-2"></script>

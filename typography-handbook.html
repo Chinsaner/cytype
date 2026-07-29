@@ -5,26 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Design, Typography, etc.: A Handbook | CY Type</title>
   <meta name="description" content="Chinese translation of Design, Typography, etc.: A Handbook by Damien and Claire Gautier.">
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="publications.html">Research</a></nav>
+    <div class="header-right">
+      <nav><a href="publications.html"><span class="i18n-en">Research</span><span class="i18n-zh">研究</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
   <main>
     <section class="talk-detail-hero teaching-detail-hero research-detail-hero">
-      <time class="teaching-detail-date" datetime="2021-07">Jul 2021 – Dec 2021</time>
-      <p class="eyebrow">Book Translation</p>
-      <h1>Design, Typography, etc.: A Handbook</h1>
-      <p class="talk-subtitle">文字设计的可能：从基础到创新实践</p>
-      <p>A comprehensive handbook on print typography, with practical notes, illustrative application examples, and an extensive bibliography.</p>
+      <time class="teaching-detail-date" datetime="2021-07"><span class="i18n-en">Jul 2021 – Dec 2021</span><span class="i18n-zh">2021年7月至12月</span></time>
+      <p class="eyebrow"><span class="i18n-en">Book Translation</span><span class="i18n-zh">图书翻译</span></p>
+      <h1><span class="i18n-en">Design, Typography, etc.: A Handbook</span><span class="i18n-zh">文字设计的可能：从基础到创新实践</span></h1>
+      <p class="i18n-en">A comprehensive handbook on print typography, with practical notes, illustrative application examples, and an extensive bibliography.</p>
+      <p class="i18n-zh">一部关于印刷字体设计的综合性手册，包含实用笔记、图文并茂的应用案例与详尽的参考书目。</p>
       <dl class="talk-meta">
-        <div><dt>Author</dt><dd>Damien Gautier, Claire Gautier (France)</dd></div>
-        <div><dt>Publisher</dt><dd>Shanghai People's Art Publishing House</dd></div>
-        <div><dt>Translators</dt><dd>Chen Yue, Liu Zhao</dd></div>
-        <div><dt>Length</dt><dd>141,463 characters (Chinese, excluding spaces)</dd></div>
-        <div><dt>Published</dt><dd>2024</dd></div>
+        <div><dt><span class="i18n-en">Author</span><span class="i18n-zh">作者</span></dt><dd><span class="i18n-en">Damien Gautier, Claire Gautier (France)</span><span class="i18n-zh">达米安·戈蒂耶、克莱尔·戈蒂耶（法国）</span></dd></div>
+        <div><dt><span class="i18n-en">Publisher</span><span class="i18n-zh">出版社</span></dt><dd><span class="i18n-en">Shanghai People's Art Publishing House</span><span class="i18n-zh">上海人民美术出版社</span></dd></div>
+        <div><dt><span class="i18n-en">Translators</span><span class="i18n-zh">译者</span></dt><dd><span class="i18n-en">Chen Yue, Liu Zhao</span><span class="i18n-zh">陈玥、刘钊</span></dd></div>
+        <div><dt><span class="i18n-en">Length</span><span class="i18n-zh">字数</span></dt><dd><span class="i18n-en">141,463 characters (Chinese, excluding spaces)</span><span class="i18n-zh">141,463 字（中文，不含空格）</span></dd></div>
+        <div><dt><span class="i18n-en">Published</span><span class="i18n-zh">出版年份</span></dt><dd>2024</dd></div>
       </dl>
     </section>
 
@@ -42,9 +55,10 @@
     </section>
 
     <section class="pager">
-      <a href="publications.html">Back to Publications</a>
-      <a href="brands.html">Back to Research</a>
+      <a href="publications.html"><span class="i18n-en">Back to Publications</span><span class="i18n-zh">返回出版物</span></a>
+      <a href="brands.html"><span class="i18n-en">Back to Research</span><span class="i18n-zh">返回研究</span></a>
     </section>
   </main>
+  <script src="site.js?v=research-detail-lang-1"></script>
 </body>
 </html>

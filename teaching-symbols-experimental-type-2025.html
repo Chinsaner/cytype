@@ -5,25 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Symbols and Contemporary Experimental Typeface Design | Teaching | CY Type</title>
   <meta name="description" content="Symbols and Contemporary Experimental Typeface Design teaching documentation by Yue Chen.">
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="activities.html">Activities</a><a href="teaching-foundations-latin-type-2026.html">Previous</a><a href="teaching-cross-script-2025.html">Next</a></nav>
+    <div class="header-right">
+      <nav><a href="activities.html"><span class="i18n-en">Activities</span><span class="i18n-zh">活动</span></a><a href="teaching-foundations-latin-type-2026.html"><span class="i18n-en">Previous</span><span class="i18n-zh">上一篇</span></a><a href="teaching-cross-script-2025.html"><span class="i18n-en">Next</span><span class="i18n-zh">下一篇</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
 
   <main>
     <section class="talk-detail-hero teaching-detail-hero">
       <time class="teaching-detail-date" datetime="2025.11">2025.11-2025.12</time>
-      <p class="eyebrow">Course</p>
-      <h1>Symbols and Contemporary Experimental Typeface Design</h1>
-      <p>Experimental type design course exploring symbols, visual systems, and contemporary display typography.</p>
+      <p class="eyebrow"><span class="i18n-en">Course</span><span class="i18n-zh">课程</span></p>
+      <h1><span class="i18n-en">Symbols and Contemporary Experimental Typeface Design</span><span class="i18n-zh">符号与当代实验字体设计</span></h1>
+      <p><span class="i18n-en">Experimental type design course exploring symbols, visual systems, and contemporary display typography.</span><span class="i18n-zh">探索符号、视觉系统与当代展示字体的实验性字体设计课程。</span></p>
       <dl class="talk-meta">
-        <div><dt>School</dt><dd>Sichuan Fine Arts Institute</dd></div>
-        <div><dt>Place</dt><dd>Chongqing</dd></div>
-        <div><dt>Students</dt><dd>Studio 2, Class of 2023</dd></div>
-        <div><dt>Role</dt><dd>Instructor</dd></div>
+        <div><dt><span class="i18n-en">School</span><span class="i18n-zh">院校</span></dt><dd><span class="i18n-en">Sichuan Fine Arts Institute</span><span class="i18n-zh">四川美术学院</span></dd></div>
+        <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Chongqing</span><span class="i18n-zh">重庆</span></dd></div>
+        <div><dt><span class="i18n-en">Students</span><span class="i18n-zh">学生</span></dt><dd><span class="i18n-en">Studio 2, Class of 2023</span><span class="i18n-zh">2023级第二工作室</span></dd></div>
+        <div><dt><span class="i18n-en">Role</span><span class="i18n-zh">角色</span></dt><dd><span class="i18n-en">Instructor</span><span class="i18n-zh">授课教师</span></dd></div>
       </dl>
     </section>
 
@@ -63,9 +76,10 @@
     </section>
 
     <section class="pager">
-      <a href="teaching-foundations-latin-type-2026.html">Previous: Foundations of Latin Type Design</a>
-      <a href="teaching-cross-script-2025.html">Next: Chinese-Latin Cross-script Design and Application</a>
+      <a href="teaching-foundations-latin-type-2026.html"><span class="i18n-en">Previous: Foundations of Latin Type Design</span><span class="i18n-zh">上一篇：拉丁字体设计基础</span></a>
+      <a href="teaching-cross-script-2025.html"><span class="i18n-en">Next: Chinese-Latin Cross-script Design and Application</span><span class="i18n-zh">下一篇：中西文交叉设计与运用</span></a>
     </section>
   </main>
+  <script src="site.js?v=teaching-detail-lang-1"></script>
 </body>
 </html>

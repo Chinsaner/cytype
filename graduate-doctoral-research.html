@@ -5,23 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Graduate and Doctoral Research | CY Type</title>
   <meta name="description" content="Graduate and Doctoral Research forum presentation by Yue Chen.">
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="activities.html">Activities</a><a href="wave-2.html">Previous</a><a href="anyang-2025.html">Next</a></nav>
+    <div class="header-right">
+      <nav><a href="activities.html"><span class="i18n-en">Activities</span><span class="i18n-zh">活动</span></a><a href="wave-2.html"><span class="i18n-en">Previous</span><span class="i18n-zh">上一篇</span></a><a href="anyang-2025.html"><span class="i18n-en">Next</span><span class="i18n-zh">下一篇</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
 
   <main>
     <section class="talk-detail-hero">
-      <p class="eyebrow">Academic Forum</p>
-      <h1>Graduate and Doctoral Research: Character Form, Type, and Typography</h1>
-      <p>The Development of Hanyu Pinyin and Its Application Challenges in Type Design</p>
+      <p class="eyebrow"><span class="i18n-en">Academic Forum</span><span class="i18n-zh">学术论坛</span></p>
+      <h1><span class="i18n-en">Graduate and Doctoral Research: Character Form, Type, and Typography</span><span class="i18n-zh">研究生与博士生研究论坛：字形、字体与文字设计</span></h1>
+      <p><span class="i18n-en">The Development of Hanyu Pinyin and Its Application Challenges in Type Design</span><span class="i18n-zh">汉语拼音的发展及其在字体设计中的应用挑战</span></p>
       <dl class="talk-meta">
-        <div><dt>Date</dt><dd>May 14-15, 2025</dd></div>
-        <div><dt>Place</dt><dd>Academy of Arts &amp; Design, Tsinghua University / Online and onsite</dd></div>
-        <div><dt>Host</dt><dd>Department of Visual Communication Design, Academy of Arts &amp; Design, Tsinghua University; Department of Typography &amp; Graphic Communication, University of Reading</dd></div>
+        <div><dt><span class="i18n-en">Date</span><span class="i18n-zh">日期</span></dt><dd><span class="i18n-en">May 14-15, 2025</span><span class="i18n-zh">2025年5月14日至15日</span></dd></div>
+        <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Academy of Arts &amp; Design, Tsinghua University / Online and onsite</span><span class="i18n-zh">清华大学美术学院 / 线上线下</span></dd></div>
+        <div><dt><span class="i18n-en">Host</span><span class="i18n-zh">主办方</span></dt><dd><span class="i18n-en">Department of Visual Communication Design, Academy of Arts &amp; Design, Tsinghua University; Department of Typography &amp; Graphic Communication, University of Reading</span><span class="i18n-zh">清华大学美术学院视觉传达设计系；雷丁大学字体与平面传达系</span></dd></div>
       </dl>
     </section>
 
@@ -41,9 +54,10 @@
     </section>
 
     <section class="pager">
-      <a href="wave-2.html">Previous: Writing As Visual Engagement / WAVE 2</a>
-      <a href="anyang-2025.html">Next: Anyang Chinese Characters Conference 2025</a>
+      <a href="wave-2.html"><span class="i18n-en">Previous: Writing As Visual Engagement / WAVE 2</span><span class="i18n-zh">上一篇：Writing As Visual Engagement / WAVE 2</span></a>
+      <a href="anyang-2025.html"><span class="i18n-en">Next: Anyang Chinese Characters Conference 2025</span><span class="i18n-zh">下一篇：安阳汉字大会 2025</span></a>
     </section>
   </main>
+  <script src="site.js?v=talk-detail-lang-1"></script>
 </body>
 </html>

@@ -4,12 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yourong Type | Yue CHEN</title>
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="jingzhe-an.html">Previous</a><a href="aki.html">Next</a></nav>
+    <div class="header-right">
+      <nav><a href="jingzhe-an.html"><span class="i18n-en">Previous</span><span class="i18n-zh">上一篇</span></a><a href="aki.html"><span class="i18n-en">Next</span><span class="i18n-zh">下一篇</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
   <main>
     <section class="project-hero-image project-hero-awarded">
@@ -29,11 +42,11 @@
       </aside>
     </section>
     <section class="meta-grid">
-      <div><span>Scripts</span><strong>Hanzi, Latin</strong></div>
-      <div><span>Award</span><strong>Morisawa Award Honorable Mention 2024</strong></div>
-      <div><span>Foundry</span><strong>Not available yet</strong></div>
-      <div><span>Designers</span><strong>Congyu ZHANG, Yue CHEN</strong></div>
-      <div><span>Period</span><strong>May 2024 to present</strong></div>
+      <div><span><span class="i18n-en">Scripts</span><span class="i18n-zh">文字系统</span></span><strong><span class="i18n-en">Hanzi, Latin</span><span class="i18n-zh">汉字、拉丁字母</span></strong></div>
+      <div><span><span class="i18n-en">Award</span><span class="i18n-zh">获奖</span></span><strong>Morisawa Award Honorable Mention 2024</strong></div>
+      <div><span><span class="i18n-en">Foundry</span><span class="i18n-zh">发行方</span></span><strong><span class="i18n-en">Not available yet</span><span class="i18n-zh">暂无</span></strong></div>
+      <div><span><span class="i18n-en">Designers</span><span class="i18n-zh">设计师</span></span><strong>Congyu ZHANG, Yue CHEN</strong></div>
+      <div><span><span class="i18n-en">Period</span><span class="i18n-zh">项目周期</span></span><strong><span class="i18n-en">May 2024 to present</span><span class="i18n-zh">2024年5月至今</span></strong></div>
     </section>
     <section class="horizontal-gallery-section" aria-label="Yourong Type specimen gallery">
       <div class="horizontal-gallery auto-gallery" data-horizontal-gallery data-auto-gallery>
@@ -58,8 +71,8 @@
       <img src="assets/details/yourong-gallery/yourong-gallery-wide-04.jpg" alt="Yourong Type wide specimen 4" decoding="async" loading="lazy">
     </section>
     <section class="pager">
-      <a href="jingzhe-an.html">Previous: Jingzhe An</a>
-      <a href="aki.html">Next: Aki Family</a>
+      <a href="jingzhe-an.html"><span class="i18n-en">Previous: Jingzhe An</span><span class="i18n-zh">上一篇：静者安</span></a>
+      <a href="aki.html"><span class="i18n-en">Next: Aki Family</span><span class="i18n-zh">下一篇：阿町家族</span></a>
     </section>
   </main>
   <script src="site.js?v=yourong-auto-gallery-6"></script>

@@ -5,40 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comparable Writing Units for Ideographic Yi | CY Type</title>
   <meta name="description" content="Establishing comparable writing units in a non-unified writing system: a grapholinguistic approach based on ideographic Yi.">
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="brands.html">Research</a></nav>
+    <div class="header-right">
+      <nav><a href="brands.html"><span class="i18n-en">Research</span><span class="i18n-zh">研究</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
   <main>
     <section class="talk-detail-hero teaching-detail-hero research-detail-hero">
-      <p class="eyebrow">Script Encoding Research</p>
-      <h1>Comparable Writing Units for Ideographic Yi</h1>
-      <p>A grapholinguistic case study of the Ideographic Yi Unicode Submission Working Group's effort to turn scattered, image-based character sources into a single comparable, traceable dataset.</p>
+      <p class="eyebrow"><span class="i18n-en">Script Encoding Research</span><span class="i18n-zh">文字编码研究</span></p>
+      <h1><span class="i18n-en">Comparable Writing Units for Ideographic Yi</span><span class="i18n-zh">表意彝文可比较书写单位研究</span></h1>
+      <p class="i18n-en">A grapholinguistic case study of the Ideographic Yi Unicode Submission Working Group's effort to turn scattered, image-based character sources into a single comparable, traceable dataset.</p>
+      <p class="i18n-zh">表意彝文编码提交工作组的字符学案例研究，致力于将分散的图像化字符资料，转化为统一、可比较、可追溯的数据集。</p>
     </section>
 
     <section class="simple-section">
-      <div><h2>Background</h2></div>
+      <div><h2><span class="i18n-en">Background</span><span class="i18n-zh">背景</span></h2></div>
       <div class="research-article-copy">
-        <p>Ideographic Yi — distinct from the already-encoded syllabic Yi script — has no standard Unicode code points. Its written record survives mainly as scanned images rather than searchable text, which limits input, search, and long-term storage.</p>
-        <p>In response, the Ideographic Yi Unicode Submission Working Group formed to move the script from scattered, non-encoded image material toward organised character data: a comparable and traceable basis for a future Unicode submission. Group Leader: Kushim Jiang. Key members: Awen Shibi, Nuo Ma Niji, Jili Mimi, Azhuo Qubu, Ke'ou Jili, Mopa Jiha, Lu Fuquan, Yue Chen.</p>
+        <p class="i18n-en">Ideographic Yi — distinct from the already-encoded syllabic Yi script — has no standard Unicode code points. Its written record survives mainly as scanned images rather than searchable text, which limits input, search, and long-term storage.</p>
+        <p class="i18n-zh">表意彝文——有别于已编码的音节彝文——目前尚无标准 Unicode 码位。其书写记录主要以扫描图像的形式留存，而非可检索的文本，这限制了输入、检索与长期存储。</p>
+        <p class="i18n-en">In response, the Ideographic Yi Unicode Submission Working Group formed to move the script from scattered, non-encoded image material toward organised character data: a comparable and traceable basis for a future Unicode submission. Group Leader: Kushim Jiang. Key members: Awen Shibi, Nuo Ma Niji, Jili Mimi, Azhuo Qubu, Ke'ou Jili, Mopa Jiha, Lu Fuquan, Yue Chen.</p>
+        <p class="i18n-zh">为此，表意彝文 Unicode 提交工作组应运而生，致力于将分散、未编码的图像资料转化为有组织的字符数据，为未来的 Unicode 提交提供可比较、可追溯的基础。工作组组长：Kushim Jiang。核心成员：Awen Shibi、Nuo Ma Niji、Jili Mimi、Azhuo Qubu、Ke'ou Jili、Mopa Jiha、Lu Fuquan、陈玥（Yue Chen）。</p>
       </div>
     </section>
 
     <section class="simple-section">
-      <div><h2>Source Materials</h2></div>
+      <div><h2><span class="i18n-en">Source Materials</span><span class="i18n-zh">原始资料</span></h2></div>
       <div class="research-article-copy">
-        <p>Four authoritative dictionaries, spanning Yunnan, Sichuan, Guizhou and Guangxi, were selected as the working group's comparison basis.</p>
+        <p class="i18n-en">Four authoritative dictionaries, spanning Yunnan, Sichuan, Guizhou and Guangxi, were selected as the working group's comparison basis.</p>
+        <p class="i18n-zh">工作组选取了四部涵盖云南、四川、贵州与广西的权威字典，作为比较研究的基础。</p>
         <table class="research-table">
           <thead>
             <tr>
-              <th>Code</th>
-              <th>Source</th>
-              <th>Author / Organisation</th>
-              <th>Year</th>
-              <th>Entries</th>
+              <th><span class="i18n-en">Code</span><span class="i18n-zh">代码</span></th>
+              <th><span class="i18n-en">Source</span><span class="i18n-zh">来源</span></th>
+              <th><span class="i18n-en">Author / Organisation</span><span class="i18n-zh">作者／机构</span></th>
+              <th><span class="i18n-en">Year</span><span class="i18n-zh">年份</span></th>
+              <th><span class="i18n-en">Entries</span><span class="i18n-zh">条目数</span></th>
             </tr>
           </thead>
           <tbody>
@@ -73,7 +90,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <td colspan="4">Total individual glyph entries</td>
+              <td colspan="4"><span class="i18n-en">Total individual glyph entries</span><span class="i18n-zh">字形条目总数</span></td>
               <td>11,891</td>
             </tr>
           </tfoot>
@@ -82,25 +99,28 @@
     </section>
 
     <section class="simple-section">
-      <div><h2>Methodology</h2></div>
+      <div><h2><span class="i18n-en">Methodology</span><span class="i18n-zh">方法</span></h2></div>
       <div class="research-article-copy">
         <ol class="research-steps">
           <li>
-            <strong>Glyph capture and vectorisation</strong>
-            <p>Source documents were scanned and segmented into individual glyph images using semi-automatic tooling (AutoCUT), then manually inspected and adjusted. Each glyph was outlined and vectorised (FontCreator), inspected again, and incorporated into font files for unified glyph management.</p>
+            <strong><span class="i18n-en">Glyph capture and vectorisation</span><span class="i18n-zh">字形采集与矢量化</span></strong>
+            <p class="i18n-en">Source documents were scanned and segmented into individual glyph images using semi-automatic tooling (AutoCUT), then manually inspected and adjusted. Each glyph was outlined and vectorised (FontCreator), inspected again, and incorporated into font files for unified glyph management.</p>
+            <p class="i18n-zh">原始文献经扫描后，使用半自动工具（AutoCUT）切分为单个字形图像，再经人工检查与调整。每个字形经过描边与矢量化处理（FontCreator），再次检查后并入字体文件，进行统一的字形管理。</p>
           </li>
           <li>
-            <strong>Structured annotation</strong>
-            <p>Each source was recorded in its own worksheet under a unified field structure, producing four source-segmented data tables:</p>
+            <strong><span class="i18n-en">Structured annotation</span><span class="i18n-zh">结构化标注</span></strong>
+            <p class="i18n-en">Each source was recorded in its own worksheet under a unified field structure, producing four source-segmented data tables:</p>
+            <p class="i18n-zh">每个来源均在统一的字段结构下记录于独立工作表中，形成按来源划分的四张数据表：</p>
             <ul>
-              <li>Index, temporary code point, glyph, page, sequence number on that page</li>
-              <li>Source reference, radical, stroke count</li>
-              <li>Representative pronunciation, meaning</li>
+              <li><span class="i18n-en">Index, temporary code point, glyph, page, sequence number on that page</span><span class="i18n-zh">索引、临时码位、字形、页码、页内序号</span></li>
+              <li><span class="i18n-en">Source reference, radical, stroke count</span><span class="i18n-zh">来源出处、部首、笔画数</span></li>
+              <li><span class="i18n-en">Representative pronunciation, meaning</span><span class="i18n-zh">代表读音、字义</span></li>
             </ul>
           </li>
           <li>
-            <strong>Cross-source comparison</strong>
-            <p>Glyphs were compared pairwise for structure. High structural consistency triggers a semantic consistency check: the same meaning merges two entries into one row as graphic variants; a different meaning opens a new row as a distinct semantic unit. Significant structural differences trigger a structural relationship judgment: a structural-variant relation still merges the row, while an unrelated structure opens a new row as a different character. The result is a single cross-source master table.</p>
+            <strong><span class="i18n-en">Cross-source comparison</span><span class="i18n-zh">跨来源比较</span></strong>
+            <p class="i18n-en">Glyphs were compared pairwise for structure. High structural consistency triggers a semantic consistency check: the same meaning merges two entries into one row as graphic variants; a different meaning opens a new row as a distinct semantic unit. Significant structural differences trigger a structural relationship judgment: a structural-variant relation still merges the row, while an unrelated structure opens a new row as a different character. The result is a single cross-source master table.</p>
+            <p class="i18n-zh">对字形进行两两结构比较。结构高度一致时，触发字义一致性检查：字义相同则合并为一行，视为异体字形；字义不同则新建一行，视为不同的语义单位。结构存在明显差异时，触发结构关系判断：属于结构异体关系仍合并为一行，结构无关则新建一行，视为不同字符。最终形成一张跨来源的总表。</p>
           </li>
         </ol>
       </div>
@@ -120,8 +140,8 @@
     </section>
 
     <section class="pager">
-      <a href="brands.html">Back to Research</a>
-      <a href="zidao.html">Next: Way of Type</a>
+      <a href="brands.html"><span class="i18n-en">Back to Research</span><span class="i18n-zh">返回研究</span></a>
+      <a href="zidao.html"><span class="i18n-en">Next: Way of Type</span><span class="i18n-zh">下一篇：字道</span></a>
     </section>
   </main>
   <script src="site.js?v=ideographic-yi-carousel-1"></script>

@@ -4,23 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Computer Digital Font Development of Jianzi Notation System for Guqin | Yue CHEN</title>
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="shanghai-sky.html">Previous</a><a href="lihei.html">Next</a></nav>
+    <div class="header-right">
+      <nav><a href="shanghai-sky.html"><span class="i18n-en">Previous</span><span class="i18n-zh">上一篇</span></a><a href="lihei.html"><span class="i18n-en">Next</span><span class="i18n-zh">下一篇</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
   <main>
     <section class="project-hero-image">
       <img src="assets/headers/guqin-header.png" alt="Computer digital font development of Jianzi notation system for Guqin" decoding="async">
     </section>
     <section class="meta-grid">
-      <div><span>Project</span><strong>Computer digital font development of Jianzi notation system for Guqin</strong></div>
-      <div><span>Scripts</span><strong>Jianzi (large character)<br>Jianzi (small character)</strong></div>
-      <div><span>Client</span><strong>Culture and Art Publishing House</strong></div>
-      <div><span>Designers</span><strong>Zhao LIU, Kui ZHU, Yiwei CHEN, Yue CHEN, Jingjing DUN, Xicheng YANG, Peilin SONG</strong></div>
-      <div><span>Period</span><strong>September 2020 to October 2024</strong></div>
+      <div><span><span class="i18n-en">Project</span><span class="i18n-zh">项目</span></span><strong><span class="i18n-en">Computer digital font development of Jianzi notation system for Guqin</span><span class="i18n-zh">古琴减字谱数字字体开发</span></strong></div>
+      <div><span><span class="i18n-en">Scripts</span><span class="i18n-zh">文字系统</span></span><strong><span class="i18n-en">Jianzi (large character)<br>Jianzi (small character)</span><span class="i18n-zh">减字谱（大字）<br>减字谱（小字）</span></strong></div>
+      <div><span><span class="i18n-en">Client</span><span class="i18n-zh">委托方</span></span><strong><span class="i18n-en">Culture and Art Publishing House</span><span class="i18n-zh">文化艺术出版社</span></strong></div>
+      <div><span><span class="i18n-en">Designers</span><span class="i18n-zh">设计师</span></span><strong>Zhao LIU, Kui ZHU, Yiwei CHEN, Yue CHEN, Jingjing DUN, Xicheng YANG, Peilin SONG</strong></div>
+      <div><span><span class="i18n-en">Period</span><span class="i18n-zh">项目周期</span></span><strong><span class="i18n-en">September 2020 to October 2024</span><span class="i18n-zh">2020年9月至2024年10月</span></strong></div>
     </section>
     <section class="image-stack">
       <img src="assets/details/guqin-01.jpg" alt="Guqin notation detailed image 1" decoding="async" loading="lazy">
@@ -28,9 +41,10 @@
       <img src="assets/details/guqin-03.jpg" alt="Guqin notation detailed image 3" decoding="async" loading="lazy">
     </section>
     <section class="pager">
-      <a href="shanghai-sky.html">Previous: Shanghai Sky</a>
-      <a href="lihei.html">Next: Youran Lihei</a>
+      <a href="shanghai-sky.html"><span class="i18n-en">Previous: Shanghai Sky</span><span class="i18n-zh">上一篇：上海天空体</span></a>
+      <a href="lihei.html"><span class="i18n-en">Next: Youran Lihei</span><span class="i18n-zh">下一篇：悠然隶黑</span></a>
     </section>
   </main>
+  <script src="site.js?v=guqin-lang-1"></script>
 </body>
 </html>

@@ -5,23 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Traditional Chinese Music Notation Digital Project | CY Type</title>
   <meta name="description" content="Computer digital font development of the Gongche notation system.">
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="brands.html">Research</a><a href="zidao.html">Previous</a></nav>
+    <div class="header-right">
+      <nav><a href="brands.html"><span class="i18n-en">Research</span><span class="i18n-zh">研究</span></a><a href="zidao.html"><span class="i18n-en">Previous</span><span class="i18n-zh">上一篇</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
   <main>
     <section class="talk-detail-hero teaching-detail-hero research-detail-hero">
       <time class="teaching-detail-date" datetime="2020-09">2020.09-2024.09</time>
-      <p class="eyebrow">Notation System Research</p>
-      <h1>Traditional Chinese Music Notation Digital Project</h1>
-      <p>Computer digital font development of the Gongche notation system.</p>
+      <p class="eyebrow"><span class="i18n-en">Notation System Research</span><span class="i18n-zh">记谱系统研究</span></p>
+      <h1><span class="i18n-en">Traditional Chinese Music Notation Digital Project</span><span class="i18n-zh">工尺谱数字化项目</span></h1>
+      <p><span class="i18n-en">Computer digital font development of the Gongche notation system.</span><span class="i18n-zh">工尺谱记谱系统的计算机数字字体开发。</span></p>
       <dl class="talk-meta">
-        <div><dt>Client</dt><dd>Culture and Art Publishing House</dd></div>
-        <div><dt>System</dt><dd>Gongche notation</dd></div>
-        <div><dt>Scope</dt><dd>Digital font development, grapheme tables, beat symbols, combining layouts, horizontal and vertical layout tests</dd></div>
+        <div><dt><span class="i18n-en">Client</span><span class="i18n-zh">委托方</span></dt><dd><span class="i18n-en">Culture and Art Publishing House</span><span class="i18n-zh">文化艺术出版社</span></dd></div>
+        <div><dt><span class="i18n-en">System</span><span class="i18n-zh">系统</span></dt><dd><span class="i18n-en">Gongche notation</span><span class="i18n-zh">工尺谱</span></dd></div>
+        <div><dt><span class="i18n-en">Scope</span><span class="i18n-zh">范围</span></dt><dd><span class="i18n-en">Digital font development, grapheme tables, beat symbols, combining layouts, horizontal and vertical layout tests</span><span class="i18n-zh">数字字体开发、字符表、板眼符号、组合排版、横竖排版测试</span></dd></div>
       </dl>
     </section>
 
@@ -41,9 +54,10 @@
     </section>
 
     <section class="pager">
-      <a href="zidao.html">Previous: Way of Type</a>
-      <a href="brands.html">Back to Research</a>
+      <a href="zidao.html"><span class="i18n-en">Previous: Way of Type</span><span class="i18n-zh">上一篇：字道</span></a>
+      <a href="brands.html"><span class="i18n-en">Back to Research</span><span class="i18n-zh">返回研究</span></a>
     </section>
   </main>
+  <script src="site.js?v=research-detail-lang-1"></script>
 </body>
 </html>

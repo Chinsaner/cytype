@@ -5,25 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chinese-Latin Cross-script Design and Application | Teaching | CY Type</title>
   <meta name="description" content="Chinese-Latin Cross-script Design and Application teaching documentation by Yue Chen.">
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="activities.html">Activities</a><a href="teaching-symbols-experimental-type-2025.html">Previous</a><a href="teaching-food-type-field-practice-2023.html">Next</a></nav>
+    <div class="header-right">
+      <nav><a href="activities.html"><span class="i18n-en">Activities</span><span class="i18n-zh">活动</span></a><a href="teaching-symbols-experimental-type-2025.html"><span class="i18n-en">Previous</span><span class="i18n-zh">上一篇</span></a><a href="teaching-food-type-field-practice-2023.html"><span class="i18n-en">Next</span><span class="i18n-zh">下一篇</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
 
   <main>
     <section class="talk-detail-hero teaching-detail-hero">
       <time class="teaching-detail-date" datetime="2025.04">2025.04-2025.05</time>
-      <p class="eyebrow">Course</p>
-      <h1>Chinese-Latin Cross-script Design and Application</h1>
-      <p>Course on multilingual typography, cross-script composition, and applied type design.</p>
+      <p class="eyebrow"><span class="i18n-en">Course</span><span class="i18n-zh">课程</span></p>
+      <h1><span class="i18n-en">Chinese-Latin Cross-script Design and Application</span><span class="i18n-zh">中西文交叉设计与运用</span></h1>
+      <p><span class="i18n-en">Course on multilingual typography, cross-script composition, and applied type design.</span><span class="i18n-zh">多语言排版、跨文字组合与应用型字体设计课程。</span></p>
       <dl class="talk-meta">
-        <div><dt>School</dt><dd>Sichuan Fine Arts Institute</dd></div>
-        <div><dt>Place</dt><dd>Chongqing</dd></div>
-        <div><dt>Students</dt><dd>Studio 2, Class of 2022</dd></div>
-        <div><dt>Role</dt><dd>Instructor</dd></div>
+        <div><dt><span class="i18n-en">School</span><span class="i18n-zh">院校</span></dt><dd><span class="i18n-en">Sichuan Fine Arts Institute</span><span class="i18n-zh">四川美术学院</span></dd></div>
+        <div><dt><span class="i18n-en">Place</span><span class="i18n-zh">地点</span></dt><dd><span class="i18n-en">Chongqing</span><span class="i18n-zh">重庆</span></dd></div>
+        <div><dt><span class="i18n-en">Students</span><span class="i18n-zh">学生</span></dt><dd><span class="i18n-en">Studio 2, Class of 2022</span><span class="i18n-zh">2022级第二工作室</span></dd></div>
+        <div><dt><span class="i18n-en">Role</span><span class="i18n-zh">角色</span></dt><dd><span class="i18n-en">Instructor</span><span class="i18n-zh">授课教师</span></dd></div>
       </dl>
     </section>
 
@@ -41,9 +54,10 @@
     </section>
 
     <section class="pager">
-      <a href="teaching-symbols-experimental-type-2025.html">Previous: Symbols and Contemporary Experimental Typeface Design</a>
-      <a href="teaching-food-type-field-practice-2023.html">Next: Food Type Design: Field Practice Course</a>
+      <a href="teaching-symbols-experimental-type-2025.html"><span class="i18n-en">Previous: Symbols and Contemporary Experimental Typeface Design</span><span class="i18n-zh">上一篇：符号与当代实验字体设计</span></a>
+      <a href="teaching-food-type-field-practice-2023.html"><span class="i18n-en">Next: Food Type Design: Field Practice Course</span><span class="i18n-zh">下一篇：美食字体（外出实践考察）</span></a>
     </section>
   </main>
+  <script src="site.js?v=teaching-detail-lang-1"></script>
 </body>
 </html>

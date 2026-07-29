@@ -4,12 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Youran Lihei | Yue CHEN</title>
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="guqin.html">Previous</a><a href="jigu-hanli.html">Next</a></nav>
+    <div class="header-right">
+      <nav><a href="guqin.html"><span class="i18n-en">Previous</span><span class="i18n-zh">上一篇</span></a><a href="jigu-hanli.html"><span class="i18n-en">Next</span><span class="i18n-zh">下一篇</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
   <main>
     <section class="project-hero-image project-hero-awarded">
@@ -29,25 +42,25 @@
       </aside>
     </section>
     <section class="meta-grid">
-      <div><span>Scripts</span><strong>Hanzi, Yi, Latin</strong></div>
-      <div><span>Award</span><strong>Tokyo TDC Annual 2026<br>Japan Typography Annual 2026<br>Hiiibrand Awards 2025<br>KTK Design Award 2025</strong></div>
-      <div><span>Foundry</span><strong>Hanyi Fonts (unreleased)</strong></div>
-      <div><span>Designers</span><strong>Congyu ZHANG, Yue CHEN</strong></div>
-      <div><span>Period</span><strong>July 2024 to present</strong></div>
+      <div><span><span class="i18n-en">Scripts</span><span class="i18n-zh">文字系统</span></span><strong><span class="i18n-en">Hanzi, Yi, Latin</span><span class="i18n-zh">汉字、彝文、拉丁字母</span></strong></div>
+      <div><span><span class="i18n-en">Award</span><span class="i18n-zh">获奖</span></span><strong>Tokyo TDC Annual 2026<br>Japan Typography Annual 2026<br>Hiiibrand Awards 2025<br>KTK Design Award 2025</strong></div>
+      <div><span><span class="i18n-en">Foundry</span><span class="i18n-zh">发行方</span></span><strong><span class="i18n-en">Hanyi Fonts (unreleased)</span><span class="i18n-zh">汉仪字库（未发布）</span></strong></div>
+      <div><span><span class="i18n-en">Designers</span><span class="i18n-zh">设计师</span></span><strong>Congyu ZHANG, Yue CHEN</strong></div>
+      <div><span><span class="i18n-en">Period</span><span class="i18n-zh">项目周期</span></span><strong><span class="i18n-en">July 2024 to present</span><span class="i18n-zh">2024年7月至今</span></strong></div>
     </section>
     <section class="tester" data-font-tester>
       <div class="tester-panel">
-        <h2>Type tester</h2>
+        <h2><span class="i18n-en">Type tester</span><span class="i18n-zh">字体测试</span></h2>
         <div class="tester-controls">
-          <label>Style<select data-tester-font><option value="font-lihei">SemiBold</option></select></label>
-          <label class="range-control"><span class="range-name">Size</span><input data-tester-size type="range" min="24" max="180" value="104"><input class="range-value" data-size-value type="number" min="24" max="180" value="104" aria-label="Size value"></label>
-          <label class="range-control"><span class="range-name">Line height</span><input data-tester-line type="range" min="80" max="180" value="105"><input class="range-value" data-line-value type="number" min="0.8" max="1.8" step="0.01" value="1.05" aria-label="Line height value"></label>
+          <label><span class="i18n-en">Style</span><span class="i18n-zh">样式</span><select data-tester-font><option value="font-lihei">SemiBold</option></select></label>
+          <label class="range-control"><span class="range-name"><span class="i18n-en">Size</span><span class="i18n-zh">大小</span></span><input data-tester-size type="range" min="24" max="180" value="104"><input class="range-value" data-size-value type="number" min="24" max="180" value="104" aria-label="Size value"></label>
+          <label class="range-control"><span class="range-name"><span class="i18n-en">Line height</span><span class="i18n-zh">行高</span></span><input data-tester-line type="range" min="80" max="180" value="105"><input class="range-value" data-line-value type="number" min="0.8" max="1.8" step="0.01" value="1.05" aria-label="Line height value"></label>
           <div class="segmented" data-align-controls>
             <button type="button" data-align="left" class="active" aria-label="Align left"><span class="align-icon align-left"><i></i><i></i><i></i></span></button>
             <button type="button" data-align="center" aria-label="Align center"><span class="align-icon align-center"><i></i><i></i><i></i></span></button>
             <button type="button" data-align="right" aria-label="Align right"><span class="align-icon align-right"><i></i><i></i><i></i></span></button>
           </div>
-          <label class="toggle"><input type="checkbox" data-invert> Reverse</label>
+          <label class="toggle"><input type="checkbox" data-invert> <span class="i18n-en">Reverse</span><span class="i18n-zh">反色</span></label>
         </div>
       </div>
       <div class="tester-output"><div class="tester-text font-lihei" data-tester-output contenteditable="true">悠然隶黑标题字</div></div>
@@ -61,8 +74,8 @@
       <img src="assets/details/youran-lihei-6.jpg" alt="Youran Lihei detailed specimen 6" decoding="async" loading="lazy">
     </section>
     <section class="pager">
-      <a href="guqin.html">Previous: Guqin Notation</a>
-      <a href="jigu-hanli.html">Next: Jigu Hanli</a>
+      <a href="guqin.html"><span class="i18n-en">Previous: Guqin Notation</span><span class="i18n-zh">上一篇：古琴减字谱</span></a>
+      <a href="jigu-hanli.html"><span class="i18n-en">Next: Jigu Hanli</span><span class="i18n-zh">下一篇：集古汉隶</span></a>
     </section>
   </main>
   <script src="site.js"></script>

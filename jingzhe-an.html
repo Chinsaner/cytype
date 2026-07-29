@@ -4,12 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jingzhe An | Yue CHEN</title>
+  <script>
+    (function () {
+      if (localStorage.getItem("cytypeLang") === "zh") {
+        document.documentElement.classList.add("lang-zh");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
-    <nav><a href="jigu-hanli.html">Previous</a><a href="yourong.html">Next</a></nav>
+    <div class="header-right">
+      <nav><a href="jigu-hanli.html"><span class="i18n-en">Previous</span><span class="i18n-zh">上一篇</span></a><a href="yourong.html"><span class="i18n-en">Next</span><span class="i18n-zh">下一篇</span></a></nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+        <button type="button" class="lang-btn" data-lang-btn="zh">中</button>
+      </div>
+    </div>
   </header>
   <main>
     <section class="project-hero-image project-hero-awarded">
@@ -29,11 +42,11 @@
       </aside>
     </section>
     <section class="meta-grid">
-      <div><span>Scripts</span><strong>Hanzi, Latin</strong></div>
-      <div><span>Award</span><strong>The 13th Founder Award Design Competition Chinese Type (Professional), Silver Award (No Gold Award This Year)</strong></div>
-      <div><span>Foundry</span><strong>To be added</strong></div>
-      <div><span>Designers</span><strong>Congyu ZHANG, Yue CHEN</strong></div>
-      <div><span>Period</span><strong>September 2025 to present</strong></div>
+      <div><span><span class="i18n-en">Scripts</span><span class="i18n-zh">文字系统</span></span><strong><span class="i18n-en">Hanzi, Latin</span><span class="i18n-zh">汉字、拉丁字母</span></strong></div>
+      <div><span><span class="i18n-en">Award</span><span class="i18n-zh">获奖</span></span><strong>The 13th Founder Award Design Competition Chinese Type (Professional), Silver Award (No Gold Award This Year)</strong></div>
+      <div><span><span class="i18n-en">Foundry</span><span class="i18n-zh">发行方</span></span><strong><span class="i18n-en">To be added</span><span class="i18n-zh">待补充</span></strong></div>
+      <div><span><span class="i18n-en">Designers</span><span class="i18n-zh">设计师</span></span><strong>Congyu ZHANG, Yue CHEN</strong></div>
+      <div><span><span class="i18n-en">Period</span><span class="i18n-zh">项目周期</span></span><strong><span class="i18n-en">September 2025 to present</span><span class="i18n-zh">2025年9月至今</span></strong></div>
     </section>
     <section class="paired-specimen" data-paired-specimen aria-label="Jingzhe An specimen pairs">
       <figure class="paired-specimen-column active">
@@ -46,8 +59,8 @@
       </figure>
     </section>
     <section class="pager">
-      <a href="jigu-hanli.html">Previous: Jigu Hanli</a>
-      <a href="yourong.html">Next: Yourong Type</a>
+      <a href="jigu-hanli.html"><span class="i18n-en">Previous: Jigu Hanli</span><span class="i18n-zh">上一篇：集古汉隶</span></a>
+      <a href="yourong.html"><span class="i18n-en">Next: Yourong Type</span><span class="i18n-zh">下一篇：有容体</span></a>
     </section>
   </main>
   <script src="site.js?v=jingzhe-paired-specimen-3"></script>
