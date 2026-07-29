@@ -169,7 +169,9 @@ a:hover {
   color: var(--ink);
 }
 
-.lang-btn.active {
+.lang-btn.active,
+html.lang-zh .lang-btn[data-lang-btn="zh"],
+html:not(.lang-zh) .lang-btn[data-lang-btn="en"] {
   background: var(--ink);
   color: var(--bg);
 }
