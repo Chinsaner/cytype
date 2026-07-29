@@ -1152,6 +1152,10 @@ h1 {
   border-bottom: 1px solid var(--line);
 }
 
+.meta-grid-4col {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .meta-grid div {
   min-height: 112px;
   padding: 18px;
