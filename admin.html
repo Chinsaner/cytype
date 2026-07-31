@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages | CY Type</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css?v=youran-h1-2">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">CY Type｜虫鱼爬字</a>
+    <nav><a href="index.html">Back to site</a><a href="#" id="admin-signout" hidden>Sign out</a></nav>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-login" id="admin-login">
+      <h1>Messages 消息</h1>
+      <form id="admin-login-form">
+        <input type="email" id="admin-email" placeholder="Email" autocomplete="username" required>
+        <input type="password" id="admin-password" placeholder="Password" autocomplete="current-password" required>
+        <button type="submit">Sign in 登录</button>
+        <p class="admin-login-error" id="admin-login-error" hidden></p>
+      </form>
+    </section>
+
+    <section class="admin-app" id="admin-app" hidden>
+      <div class="admin-threads" id="admin-threads">
+        <p class="admin-empty">Loading…</p>
+      </div>
+      <div class="admin-conversation" id="admin-conversation">
+        <p class="admin-empty">Select a conversation 选择一个对话</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+  <script src="admin-chat.js"></script>
+</body>
+</html>
