@@ -2687,6 +2687,63 @@ h1 {
   color: var(--ink);
 }
 
+.cy-chat-namegate {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  padding: 20px;
+}
+
+.cy-chat-namegate[hidden] {
+  display: none;
+}
+
+.cy-chat-namegate p {
+  color: var(--muted);
+  font-size: 13.5px;
+  text-align: center;
+}
+
+.cy-chat-namegate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cy-chat-namegate-input {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13.5px;
+  font-family: inherit;
+  text-align: center;
+}
+
+.cy-chat-namegate-input:focus {
+  outline: none;
+  border-color: var(--mint);
+}
+
+.cy-chat-namegate-form button {
+  border: 0;
+  background: var(--mint);
+  color: #04240a;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cy-chat-messages[hidden],
+.cy-chat-form[hidden] {
+  display: none;
+}
+
 .cy-chat-messages {
   flex: 1;
   overflow-y: auto;
@@ -2877,6 +2934,67 @@ h1 {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+}
+
+.admin-threads-group {
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-threads-group h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 14px 16px 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.admin-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 10.5px;
+}
+
+.admin-browsing-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.admin-browsing-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--mint);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(38, 255, 0, 0.15);
+}
+
+.admin-empty-small {
+  padding: 4px 16px 14px;
+  font-size: 12.5px;
+  margin: 0;
+}
+
+.admin-conversation-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .admin-thread {

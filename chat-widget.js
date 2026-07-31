@@ -13,23 +13,40 @@
   }
   var db = firebase.firestore();
 
-  var THREAD_KEY = "cytypeChatThreadId";
+  var VISITOR_KEY = "cytypeChatThreadId";
+  var NAME_KEY = "cytypeChatName";
   var SEEN_KEY = "cytypeChatLastSeenOwnerAt";
+  var HEARTBEAT_MS = 25000;
 
-  function getThreadId() {
-    var id = localStorage.getItem(THREAD_KEY);
+  function getVisitorId() {
+    var id = localStorage.getItem(VISITOR_KEY);
     if (!id) {
       id = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(16).slice(2));
-      localStorage.setItem(THREAD_KEY, id);
+      localStorage.setItem(VISITOR_KEY, id);
     }
     return id;
   }
 
-  var threadId = getThreadId();
-  var threadRef = db.collection("threads").doc(threadId);
+  var visitorId = getVisitorId();
+  var threadRef = db.collection("threads").doc(visitorId);
   var messagesRef = threadRef.collection("messages");
+  var presenceRef = db.collection("presence").doc(visitorId);
   var threadExists = false;
   var unsubscribe = null;
+
+  // Presence heartbeat: lets the admin see "currently browsing" visitors,
+  // independent of whether they ever open or use the chat panel.
+  function heartbeat() {
+    presenceRef.set({
+      name: localStorage.getItem(NAME_KEY) || null,
+      lastSeenAt: firebase.firestore.FieldValue.serverTimestamp(),
+      createdAt: firebase.firestore.FieldValue.serverTimestamp()
+    }, { merge: true });
+  }
+  heartbeat();
+  setInterval(heartbeat, HEARTBEAT_MS);
+
+  var isZh = document.documentElement.classList.contains("lang-zh");
 
   var root = document.createElement("div");
   root.className = "cy-chat";
@@ -45,8 +62,15 @@
         '<span><span class="i18n-en">Message CY Type</span><span class="i18n-zh">给虫鱼爬字留言</span></span>' +
         '<button type="button" class="cy-chat-close" aria-label="Close chat">&times;</button>' +
       '</div>' +
-      '<div class="cy-chat-messages"></div>' +
-      '<form class="cy-chat-form">' +
+      '<div class="cy-chat-namegate">' +
+        '<p>' + (isZh ? "开始之前，留下你的称呼：" : "Before we start, what should we call you?") + '</p>' +
+        '<form class="cy-chat-namegate-form">' +
+          '<input type="text" class="cy-chat-namegate-input" maxlength="60" placeholder="' + (isZh ? "你的名字" : "Your name") + '" required>' +
+          '<button type="submit">' + (isZh ? "开始对话" : "Start chat") + '</button>' +
+        '</form>' +
+      '</div>' +
+      '<div class="cy-chat-messages" hidden></div>' +
+      '<form class="cy-chat-form" hidden>' +
         '<input type="text" class="cy-chat-input" autocomplete="off" maxlength="2000">' +
         '<button type="submit" class="cy-chat-send" aria-label="Send">' +
           '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>' +
@@ -55,7 +79,6 @@
     '</div>';
   document.body.appendChild(root);
 
-  var isZh = document.documentElement.classList.contains("lang-zh");
   var input = root.querySelector(".cy-chat-input");
   input.placeholder = isZh ? "输入消息……" : "Type a message…";
 
@@ -63,6 +86,9 @@
   var bubbleDot = root.querySelector(".cy-chat-bubble-dot");
   var panel = root.querySelector(".cy-chat-panel");
   var closeBtn = root.querySelector(".cy-chat-close");
+  var nameGate = root.querySelector(".cy-chat-namegate");
+  var nameGateForm = root.querySelector(".cy-chat-namegate-form");
+  var nameGateInput = root.querySelector(".cy-chat-namegate-input");
   var messagesEl = root.querySelector(".cy-chat-messages");
   var form = root.querySelector(".cy-chat-form");
 
@@ -128,14 +154,26 @@
     });
   }
 
+  function showChatUI() {
+    nameGate.hidden = true;
+    messagesEl.hidden = false;
+    form.hidden = false;
+    listen();
+    input.focus();
+  }
+
   function openPanel() {
     panel.hidden = false;
     bubble.classList.add("cy-chat-bubble-active");
-    listen();
     var seen = Number(localStorage.getItem(SEEN_KEY) || 0);
     localStorage.setItem(SEEN_KEY, String(Date.now()));
     bubbleDot.hidden = true;
-    input.focus();
+
+    if (localStorage.getItem(NAME_KEY)) {
+      showChatUI();
+    } else {
+      nameGateInput.focus();
+    }
   }
 
   function closePanel() {
@@ -149,11 +187,21 @@
   });
   closeBtn.addEventListener("click", closePanel);
 
+  nameGateForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = nameGateInput.value.trim();
+    if (!name) return;
+    localStorage.setItem(NAME_KEY, name);
+    presenceRef.set({ name: name }, { merge: true });
+    showChatUI();
+  });
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var text = input.value.trim();
     if (!text) return;
     input.value = "";
+    var name = localStorage.getItem(NAME_KEY) || null;
 
     var send = function () {
       messagesRef.add({
@@ -164,8 +212,8 @@
       threadRef.set({
         lastMessageAt: firebase.firestore.FieldValue.serverTimestamp(),
         lastMessageText: text,
-        hasUnread: true,
-        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+        visitorName: name,
+        hasUnread: true
       }, { merge: true });
     };
 
@@ -175,9 +223,9 @@
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
         lastMessageAt: firebase.firestore.FieldValue.serverTimestamp(),
         lastMessageText: text,
+        visitorName: name,
         hasUnread: true
       }, { merge: true }).then(send);
-      listen();
     } else {
       send();
     }
@@ -188,7 +236,7 @@
   threadRef.get().then(function (doc) {
     if (doc.exists) {
       threadExists = true;
-      listen();
+      if (localStorage.getItem(NAME_KEY)) listen();
     }
   });
 })();

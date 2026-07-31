@@ -11,17 +11,26 @@
   var auth = firebase.auth();
   var db = firebase.firestore();
 
+  var ONLINE_WINDOW_MS = 60000;
+
   var loginSection = document.getElementById("admin-login");
   var loginForm = document.getElementById("admin-login-form");
   var loginError = document.getElementById("admin-login-error");
   var appSection = document.getElementById("admin-app");
-  var threadsEl = document.getElementById("admin-threads");
+  var threadListEl = document.getElementById("admin-thread-list");
+  var browsingListEl = document.getElementById("admin-browsing-list");
+  var browsingCountEl = document.getElementById("admin-browsing-count");
   var conversationEl = document.getElementById("admin-conversation");
   var signOutLink = document.getElementById("admin-signout");
 
   var threadsUnsub = null;
+  var presenceUnsub = null;
   var messagesUnsub = null;
   var activeThreadId = null;
+  var browsingTick = null;
+
+  var latestThreads = [];
+  var latestPresence = [];
 
   auth.onAuthStateChanged(function (user) {
     if (user) {
@@ -29,12 +38,16 @@
       appSection.hidden = false;
       signOutLink.hidden = false;
       listenThreads();
+      listenPresence();
+      browsingTick = setInterval(renderBrowsing, 15000);
     } else {
       loginSection.hidden = false;
       appSection.hidden = true;
       signOutLink.hidden = true;
       if (threadsUnsub) { threadsUnsub(); threadsUnsub = null; }
+      if (presenceUnsub) { presenceUnsub(); presenceUnsub = null; }
       if (messagesUnsub) { messagesUnsub(); messagesUnsub = null; }
+      if (browsingTick) { clearInterval(browsingTick); browsingTick = null; }
     }
   });
 
@@ -60,50 +73,108 @@
     return (date.getMonth() + 1) + "/" + date.getDate() + " " + pad(date.getHours()) + ":" + pad(date.getMinutes());
   }
 
-  function listenThreads() {
-    threadsUnsub = db.collection("threads").orderBy("lastMessageAt", "desc")
-      .onSnapshot(function (snapshot) {
-        threadsEl.innerHTML = "";
-        if (snapshot.empty) {
-          var empty = document.createElement("p");
-          empty.className = "admin-empty";
-          empty.textContent = "No messages yet 暂无消息";
-          threadsEl.appendChild(empty);
-          return;
-        }
-        snapshot.forEach(function (doc) {
-          var data = doc.data();
-          var item = document.createElement("button");
-          item.type = "button";
-          item.className = "admin-thread" + (doc.id === activeThreadId ? " admin-thread-active" : "") + (data.hasUnread ? " admin-thread-unread" : "");
-          var time = data.lastMessageAt && data.lastMessageAt.toDate ? formatDateTime(data.lastMessageAt.toDate()) : "";
-          item.innerHTML =
-            '<span class="admin-thread-id">Visitor ' + doc.id.slice(0, 8) + '</span>' +
-            '<span class="admin-thread-preview">' + (data.lastMessageText ? escapeHtml(data.lastMessageText) : "") + '</span>' +
-            '<span class="admin-thread-time">' + time + '</span>';
-          item.addEventListener("click", function () { openThread(doc.id); });
-          threadsEl.appendChild(item);
-        });
-      }, function (err) {
-        console.error("Threads listen error:", err);
-      });
-  }
-
   function escapeHtml(str) {
     var div = document.createElement("div");
     div.textContent = str;
     return div.innerHTML;
   }
 
-  function openThread(threadId) {
-    activeThreadId = threadId;
-    Array.prototype.forEach.call(threadsEl.querySelectorAll(".admin-thread"), function (el, i) {
-      el.classList.toggle("admin-thread-active", el === document.activeElement);
+  function visitorLabel(id, name) {
+    return name ? escapeHtml(name) : "Visitor " + id.slice(0, 8);
+  }
+
+  function listenThreads() {
+    threadsUnsub = db.collection("threads").orderBy("lastMessageAt", "desc")
+      .onSnapshot(function (snapshot) {
+        latestThreads = [];
+        threadListEl.innerHTML = "";
+        if (snapshot.empty) {
+          var empty = document.createElement("p");
+          empty.className = "admin-empty";
+          empty.textContent = "No messages yet 暂无消息";
+          threadListEl.appendChild(empty);
+        }
+        snapshot.forEach(function (doc) {
+          var data = doc.data();
+          latestThreads.push(doc.id);
+          var item = document.createElement("button");
+          item.type = "button";
+          item.className = "admin-thread" + (doc.id === activeThreadId ? " admin-thread-active" : "") + (data.hasUnread ? " admin-thread-unread" : "");
+          var time = data.lastMessageAt && data.lastMessageAt.toDate ? formatDateTime(data.lastMessageAt.toDate()) : "";
+          item.innerHTML =
+            '<span class="admin-thread-id">' + visitorLabel(doc.id, data.visitorName) + '</span>' +
+            '<span class="admin-thread-preview">' + (data.lastMessageText ? escapeHtml(data.lastMessageText) : "") + '</span>' +
+            '<span class="admin-thread-time">' + time + '</span>';
+          item.addEventListener("click", function () { openThread(doc.id, data.visitorName); });
+          threadListEl.appendChild(item);
+        });
+        renderBrowsing();
+      }, function (err) {
+        console.error("Threads listen error:", err);
+      });
+  }
+
+  function listenPresence() {
+    presenceUnsub = db.collection("presence")
+      .onSnapshot(function (snapshot) {
+        latestPresence = [];
+        snapshot.forEach(function (doc) {
+          latestPresence.push({ id: doc.id, data: doc.data() });
+        });
+        renderBrowsing();
+      }, function (err) {
+        console.error("Presence listen error:", err);
+      });
+  }
+
+  function renderBrowsing() {
+    var now = Date.now();
+    var threadSet = {};
+    latestThreads.forEach(function (id) { threadSet[id] = true; });
+
+    var online = latestPresence.filter(function (p) {
+      if (threadSet[p.id]) return false;
+      var seen = p.data.lastSeenAt && p.data.lastSeenAt.toMillis ? p.data.lastSeenAt.toMillis() : 0;
+      return now - seen < ONLINE_WINDOW_MS;
     });
+
+    browsingCountEl.textContent = String(online.length);
+    browsingListEl.innerHTML = "";
+
+    if (!online.length) {
+      var empty = document.createElement("p");
+      empty.className = "admin-empty admin-empty-small";
+      empty.textContent = "No one right now 暂无访客";
+      browsingListEl.appendChild(empty);
+      return;
+    }
+
+    online.forEach(function (p) {
+      var row = document.createElement("div");
+      row.className = "admin-browsing-row";
+      row.innerHTML =
+        '<span class="admin-browsing-dot"></span>' +
+        '<span>' + visitorLabel(p.id, p.data.name) + '</span>';
+      browsingListEl.appendChild(row);
+    });
+  }
+
+  function openThread(threadId, visitorName) {
+    activeThreadId = threadId;
+    Array.prototype.forEach.call(threadListEl.querySelectorAll(".admin-thread"), function (el) {
+      el.classList.remove("admin-thread-active");
+    });
+    var clicked = Array.prototype.find
+      ? Array.prototype.find.call(threadListEl.querySelectorAll(".admin-thread"), function (el) {
+          return el.querySelector(".admin-thread-id").textContent === visitorLabel(threadId, visitorName);
+        })
+      : null;
+    if (clicked) clicked.classList.add("admin-thread-active");
 
     db.collection("threads").doc(threadId).set({ hasUnread: false }, { merge: true });
 
     conversationEl.innerHTML =
+      '<div class="admin-conversation-header">' + visitorLabel(threadId, visitorName) + '</div>' +
       '<div class="admin-conversation-messages" id="admin-conversation-messages"></div>' +
       '<form class="admin-reply-form" id="admin-reply-form">' +
         '<input type="text" id="admin-reply-input" autocomplete="off" placeholder="Reply…">' +

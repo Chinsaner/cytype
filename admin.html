@@ -26,7 +26,16 @@
 
     <section class="admin-app" id="admin-app" hidden>
       <div class="admin-threads" id="admin-threads">
-        <p class="admin-empty">Loading…</p>
+        <div class="admin-threads-group">
+          <h2>Browsing now 正在浏览 <span class="admin-count" id="admin-browsing-count">0</span></h2>
+          <div id="admin-browsing-list"></div>
+        </div>
+        <div class="admin-threads-group">
+          <h2>Conversations 对话</h2>
+          <div id="admin-thread-list">
+            <p class="admin-empty">Loading…</p>
+          </div>
+        </div>
       </div>
       <div class="admin-conversation" id="admin-conversation">
         <p class="admin-empty">Select a conversation 选择一个对话</p>
