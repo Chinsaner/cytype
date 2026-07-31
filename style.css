@@ -2718,7 +2718,7 @@ h1 {
   color: var(--ink);
   border-radius: 8px;
   padding: 10px 14px;
-  font-size: 13.5px;
+  font-size: 16px;
   font-family: inherit;
   text-align: center;
 }
@@ -2820,7 +2820,7 @@ h1 {
   color: var(--ink);
   border-radius: 20px;
   padding: 9px 14px;
-  font-size: 13px;
+  font-size: 16px;
   font-family: inherit;
 }
 
@@ -2892,7 +2892,7 @@ h1 {
   color: var(--ink);
   border-radius: 6px;
   padding: 11px 14px;
-  font-size: 14px;
+  font-size: 16px;
   font-family: inherit;
 }
 
@@ -3111,7 +3111,7 @@ h1 {
   color: var(--ink);
   border-radius: 6px;
   padding: 10px 14px;
-  font-size: 14px;
+  font-size: 16px;
   font-family: inherit;
 }
 
