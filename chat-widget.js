@@ -46,7 +46,9 @@
   heartbeat();
   setInterval(heartbeat, HEARTBEAT_MS);
 
-  var isZh = document.documentElement.classList.contains("lang-zh");
+  function isZh() {
+    return document.documentElement.classList.contains("lang-zh");
+  }
 
   var root = document.createElement("div");
   root.className = "cy-chat";
@@ -63,13 +65,15 @@
         '<button type="button" class="cy-chat-close" aria-label="Close chat">&times;</button>' +
       '</div>' +
       '<div class="cy-chat-namegate">' +
-        '<p>' + (isZh ? "开始之前，留下你的称呼：" : "Before we start, what should we call you?") + '</p>' +
+        '<p><span class="i18n-en">Before we start, what should we call you?</span><span class="i18n-zh">开始之前，留下你的称呼：</span></p>' +
         '<form class="cy-chat-namegate-form">' +
-          '<input type="text" class="cy-chat-namegate-input" maxlength="60" placeholder="' + (isZh ? "你的名字" : "Your name") + '" required>' +
-          '<button type="submit">' + (isZh ? "开始对话" : "Start chat") + '</button>' +
+          '<input type="text" class="cy-chat-namegate-input" maxlength="60" required>' +
+          '<button type="submit"><span class="i18n-en">Start chat</span><span class="i18n-zh">开始对话</span></button>' +
         '</form>' +
       '</div>' +
-      '<div class="cy-chat-messages" hidden></div>' +
+      '<div class="cy-chat-messages" hidden>' +
+        '<p class="cy-chat-empty"><span class="i18n-en">Leave a message and we\'ll get back to you soon.</span><span class="i18n-zh">留下你的消息，我们会尽快回复。</span></p>' +
+      '</div>' +
       '<form class="cy-chat-form" hidden>' +
         '<input type="text" class="cy-chat-input" autocomplete="off" maxlength="2000">' +
         '<button type="submit" class="cy-chat-send" aria-label="Send">' +
@@ -80,8 +84,6 @@
   document.body.appendChild(root);
 
   var input = root.querySelector(".cy-chat-input");
-  input.placeholder = isZh ? "输入消息……" : "Type a message…";
-
   var bubble = root.querySelector(".cy-chat-bubble");
   var bubbleDot = root.querySelector(".cy-chat-bubble-dot");
   var panel = root.querySelector(".cy-chat-panel");
@@ -90,7 +92,20 @@
   var nameGateForm = root.querySelector(".cy-chat-namegate-form");
   var nameGateInput = root.querySelector(".cy-chat-namegate-input");
   var messagesEl = root.querySelector(".cy-chat-messages");
+  var emptyMsg = root.querySelector(".cy-chat-empty");
   var form = root.querySelector(".cy-chat-form");
+
+  function refreshPlaceholders() {
+    var zh = isZh();
+    input.placeholder = zh ? "输入消息……" : "Type a message…";
+    nameGateInput.placeholder = zh ? "你的名字" : "Your name";
+  }
+  refreshPlaceholders();
+
+  new MutationObserver(refreshPlaceholders).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class"]
+  });
 
   function formatTime(date) {
     if (!date) return "";
@@ -101,17 +116,12 @@
 
   function render(snapshot) {
     var wasNearBottom = messagesEl.scrollTop + messagesEl.clientHeight >= messagesEl.scrollHeight - 24;
-    messagesEl.innerHTML = "";
+    Array.prototype.forEach.call(messagesEl.querySelectorAll(".cy-chat-row"), function (el) {
+      el.remove();
+    });
     var latestOwnerAt = null;
 
-    if (snapshot.empty) {
-      var empty = document.createElement("p");
-      empty.className = "cy-chat-empty";
-      empty.textContent = isZh
-        ? "留下你的消息，我们会尽快回复。"
-        : "Leave a message and we'll get back to you soon.";
-      messagesEl.appendChild(empty);
-    }
+    emptyMsg.hidden = !snapshot.empty;
 
     snapshot.forEach(function (doc) {
       var msg = doc.data();
