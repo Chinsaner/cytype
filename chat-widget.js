@@ -65,14 +65,14 @@
         '<button type="button" class="cy-chat-close" aria-label="Close chat">&times;</button>' +
       '</div>' +
       '<div class="cy-chat-namegate">' +
-        '<p><span class="i18n-en">Before we start, what should we call you?</span><span class="i18n-zh">开始之前，留下你的称呼：</span></p>' +
+        '<p><span class="i18n-en">Before we start, what should we call you?</span><span class="i18n-zh">开始之前，留下您的称呼：</span></p>' +
         '<form class="cy-chat-namegate-form">' +
           '<input type="text" class="cy-chat-namegate-input" maxlength="60" required>' +
           '<button type="submit"><span class="i18n-en">Start chat</span><span class="i18n-zh">开始对话</span></button>' +
         '</form>' +
       '</div>' +
       '<div class="cy-chat-messages" hidden>' +
-        '<p class="cy-chat-empty"><span class="i18n-en">Leave a message and we\'ll get back to you soon.</span><span class="i18n-zh">留下你的消息，我们会尽快回复。</span></p>' +
+        '<p class="cy-chat-empty"><span class="i18n-en">Leave a message and we\'ll get back to you soon.</span><span class="i18n-zh">留下您的消息，我们会尽快回复。</span></p>' +
       '</div>' +
       '<form class="cy-chat-form" hidden>' +
         '<input type="text" class="cy-chat-input" autocomplete="off" maxlength="2000">' +
@@ -98,7 +98,7 @@
   function refreshPlaceholders() {
     var zh = isZh();
     input.placeholder = zh ? "输入消息……" : "Type a message…";
-    nameGateInput.placeholder = zh ? "你的名字" : "Your name";
+    nameGateInput.placeholder = zh ? "您的名字" : "Your name";
   }
   refreshPlaceholders();
 
