@@ -2927,8 +2927,8 @@ h1 {
   min-height: calc(100vh - 59px);
 }
 
-.admin-threads {
-  width: 300px;
+.admin-column {
+  width: 240px;
   flex-shrink: 0;
   border-right: 1px solid var(--line);
   overflow-y: auto;
@@ -2936,11 +2936,7 @@ h1 {
   flex-direction: column;
 }
 
-.admin-threads-group {
-  border-bottom: 1px solid var(--line);
-}
-
-.admin-threads-group h2 {
+.admin-column h2 {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -2951,6 +2947,11 @@ h1 {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--muted);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  z-index: 1;
 }
 
 .admin-count {
@@ -2982,10 +2983,6 @@ h1 {
   background: var(--mint);
   flex-shrink: 0;
   box-shadow: 0 0 0 3px rgba(38, 255, 0, 0.15);
-}
-
-.admin-threads-group-log {
-  border-bottom: 0;
 }
 
 .admin-visit-row {
@@ -3170,9 +3167,9 @@ h1 {
     flex-direction: column;
   }
 
-  .admin-threads {
+  .admin-column {
     width: 100%;
-    max-height: 220px;
+    max-height: 200px;
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
