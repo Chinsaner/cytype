@@ -20,11 +20,13 @@
   var threadListEl = document.getElementById("admin-thread-list");
   var browsingListEl = document.getElementById("admin-browsing-list");
   var browsingCountEl = document.getElementById("admin-browsing-count");
+  var visitListEl = document.getElementById("admin-visit-list");
   var conversationEl = document.getElementById("admin-conversation");
   var signOutLink = document.getElementById("admin-signout");
 
   var threadsUnsub = null;
   var presenceUnsub = null;
+  var visitsUnsub = null;
   var messagesUnsub = null;
   var activeThreadId = null;
   var browsingTick = null;
@@ -39,6 +41,7 @@
       signOutLink.hidden = false;
       listenThreads();
       listenPresence();
+      listenVisits();
       browsingTick = setInterval(renderBrowsing, 15000);
     } else {
       loginSection.hidden = false;
@@ -46,6 +49,7 @@
       signOutLink.hidden = true;
       if (threadsUnsub) { threadsUnsub(); threadsUnsub = null; }
       if (presenceUnsub) { presenceUnsub(); presenceUnsub = null; }
+      if (visitsUnsub) { visitsUnsub(); visitsUnsub = null; }
       if (messagesUnsub) { messagesUnsub(); messagesUnsub = null; }
       if (browsingTick) { clearInterval(browsingTick); browsingTick = null; }
     }
@@ -157,6 +161,33 @@
         '<span>' + visitorLabel(p.id, p.data.name) + '</span>';
       browsingListEl.appendChild(row);
     });
+  }
+
+  function listenVisits() {
+    visitsUnsub = db.collection("visits").orderBy("createdAt", "desc").limit(200)
+      .onSnapshot(function (snapshot) {
+        visitListEl.innerHTML = "";
+        if (snapshot.empty) {
+          var empty = document.createElement("p");
+          empty.className = "admin-empty";
+          empty.textContent = "No visits yet 暂无访问记录";
+          visitListEl.appendChild(empty);
+          return;
+        }
+        snapshot.forEach(function (doc) {
+          var data = doc.data();
+          var time = data.createdAt && data.createdAt.toDate ? formatDateTime(data.createdAt.toDate()) : "";
+          var row = document.createElement("div");
+          row.className = "admin-visit-row";
+          row.innerHTML =
+            '<span class="admin-visit-name">' + visitorLabel(data.visitorId || doc.id, data.name) + '</span>' +
+            '<span class="admin-visit-page">' + escapeHtml(data.page || "") + '</span>' +
+            '<span class="admin-visit-time">' + time + '</span>';
+          visitListEl.appendChild(row);
+        });
+      }, function (err) {
+        console.error("Visits listen error:", err);
+      });
   }
 
   function openThread(threadId, visitorName) {

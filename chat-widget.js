@@ -46,6 +46,15 @@
   heartbeat();
   setInterval(heartbeat, HEARTBEAT_MS);
 
+  // Visit log: one persistent record per page load, so the owner has a
+  // lasting trail of who came by even after they've left the site.
+  db.collection("visits").add({
+    visitorId: visitorId,
+    name: localStorage.getItem(NAME_KEY) || null,
+    page: location.pathname.replace(/^\//, "") || "index.html",
+    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+  });
+
   function isZh() {
     return document.documentElement.classList.contains("lang-zh");
   }

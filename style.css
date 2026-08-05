@@ -2984,6 +2984,40 @@ h1 {
   box-shadow: 0 0 0 3px rgba(38, 255, 0, 0.15);
 }
 
+.admin-threads-group-log {
+  border-bottom: 0;
+}
+
+.admin-visit-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 3px 8px;
+  padding: 7px 16px;
+  border-bottom: 1px solid var(--line);
+  font-size: 12.5px;
+}
+
+.admin-visit-name {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.admin-visit-page {
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-visit-time {
+  color: var(--muted);
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
 .admin-empty-small {
   padding: 4px 16px 14px;
   font-size: 12.5px;
