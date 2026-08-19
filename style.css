@@ -201,12 +201,6 @@ html.lang-zh .i18n-en {
   color: var(--mint);
 }
 
-.mobile-menu-toggle,
-.mobile-drawer,
-.mobile-drawer-overlay {
-  display: none;
-}
-
 .nav-group {
   position: relative;
   padding: 18px 0;
@@ -2491,24 +2485,17 @@ h1 {
 }
 
 @media (max-width: 640px) {
-  .site-header {
-    align-items: center;
-  }
-
+  .site-header,
   .topbar {
     align-items: flex-start;
     flex-direction: column;
   }
 
   .header-right {
-    margin-top: 0;
-    margin-left: auto;
+    margin-top: 18px;
   }
 
-  .site-header .main-nav {
-    display: none;
-  }
-
+  .main-nav,
   .topbar nav {
     justify-content: flex-start;
     flex-wrap: nowrap;
@@ -2537,179 +2524,6 @@ h1 {
   .project-menu {
     left: 0;
     right: auto;
-  }
-
-  .mobile-menu-toggle {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 4px;
-    width: 42px;
-    height: 42px;
-    margin-left: 2px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.06);
-    color: var(--ink);
-    cursor: pointer;
-  }
-
-  .mobile-menu-toggle span {
-    display: block;
-    width: 17px;
-    height: 2px;
-    margin: 0 auto;
-    background: currentColor;
-  }
-
-  .mobile-drawer-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 80;
-    display: block;
-    background: rgba(0, 0, 0, 0.58);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.22s ease;
-  }
-
-  .mobile-drawer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 90;
-    display: flex;
-    width: min(78vw, 326px);
-    padding: calc(24px + env(safe-area-inset-top)) 18px calc(20px + env(safe-area-inset-bottom));
-    flex-direction: column;
-    gap: 22px;
-    overflow-y: auto;
-    background: rgba(246, 247, 250, 0.86);
-    border-right: 1px solid rgba(255, 255, 255, 0.65);
-    box-shadow: 22px 0 54px rgba(0, 0, 0, 0.34);
-    color: #101010;
-    transform: translateX(-104%);
-    transition: transform 0.24s ease;
-    backdrop-filter: blur(22px);
-  }
-
-  body.mobile-menu-open {
-    overflow: hidden;
-  }
-
-  body.mobile-menu-open .mobile-drawer {
-    transform: translateX(0);
-  }
-
-  body.mobile-menu-open .mobile-drawer-overlay {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .mobile-drawer-brand {
-    padding: 8px 10px 2px;
-  }
-
-  .mobile-drawer-brand a {
-    color: #111;
-    font-family: "Easy Lihei Titles", "Youran Lihei", "Noto Sans SC", sans-serif;
-    font-size: 26px;
-    font-weight: 800;
-    text-decoration: none;
-  }
-
-  .mobile-drawer-nav {
-    display: grid;
-    gap: 10px;
-  }
-
-  .mobile-drawer-link,
-  .mobile-drawer-close {
-    display: grid;
-    grid-template-columns: 50px 1fr 16px;
-    align-items: center;
-    gap: 12px;
-    min-height: 62px;
-    padding: 10px 8px;
-    border: 0;
-    border-radius: 12px;
-    background: transparent;
-    color: #111;
-    font-family: inherit;
-    text-align: left;
-    text-decoration: none;
-  }
-
-  .mobile-drawer-link.is-active {
-    background: rgba(58, 86, 245, 0.12);
-  }
-
-  .mobile-drawer-icon {
-    display: grid;
-    width: 48px;
-    height: 48px;
-    place-items: center;
-    border-radius: 12px;
-    background: rgba(58, 86, 245, 0.1);
-    color: #4166ff;
-    font-size: 21px;
-    font-weight: 800;
-  }
-
-  .mobile-drawer-link.is-active .mobile-drawer-icon {
-    background: #4166ff;
-    color: #fff;
-  }
-
-  .mobile-drawer-link strong,
-  .mobile-drawer-close strong {
-    display: block;
-    font-size: 18px;
-    line-height: 1.1;
-  }
-
-  .mobile-drawer-link small,
-  .mobile-drawer-close small {
-    display: block;
-    margin-top: 4px;
-    color: #666a70;
-    font-size: 12px;
-    font-weight: 600;
-  }
-
-  .mobile-drawer-link::after {
-    content: "›";
-    color: #777b82;
-    font-size: 28px;
-    line-height: 1;
-  }
-
-  .mobile-drawer-close {
-    grid-template-columns: 50px 1fr;
-    margin-top: auto;
-    border-top: 1px solid rgba(16, 16, 16, 0.1);
-    border-radius: 0;
-    cursor: pointer;
-  }
-
-  .mobile-drawer-foot {
-    padding: 14px 8px 0;
-    border-top: 1px solid rgba(16, 16, 16, 0.1);
-    color: #6b6f75;
-    text-align: center;
-  }
-
-  .mobile-drawer-foot strong {
-    display: block;
-    color: #111;
-    font-size: 15px;
-  }
-
-  .mobile-drawer-foot p {
-    margin: 8px 0 0;
-    font-size: 12px;
-    line-height: 1.4;
   }
 
   .home-title {
