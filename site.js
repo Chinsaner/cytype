@@ -272,3 +272,85 @@ document.querySelectorAll("[data-horizontal-gallery]").forEach((gallery) => {
     { passive: false }
   );
 });
+
+(() => {
+  const header = document.querySelector(".site-header");
+  if (!header || header.querySelector(".mobile-menu-toggle")) return;
+
+  const items = [
+    { href: "index.html#type-projects", icon: "字", en: "Type Projects", zh: "字体项目", match: ["index.html", ""] },
+    { href: "brands.html", icon: "研", en: "Research", zh: "研究", match: ["brands.html"] },
+    { href: "activities.html", icon: "课", en: "Teaching", zh: "教学", match: ["activities.html"] },
+    { href: "talks.html", icon: "讲", en: "Talks", zh: "讲座", match: ["talks.html"] },
+    { href: "index.html#about", icon: "关", en: "About", zh: "关于", match: [] },
+  ];
+
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const toggle = document.createElement("button");
+  toggle.className = "mobile-menu-toggle";
+  toggle.type = "button";
+  toggle.setAttribute("aria-label", "Open mobile navigation");
+  toggle.setAttribute("aria-controls", "mobile-drawer");
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.innerHTML = "<span></span><span></span><span></span>";
+
+  const headerRight = header.querySelector(".header-right");
+  header.insertBefore(toggle, headerRight || null);
+
+  const overlay = document.createElement("button");
+  overlay.className = "mobile-drawer-overlay";
+  overlay.type = "button";
+  overlay.setAttribute("aria-label", "Close mobile navigation");
+
+  const drawer = document.createElement("aside");
+  drawer.className = "mobile-drawer";
+  drawer.id = "mobile-drawer";
+  drawer.setAttribute("aria-label", "Mobile navigation");
+  drawer.setAttribute("aria-hidden", "true");
+  drawer.innerHTML = `
+    <div class="mobile-drawer-brand">
+      <a href="index.html">CY Type｜虫鱼爬字</a>
+    </div>
+    <nav class="mobile-drawer-nav">
+      ${items
+        .map((item) => {
+          const active = item.match.includes(currentPage) ? " is-active" : "";
+          const ariaCurrent = active ? ' aria-current="page"' : "";
+          return `<a class="mobile-drawer-link${active}" href="${item.href}"${ariaCurrent}>
+            <span class="mobile-drawer-icon">${item.icon}</span>
+            <span><strong><span class="i18n-en">${item.en}</span><span class="i18n-zh">${item.zh}</span></strong><small>${item.en}</small></span>
+          </a>`;
+        })
+        .join("")}
+    </nav>
+    <button class="mobile-drawer-close" type="button">
+      <span class="mobile-drawer-icon">×</span>
+      <span><strong><span class="i18n-en">Close</span><span class="i18n-zh">关闭</span></strong><small>Close menu</small></span>
+    </button>
+    <div class="mobile-drawer-foot">
+      <strong>CY Type｜虫鱼爬字</strong>
+      <p>Type, scripts, and digital writing systems.</p>
+    </div>
+  `;
+
+  document.body.append(overlay, drawer);
+
+  const setOpen = (open) => {
+    document.body.classList.toggle("mobile-menu-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    drawer.setAttribute("aria-hidden", String(!open));
+  };
+
+  toggle.addEventListener("click", () => {
+    setOpen(toggle.getAttribute("aria-expanded") !== "true");
+  });
+
+  overlay.addEventListener("click", () => setOpen(false));
+  drawer.querySelector(".mobile-drawer-close").addEventListener("click", () => setOpen(false));
+  drawer.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setOpen(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
+})();
