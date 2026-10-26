@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Messages | CY Type</title>
+  <title>Visitors | CY Type</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="stylesheet" href="style.css?v=youran-h1-2">
 </head>
@@ -15,7 +15,7 @@
 
   <main class="admin-main">
     <section class="admin-login" id="admin-login">
-      <h1>Messages 消息</h1>
+      <h1>Visitors 访客</h1>
       <form id="admin-login-form">
         <input type="email" id="admin-email" placeholder="Email" autocomplete="username" required>
         <input type="password" id="admin-password" placeholder="Password" autocomplete="current-password" required>
@@ -35,21 +35,12 @@
           <p class="admin-empty">Loading…</p>
         </div>
       </div>
-      <div class="admin-column admin-column-threads">
-        <h2>Conversations 对话</h2>
-        <div id="admin-thread-list">
-          <p class="admin-empty">Loading…</p>
-        </div>
-      </div>
-      <div class="admin-conversation" id="admin-conversation">
-        <p class="admin-empty">Select a conversation 选择一个对话</p>
-      </div>
     </section>
   </main>
 
   <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
-  <script src="admin-chat.js"></script>
+  <script src="admin-visitors.js"></script>
 </body>
 </html>
