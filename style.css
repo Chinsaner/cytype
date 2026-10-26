@@ -2758,6 +2758,26 @@ h1 {
   flex-shrink: 0;
 }
 
+.admin-site-tag {
+  flex-shrink: 0;
+  padding: 1px 6px;
+  border-radius: 3px;
+  border: 1px solid currentColor;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.admin-site-cytype {
+  color: var(--mint);
+}
+
+.admin-site-chenyue {
+  color: #ffb000;
+}
+
 .admin-empty-small {
   padding: 4px 16px 14px;
   font-size: 12.5px;

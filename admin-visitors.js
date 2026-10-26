@@ -77,6 +77,12 @@
     return name ? escapeHtml(name) : "Visitor " + String(id).slice(0, 8);
   }
 
+  // Records written before the two sites were split carry no site field.
+  function siteTag(site) {
+    if (!site) return "";
+    return '<span class="admin-site-tag admin-site-' + escapeHtml(site) + '">' + escapeHtml(site) + '</span>';
+  }
+
   function listenPresence() {
     presenceUnsub = db.collection("presence")
       .onSnapshot(function (snapshot) {
@@ -113,7 +119,8 @@
       row.className = "admin-browsing-row";
       row.innerHTML =
         '<span class="admin-browsing-dot"></span>' +
-        '<span>' + visitorLabel(p.id, p.data.name) + '</span>';
+        '<span>' + visitorLabel(p.id, p.data.name) + '</span>' +
+        siteTag(p.data.site);
       browsingListEl.appendChild(row);
     });
   }
@@ -136,6 +143,7 @@
           row.className = "admin-visit-row";
           row.innerHTML =
             '<span class="admin-visit-name">' + visitorLabel(data.visitorId || doc.id, data.name) + '</span>' +
+            siteTag(data.site) +
             '<span class="admin-visit-page">' + escapeHtml(data.page || "") + '</span>' +
             '<span class="admin-visit-time">' + time + '</span>';
           visitListEl.appendChild(row);
