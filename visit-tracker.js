@@ -13,11 +13,6 @@
   }
   var db = firebase.firestore();
 
-  // Which site these records came from. The chenyue site ships the same
-  // tracker with this set to "chenyue", so one admin page can tell the two
-  // apart even though their page paths are identical.
-  var SITE = "cytype";
-
   var VISITOR_KEY = "cytypeChatThreadId";
   var NAME_KEY = "cytypeChatName";
   var HEARTBEAT_MS = 25000;
@@ -41,7 +36,6 @@
   function heartbeat() {
     presenceRef.set({
       name: visitorName,
-      site: SITE,
       lastSeenAt: firebase.firestore.FieldValue.serverTimestamp(),
       createdAt: firebase.firestore.FieldValue.serverTimestamp()
     }, { merge: true });
@@ -54,7 +48,6 @@
   db.collection("visits").add({
     visitorId: visitorId,
     name: visitorName,
-    site: SITE,
     page: location.pathname.replace(/^\//, "") || "index.html",
     createdAt: firebase.firestore.FieldValue.serverTimestamp()
   });
